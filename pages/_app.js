@@ -32,7 +32,7 @@ export default function Site(props) {
         onLogout={onLogout}
         error={pageProps.error}
       >
-        <EditLink cms={cms} />
+        {!isProduction && <EditLink cms={cms} />}
         <Component {...pageProps} />
       </TinacmsGithubProvider>
     </TinaProvider>
