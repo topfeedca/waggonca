@@ -4,44 +4,39 @@ import { GithubClient, TinacmsGithubProvider, GithubMediaStore } from 'react-tin
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-export default class Site extends App {
-  constructor(props) {
-    super(props)
+export default function Site(props) {
+  const github = new GithubClient({
+    proxy: '/api/proxy-github',
+    authCallbackRoute: '/api/create-github-access-token',
+    clientId: process.env.GITHUB_CLIENT_ID,
+    baseRepoFullName: process.env.REPO_FULL_NAME,
+    authScope: isProduction ? 'repo' : 'public_repo',
+  })
+ 
+  const cms = new TinaCMS({
+    enabled: props.pageProps.preview,
+    apis: {
+      github,
+    },
+    media: new GithubMediaStore(github),
+    sidebar: props.pageProps.preview,
+    toolbar: props.pageProps.preview,
+  })
 
-    const github = new GithubClient({
-      proxy: '/api/proxy-github',
-      authCallbackRoute: '/api/create-github-access-token',
-      clientId: process.env.GITHUB_CLIENT_ID,
-      baseRepoFullName: process.env.REPO_FULL_NAME,
-      authScope: isProduction ? 'repo' : 'public_repo',
-    })
+  const { Component, pageProps } = props
 
-    this.cms = new TinaCMS({
-      enabled: props.pageProps.preview,
-      apis: {
-        github,
-      },
-      media: new GithubMediaStore(github),
-      sidebar: props.pageProps.preview,
-      toolbar: props.pageProps.preview,
-    })
-  }
-
-  render() {
-    const { Component, pageProps } = this.props
-    return (
-      <TinaProvider cms={this.cms}>
-        <TinacmsGithubProvider
-          onLogin={onLogin}
-          onLogout={onLogout}
-          error={pageProps.error}
-        >
-          <EditLink cms={this.cms} />
-          <Component {...pageProps} />
-        </TinacmsGithubProvider>
-      </TinaProvider>
-    )
-  }
+  return (
+    <TinaProvider cms={cms}>
+      <TinacmsGithubProvider
+        onLogin={onLogin}
+        onLogout={onLogout}
+        error={pageProps.error}
+      >
+        <EditLink cms={cms} />
+        <Component {...pageProps} />
+      </TinacmsGithubProvider>
+    </TinaProvider>
+  )
 }
 
 const onLogin = async () => {
