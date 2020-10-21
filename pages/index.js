@@ -25,6 +25,7 @@ export default function Home({ file, preview }) {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/fonts/fonts.css" />
       </Head>
 
       <Container>
