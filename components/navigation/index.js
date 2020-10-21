@@ -89,4 +89,6 @@ const GetStartedButton = styled.button`
   border: none;
   color: white;
   font-size: 17px;
+  font-weight: 500;
+  line-height: 1.18;
 `

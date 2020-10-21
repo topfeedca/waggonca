@@ -33,7 +33,7 @@ export default function Home({ file, preview }) {
         <ContentWrapper>
           {/* <h1>{data.title}</h1> */}
           <Section>
-            <SectionInfo>
+            <FarmerSectionInfo>
               <h1>Increase efficiency and sales on your farm.</h1>
               <p>
                 Track every part of your operations while offering your clients an effective way to find and purchase from you. 
@@ -41,19 +41,22 @@ export default function Home({ file, preview }) {
               <CTAButton>
                 Try It Now
               </CTAButton>
-            </SectionInfo>
+            </FarmerSectionInfo>
+            <FarmerImage src="/img/Farmer.svg" alt="Farmer" />
           </Section>
 
           <Section>
-            <SectionInfo>
-              <h1>Increase efficiency and sales on your farm.</h1>
+            <BuildSectionInfo>
+              <h1>Build your business and get more sales</h1>
               <p>
                 Track every part of your operations while offering your clients an effective way to find and purchase from you. 
               </p>
-              <CTAButton>
-                Try It Now
-              </CTAButton>
-            </SectionInfo>
+              <p>
+                Showcase and share your online store so you can make finding your products easy for new customers. Bottom line, let’s grow your business.
+              </p>
+            </BuildSectionInfo>
+            <BuildSectionImage src="/img/Phone.png" alt="Phone" />
+            <SwirlBackground src="/img/SwirlBackground.svg" alt="Swirl" />
           </Section>
 
           <Section>
@@ -127,8 +130,9 @@ export const getStaticProps = async function ({
 
 const Container = styled.div`
   width: 100%;
-  max-width: 980px;
+  max-width: 1200px;
   margin: 0 auto;
+  /* overflow: hidden; */
 `;
 
 const ContentWrapper = styled.div`
@@ -149,7 +153,9 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 `
+
 const SectionInfo = styled.div`
   h1 {
     width: 581px;
@@ -171,6 +177,58 @@ const SectionInfo = styled.div`
     margin-bottom: 40px;
   }
 
+`
+
+const FarmerSectionInfo = styled(SectionInfo)`
+  margin-bottom: 268px;
+`
+
+const FarmerImage = styled.img`
+  position: absolute;
+  top: 100px;
+  right: 0;
+  height: 500px;
+  width: 800px;
+  z-index: 1000;
+`
+const BuildSectionInfo = styled(SectionInfo)`
+  margin-left: 138px;
+  margin-top: 190px;
+  margin-bottom: 324px;
+  
+  h1,
+  p {
+    color: white;
+  }
+
+  h1 {
+    max-width: 580px;
+  }
+
+  p {
+    max-width: 382px;
+  }
+`
+
+const BuildSectionImage = styled.img`
+  position: absolute;
+  top: 66px;
+  right: -410px;
+  height: 1000px;
+  width: 920px;
+`
+
+const SwirlBackground = styled.img`
+  position: absolute;
+  /* overflow-x: hidden; */
+  overflow: hidden;
+  top: 40px;
+  right: -436px;
+  height: 924px;
+  width: 1642px;
+  z-index: -1000;
+  border-radius: 18px;
+  /* margin-right: -300px; */
 `
 
 const CTAButton = styled.button`
