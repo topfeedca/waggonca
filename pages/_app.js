@@ -1,42 +1,128 @@
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
-import { GithubClient, TinacmsGithubProvider, GithubMediaStore } from 'react-tinacms-github'
+import {
+  GithubClient,
+  GithubMediaStore,
+  TinacmsGithubProvider,
+} from 'react-tinacms-github'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-export default function Site(props) {
-  const github = new GithubClient({
-    proxy: '/api/proxy-github',
-    authCallbackRoute: '/api/create-github-access-token',
-    clientId: process.env.GITHUB_CLIENT_ID,
-    baseRepoFullName: process.env.REPO_FULL_NAME,
-    authScope: isProduction ? 'repo' : 'public_repo',
-  })
- 
-  const cms = new TinaCMS({
-    enabled: props.pageProps.preview,
-    apis: {
-      github,
-    },
-    media: new GithubMediaStore(github),
-    sidebar: props.pageProps.preview,
-    toolbar: props.pageProps.preview,
-  })
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-  const { Component, pageProps } = props
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-  return (
-    <TinaProvider cms={cms}>
-      <TinacmsGithubProvider
-        onLogin={onLogin}
-        onLogout={onLogout}
-        error={pageProps.error}
-      >
-        {!isProduction && <EditLink cms={cms} />}
-        <Component {...pageProps} />
-      </TinacmsGithubProvider>
-    </TinaProvider>
-  )
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .edit-link-wrapper {
+    position: relative;
+  }
+
+  .edit-link-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .edit-link-btn button {
+    background: none;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    padding: 10px 18px;
+    font-size: 12px;
+    color: lightgray;
+    border-radius: 4px;
+    margin: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: #ff4c49;
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-top: 2px solid white;
+      border-right: 2px solid white;
+      color: #fefefe;
+      box-shadow: 10px 10px 28px -8px rgba(0,0,0,0.74);
+      outline: none;
+    }
+
+    &:active {
+      background: #ed3434;
+    }
+  }
+`
+
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
+}
+
+export default class Site extends App {
+  constructor(props) {
+    super(props)
+
+    const github = new GithubClient({
+      proxy: '/api/proxy-github',
+      authCallbackRoute: '/api/create-github-access-token',
+      clientId: process.env.GITHUB_CLIENT_ID,
+      baseRepoFullName: process.env.REPO_FULL_NAME,
+      authScope: isProduction ? 'repo' : 'public_repo'
+    })
+
+    this.cms = new TinaCMS({
+      enabled: !!props.pageProps.preview,
+      apis: {
+        github,
+      },
+      media: new GithubMediaStore(github),
+      sidebar: props.pageProps.preview,
+      toolbar: props.pageProps.preview,
+    })
+  }
+
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <TinaProvider cms={this.cms}>
+            <TinacmsGithubProvider
+              onLogin={onLogin}
+              onLogout={onLogout}
+              error={pageProps.error}
+            >
+              <div className="edit-link-wrapper">
+                <div className="edit-link-btn">
+                <EditLink cms={this.cms} />
+                </div>
+              </div>
+              <Component {...pageProps} />
+            </TinacmsGithubProvider>
+          </TinaProvider>
+        </ThemeProvider>
+      </>
+    )
+  }
 }
 
 const onLogin = async () => {

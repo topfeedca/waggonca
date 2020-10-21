@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import { getGithubPreviewProps, parseJson } from 'next-tinacms-github'
+import {
+  useGithubJsonForm,
+  useGithubToolbarPlugins,
+} from 'react-tinacms-github'
 import { usePlugin } from 'tinacms'
-import { useGithubJsonForm, useGithubToolbarPlugins } from 'react-tinacms-github'
+import styled from 'styled-components'
 
-import styles from '../styles/Home.module.css'
+import Navigation from '../components/navigation'
 
-export default function Home({ file }) {
+export default function Home({ file, preview }) {
   const formOptions = {
     label: 'Home Page',
     fields: [{ name: 'title', component: 'text' }],
@@ -17,87 +21,163 @@ export default function Home({ file }) {
   useGithubToolbarPlugins()
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
-        <title>Blog Starter</title>
+        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          {data.title}
-        </h1>
+      <Container>
+        <Navigation />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <ContentWrapper>
+          {/* <h1>{data.title}</h1> */}
+          <Section>
+            <SectionInfo>
+              <h1>Increase efficiency and sales on your farm.</h1>
+              <p>
+                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
+              </p>
+              <CTAButton>
+                Try It Now
+              </CTAButton>
+            </SectionInfo>
+          </Section>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Section>
+            <SectionInfo>
+              <h1>Increase efficiency and sales on your farm.</h1>
+              <p>
+                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
+              </p>
+              <CTAButton>
+                Try It Now
+              </CTAButton>
+            </SectionInfo>
+          </Section>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Section>
+            <SectionInfo>
+              <h1>Increase efficiency and sales on your farm.</h1>
+              <p>
+                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
+              </p>
+              <CTAButton>
+                Try It Now
+              </CTAButton>
+            </SectionInfo>
+          </Section>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Section>
+            <SectionInfo>
+              <h1>Increase efficiency and sales on your farm.</h1>
+              <p>
+                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
+              </p>
+              <CTAButton>
+                Try It Now
+              </CTAButton>
+            </SectionInfo>
+          </Section>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+          <Section>
+            <SectionInfo>
+              <h1>Increase efficiency and sales on your farm.</h1>
+              <p>
+                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
+              </p>
+              <CTAButton>
+                Try It Now
+              </CTAButton>
+            </SectionInfo>
+          </Section>
+        </ContentWrapper>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <Footer>
+          <p>waggon</p>
+        </Footer>
+      </Container>
     </div>
   )
 }
 
-export const getStaticProps = async function({
-   preview,
-   previewData,
-  }) {
-   if (preview) {
-     return getGithubPreviewProps({
-       ...previewData,
-       fileRelativePath: 'content/home.json',
-       parse: parseJson,
-     })
-   }
-   return {
-     props: {
-       sourceProvider: null,
-       error: null,
-       preview: false,
-       file: {
-         fileRelativePath: 'content/home.json',
-         data: (await import('../content/home.json')).default,
-       },
-     },
-   }
+export const getStaticProps = async function ({
+  preview,
+  previewData,
+}) {
+  if (preview) {
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: 'content/home.json',
+      parse: parseJson,
+    })
   }
+  return {
+    props: {
+      sourceProvider: null,
+      error: null,
+      preview: false,
+      file: {
+        fileRelativePath: 'content/home.json',
+        data: (await import('../content/home.json')).default,
+      },
+    },
+  }
+}
+
+const Container = styled.div`
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+`;
+
+const ContentWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  min-height: 800px;
+`
+
+const Footer = styled.footer`
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+`
+const Section = styled.section`
+  min-height: 400px;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+const SectionInfo = styled.div`
+  h1 {
+    width: 581px;
+    height: 104px;
+    font-size: 44px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.18;
+    color: #484848;
+  }
+
+  p {
+    width: 500px;
+    height: 48px;
+    font-size: 17px;
+    line-height: 1.59;
+    text-align: left;
+    color: #484848;
+    margin-bottom: 40px;
+  }
+
+`
+
+const CTAButton = styled.button`
+  background: #3dace4;
+  border-radius: 50px;
+  padding: 18px 68px;
+  border: none;
+  color: white;
+  font-size: 17px;
+`
