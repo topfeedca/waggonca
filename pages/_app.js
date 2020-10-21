@@ -113,11 +113,13 @@ export default class Site extends App {
               onLogout={onLogout}
               error={pageProps.error}
             >
-              <div className="edit-link-wrapper">
-                <div className="edit-link-btn">
-                <EditLink cms={this.cms} />
+              {!isProduction && (
+                <div className="edit-link-wrapper">
+                  <div className="edit-link-btn">
+                  <EditLink cms={this.cms} />
+                  </div>
                 </div>
-              </div>
+              )}
               <Component {...pageProps} />
             </TinacmsGithubProvider>
           </TinaProvider>
