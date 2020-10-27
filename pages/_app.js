@@ -2,7 +2,6 @@ import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
   GithubClient,
-  GithubMediaStore,
   TinacmsGithubProvider,
 } from 'react-tinacms-github'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
@@ -89,7 +88,7 @@ export default class Site extends App {
       authCallbackRoute: '/api/create-github-access-token',
       clientId: process.env.GITHUB_CLIENT_ID,
       baseRepoFullName: process.env.REPO_FULL_NAME,
-      authScope: isProduction ? 'repo' : 'public_repo'
+      authScope: 'public_repo'
     })
 
     this.cms = new TinaCMS({
@@ -97,7 +96,6 @@ export default class Site extends App {
       apis: {
         github,
       },
-      media: new GithubMediaStore(github),
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
     })
