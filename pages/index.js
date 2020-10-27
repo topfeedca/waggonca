@@ -20,10 +20,20 @@ export default function Home({ file, preview }) {
 
   useGithubToolbarPlugins()
 
+  const {
+    sectiona,
+    sectionb,
+    sectionc1,
+    sectoinc2,
+    sectiond,
+    sectione,
+    sectionf
+  } = data;
+
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Waggon | Your local online farmer's market</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/fonts/fonts.css" />
       </Head>
@@ -35,10 +45,8 @@ export default function Home({ file, preview }) {
           {/* <h1>{data.title}</h1> */}
           <Section>
             <FarmerSectionInfo>
-              <h1>Increase efficiency and sales on your farm.</h1>
-              <p>
-                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
-              </p>
+              <h1>{sectiona.title || 'Section A Title'}</h1>
+              <p>{data.sectiona.description}</p>
               <CTAButton>
                 Try It Now
               </CTAButton>
@@ -48,13 +56,8 @@ export default function Home({ file, preview }) {
 
           <Section>
             <BuildSectionInfo>
-              <h1>Build your business and get more sales</h1>
-              <p>
-                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
-              </p>
-              <p>
-                Showcase and share your online store so you can make finding your products easy for new customers. Bottom line, let’s grow your business.
-              </p>
+              <h1>{sectionb.title}</h1>
+              <p>{sectionb.description}</p>
             </BuildSectionInfo>
             <BuildSectionImage src="/img/Phone.png" alt="Phone" />
             <SwirlBackground src="/img/SwirlBackground.svg" alt="Swirl" />
