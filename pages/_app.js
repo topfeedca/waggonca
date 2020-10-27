@@ -139,8 +139,10 @@ const onLogin = async () => {
 
   const resp = await fetch(`/api/preview`, { headers: headers })
   const data = await resp.json()
-
-  if (resp.status == 200) window.location.href = window.location.pathname
+  
+  if (resp.status == 200) {
+    window.location.href = window.location.pathname
+  }
   else throw new Error(data.message)
 }
 

@@ -12,7 +12,22 @@ import Navigation from '../components/navigation'
 export default function Home({ file, preview }) {
   const formOptions = {
     label: 'Home Page',
-    fields: [{ name: 'title', component: 'text' }],
+    fields: [
+      { label: 'Section A - Title', name: 'sectiona.title', component: 'text' },
+      { label: 'Section A - Description', name: 'sectiona.description', component: 'textarea' },
+      { label: 'Section B - Title', name: 'sectionb.title', component: 'text' },
+      { label: 'Section B - Description', name: 'sectionb.description', component: 'textarea' },
+      { label: 'Section C, 1 - Title', name: 'sectionc1.title', component: 'text' },
+      { label: 'Section C, 1 - Description', name: 'sectionc1.description', component: 'textarea' },
+      { label: 'Section C, 2 - Title', name: 'sectionc2.title', component: 'text' },
+      { label: 'Section C, 2 - Description', name: 'sectionc2.description', component: 'textarea' },
+      { label: 'Section D - Title', name: 'sectiond.title', component: 'text' },
+      { label: 'Section D - Description', name: 'sectiond.description', component: 'textarea' },
+      { label: 'Section E - Title', name: 'sectione.title', component: 'text' },
+      { label: 'Section E - Description', name: 'sectione.description', component: 'textarea' },
+      { label: 'Section F - Title', name: 'sectionf.title', component: 'text' },
+      { label: 'Section F - Description', name: 'sectionf.description', component: 'textarea' },
+    ],
   }
 
   const [data, form] = useGithubJsonForm(file, formOptions)
@@ -24,7 +39,7 @@ export default function Home({ file, preview }) {
     sectiona,
     sectionb,
     sectionc1,
-    sectoinc2,
+    sectionc2,
     sectiond,
     sectione,
     sectionf
@@ -46,29 +61,58 @@ export default function Home({ file, preview }) {
           <Section>
             <FarmerSectionInfo>
               <h1>{sectiona.title || 'Section A Title'}</h1>
-              <p>{data.sectiona.description}</p>
+              <p>{data.sectiona.description || 'Section A Description'}</p>
               <CTAButton>
                 Try It Now
               </CTAButton>
             </FarmerSectionInfo>
             <FarmerImage src="/img/Farmer.svg" alt="Farmer" />
+            <FarmerShadowImage>
+              <Triangle />
+            </FarmerShadowImage>
           </Section>
 
           <Section>
             <BuildSectionInfo>
-              <h1>{sectionb.title}</h1>
-              <p>{sectionb.description}</p>
+              <h1>{sectionb.title || 'Section B Title'}</h1>
+              <p>{sectionb.description || 'Section B Description'}</p>
             </BuildSectionInfo>
             <BuildSectionImage src="/img/Phone.png" alt="Phone" />
             <SwirlBackground src="/img/SwirlBackground.svg" alt="Swirl" />
           </Section>
 
+          <DoubleSection>
+            <DoubleSectionInfoA>
+              <div className="img">
+                <CustomersImage src="/img/NewCustomers.svg" alt="Customers" />
+              </div>
+              <div className="details">
+                <h1>{sectionc1.title || 'Section C1 Title'}</h1>
+                <p>{sectionc1.description || 'Section C1 Description'}</p>
+                <LearnMoreLink href="/">
+                  Learn More {' ->'}
+                </LearnMoreLink>
+              </div>
+            </DoubleSectionInfoA>
+            <DoubleSectionInfoB>
+              <div className="img">
+                <OfferingsImage src="/img/Offerings.png" alt="Offerings" />
+              </div>
+              <div className="details">
+                <h1>{sectionc2.title || 'Section C2 Title'}</h1>
+                <p>{sectionc2.description || 'Section C2 Description'}</p>
+                <LearnMoreLink href="/">
+                  Learn More {' ->'}
+                </LearnMoreLink>
+              </div>
+            </DoubleSectionInfoB>
+            <DoubleBackgroundImage src="img/Path_34.svg" alt="Blob" />
+          </DoubleSection>
+
           <Section>
             <SectionInfo>
-              <h1>Increase efficiency and sales on your farm.</h1>
-              <p>
-                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
-              </p>
+              <h1>{sectiond.title || 'Section D Title'}</h1>
+              <p>{sectiond.description || 'Section D Title'}</p>
               <CTAButton>
                 Try It Now
               </CTAButton>
@@ -77,10 +121,8 @@ export default function Home({ file, preview }) {
 
           <Section>
             <SectionInfo>
-              <h1>Increase efficiency and sales on your farm.</h1>
-              <p>
-                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
-              </p>
+              <h1>{sectione.title || 'Section E Title'}</h1>
+              <p>{sectione.description || 'Section E Description'}</p>
               <CTAButton>
                 Try It Now
               </CTAButton>
@@ -89,10 +131,8 @@ export default function Home({ file, preview }) {
 
           <Section>
             <SectionInfo>
-              <h1>Increase efficiency and sales on your farm.</h1>
-              <p>
-                Track every part of your operations while offering your clients an effective way to find and purchase from you. 
-              </p>
+              <h1>{sectionf.title || 'Section F Title'}</h1>
+              <p>{sectionf.description || 'Section F Description'}</p>
               <CTAButton>
                 Try It Now
               </CTAButton>
@@ -152,6 +192,7 @@ const Footer = styled.footer`
 `
 const Section = styled.section`
   min-height: 400px;
+  width: 100%;
   padding-top: 120px;
   padding-bottom: 40px;
   display: flex;
@@ -160,10 +201,90 @@ const Section = styled.section`
   position: relative;
 `
 
+const DoubleSection = styled.section`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-around;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  .img {
+    height: 200px;
+  }
+
+  .details {
+  }
+`
+
+const DoubleSectionInfoA = styled.div`
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  padding: 30px;
+  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
+  margin-left: auto;
+  margin-right: 14px;
+`
+
+const DoubleSectionInfoB = styled.div`
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  padding: 30px;
+  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
+
+  margin-left: 14px;
+  margin-right: auto;
+`
+
+const CustomersImage = styled.img`
+  height: auto;
+  width: 250px;
+  display: flex;
+  margin: 10px auto;
+`
+
+const OfferingsImage = styled.img`
+  height: auto;
+  width: 200px;
+  display: flex;
+  margin: 10px auto;
+`
+
+const DoubleBackgroundImage = styled.img`
+  position: absolute;
+  height: 700px;
+  width: auto;
+  top: -118px;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  z-index: -1000;
+`
+
+const LearnMoreLink = styled.a`
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: #3099ce;
+`
+
 const SectionInfo = styled.div`
   h1 {
-    width: 581px;
-    height: 104px;
+    max-width: 581px;
+    min-height: 40px;
     font-size: 44px;
     font-weight: 500;
     text-align: left;
@@ -195,6 +316,21 @@ const FarmerImage = styled.img`
   width: 800px;
   z-index: 1000;
 `
+
+const Triangle = styled.div`
+  width: 0;
+  height: 0;
+  border-bottom: 1000px solid rgba(234, 234, 234, 0.65);
+  border-left: 1000px solid transparent;
+`
+
+const FarmerShadowImage = styled.div`
+  position: absolute;
+  top: 0;
+  right: -100px;
+  z-index: -1000;
+`
+
 const BuildSectionInfo = styled(SectionInfo)`
   margin-left: 138px;
   margin-top: 190px;
