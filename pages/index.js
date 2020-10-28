@@ -63,7 +63,7 @@ export default function Home({ file, preview }) {
               <h1>{sectiona.title || 'Section A Title'}</h1>
               <p>{data.sectiona.description || 'Section A Description'}</p>
               <CTAButton>
-                Try It Now
+                Try it now
               </CTAButton>
             </FarmerSectionInfo>
             <FarmerImage src="/img/Farmer.svg" alt="Farmer" />
@@ -109,35 +109,46 @@ export default function Home({ file, preview }) {
             <DoubleBackgroundImage src="img/Path_34.svg" alt="Blob" />
           </DoubleSection>
 
+          <GreenBlobImage src="img/Path_344.svg" alt="Other Blob" />
+
           <Section>
             <SectionInfo>
               <h1>{sectiond.title || 'Section D Title'}</h1>
               <p>{sectiond.description || 'Section D Title'}</p>
               <CTAButton>
-                Try It Now
+                Try it now
               </CTAButton>
             </SectionInfo>
+            <SalesPersonImage src="img/Group_27.svg" alt="Sales" />
           </Section>
 
-          <Section>
-            <SectionInfo>
+          <Spacer />
+
+          <AntiSection>
+            <AntiSectionInfo>
               <h1>{sectione.title || 'Section E Title'}</h1>
               <p>{sectione.description || 'Section E Description'}</p>
               <CTAButton>
-                Try It Now
+                Try it now
               </CTAButton>
-            </SectionInfo>
-          </Section>
+            </AntiSectionInfo>
+            <MobileServiceImage src="img/Group_66.svg" alt="Mobile Ready" />
+          </AntiSection>
 
-          <Section>
-            <SectionInfo>
+          <Spacer />
+
+          <CenteredSection>
+            <CenteredSectionInfo>
               <h1>{sectionf.title || 'Section F Title'}</h1>
               <p>{sectionf.description || 'Section F Description'}</p>
               <CTAButton>
-                Try It Now
+                Get Started
               </CTAButton>
-            </SectionInfo>
-          </Section>
+            </CenteredSectionInfo>
+            <LightSwirlImage src="img/Path_29.svg" alt="Light Swirl" />
+          </CenteredSection>
+
+          <Spacer />
         </ContentWrapper>
 
         <Footer>
@@ -185,6 +196,10 @@ const ContentWrapper = styled.div`
   min-height: 800px;
 `
 
+const Spacer = styled.div`
+  margin-bottom: 150px;
+`
+
 const Footer = styled.footer`
   text-align: center;
   font-size: 14px;
@@ -193,12 +208,94 @@ const Footer = styled.footer`
 const Section = styled.section`
   min-height: 400px;
   width: 100%;
-  padding-top: 120px;
+  padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+`
+
+const SectionInfo = styled.div`
+  h1 {
+    max-width: 581px;
+    min-height: 40px;
+    font-size: 44px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.18;
+    color: #484848;
+  }
+
+  p {
+    width: 500px;
+    height: 48px;
+    font-size: 17px;
+    line-height: 1.59;
+    text-align: left;
+    color: #484848;
+    margin-bottom: 40px;
+  }
+`
+
+const AntiSection = styled.section`
+  display: flex;
+  justify-content: flex-end;
+  min-height: 400px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 220px;
+  margin-bottom: 220px;
+  position: relative;
+`
+
+const AntiSectionInfo = styled.div`
+  h1 {
+    width: 581px;
+    min-height: 40px;
+    font-size: 44px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.18;
+    color: #484848;
+  }
+
+  p {
+    width: 500px;
+    height: 48px;
+    font-size: 17px;
+    line-height: 1.59;
+    text-align: left;
+    color: #484848;
+    margin-bottom: 40px;
+  }
+`
+
+const CenteredSection = styled.section`
+  position: relative;
+  align-items: center;
+  padding-top: 200px;
+`
+
+const CenteredSectionInfo = styled.div`
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    font-size: 44px;
+    font-weight: 500;
+    color: #484848;
+    margin: 0 auto;
+  }
+
+  p {
+    width: 100%;
+    max-width: 370px;
+    font-size: 17px;
+    color: #484848;
+    margin-bottom: 40px;
+    margin: 17px auto 40px auto;
+  }
 `
 
 const DoubleSection = styled.section`
@@ -208,15 +305,21 @@ const DoubleSection = styled.section`
   // justify-content: space-around;
   align-items: center;
   margin-top: 150px;
-  margin-bottom: 150px;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 
   .img {
     height: 200px;
   }
 
   .details {
+    h1 {
+      font-weight: 900;
+    }
+
+    p {
+      height: 100px;
+    }
   }
 `
 
@@ -281,36 +384,37 @@ const LearnMoreLink = styled.a`
   color: #3099ce;
 `
 
-const SectionInfo = styled.div`
-  h1 {
-    max-width: 581px;
-    min-height: 40px;
-    font-size: 44px;
-    font-weight: 500;
-    text-align: left;
-    line-height: 1.18;
-    color: #484848;
-  }
+const GreenBlobImage = styled.img`
+  display: flex;
+  height: 200px;
+  width: auto;
+  margin: 0 auto;
+  padding-left: 120px;
+`
 
-  p {
-    width: 500px;
-    height: 48px;
-    font-size: 17px;
-    line-height: 1.59;
-    text-align: left;
-    color: #484848;
-    margin-bottom: 40px;
-  }
-
+const SalesPersonImage = styled.img`
+  position: absolute;
+  height: 560px;
+  width: auto;
+  top: 0;
+  right: 0;
 `
 
 const FarmerSectionInfo = styled(SectionInfo)`
-  margin-bottom: 268px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+`
+
+const LightSwirlImage = styled.img`
+  position: absolute;
+  width: 100%;
+  top: 220px;
+  z-index: -1000;
 `
 
 const FarmerImage = styled.img`
   position: absolute;
-  top: 100px;
+  top: 200px;
   right: 0;
   height: 500px;
   width: 800px;
@@ -333,7 +437,7 @@ const FarmerShadowImage = styled.div`
 
 const BuildSectionInfo = styled(SectionInfo)`
   margin-left: 138px;
-  margin-top: 190px;
+  margin-top: 260px;
   margin-bottom: 324px;
   
   h1,
@@ -356,6 +460,14 @@ const BuildSectionImage = styled.img`
   right: -410px;
   height: 1000px;
   width: 920px;
+`
+
+const MobileServiceImage = styled.img`
+  position: absolute;
+  top: 60px;
+  left: -180px;
+  height: 700px;
+  width: auto;
 `
 
 const SwirlBackground = styled.img`
