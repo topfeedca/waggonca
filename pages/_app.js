@@ -9,10 +9,16 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 const isProduction = process.env.NODE_ENV === 'production'
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+  }  
+
+ * {
+   border-sizing: border-box;
+ }
+  
+  body {
     width: 100vw;
     overflow-x: hidden;
 

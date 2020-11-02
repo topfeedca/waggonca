@@ -67,9 +67,6 @@ export default function Home({ file, preview }) {
               </CTAButton>
             </FarmerSectionInfo>
             <FarmerImage src="/img/Farmer.svg" alt="Farmer" />
-            <FarmerShadowImage>
-              <Triangle />
-            </FarmerShadowImage>
           </Section>
 
           <Section>
@@ -145,16 +142,71 @@ export default function Home({ file, preview }) {
                 Get Started
               </CTAButton>
             </CenteredSectionInfo>
-            <LightSwirlImage src="img/Path_29.svg" alt="Light Swirl" />
           </CenteredSection>
-
           <Spacer />
         </ContentWrapper>
-
-        <Footer>
-          <p>waggon</p>
-        </Footer>
       </Container>
+      <Footer>
+        <FooterContent>
+          <FooterColLg>
+            <h4>Waggon</h4>
+            <p>
+              A robust CSA and farm share management tool that offers a unique way to track and interact with your customers.
+            </p>
+            <p>
+              © 2019 waggon All rights reserved.
+            </p>
+          </FooterColLg>
+          <FooterCol>
+            <h4>Waggon</h4>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/">Product</a>
+              </li>
+              <li>
+                <a href="/">Discover</a>
+              </li>
+              <li>
+                <a href="/">Platform</a>
+              </li>
+            </ul>
+          </FooterCol>
+          <FooterCol>
+            <h4>Legal</h4>
+            <ul>
+              <li>
+                <a href="/">Terms</a>
+              </li>
+              <li>
+                <a href="/">Privacy</a>
+              </li>
+              <li>
+                <a href="/">Cookies</a>
+              </li>
+              <li>
+                <a href="/">Copyright</a>
+              </li>
+            </ul>
+          </FooterCol>
+          <FooterCol>
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="/">24/7 Chat Support</a>
+              </li>
+              <li>
+                <a href="/">info@waggon.ca</a>
+              </li>
+              <li>
+                <a href="/">+1-800-555-1234</a>
+              </li>
+            </ul>  
+          </FooterCol>
+        </FooterContent>
+      </Footer>
     </div>
   )
 }
@@ -185,7 +237,7 @@ export const getStaticProps = async function ({
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   /* overflow: hidden; */
 `;
@@ -201,9 +253,13 @@ const Spacer = styled.div`
 `
 
 const Footer = styled.footer`
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
+  height: 240px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-image: url(img/blob_green-01.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 const Section = styled.section`
   min-height: 400px;
@@ -401,37 +457,16 @@ const SalesPersonImage = styled.img`
 `
 
 const FarmerSectionInfo = styled(SectionInfo)`
-  margin-top: 200px;
-  margin-bottom: 200px;
-`
-
-const LightSwirlImage = styled.img`
-  position: absolute;
-  width: 100%;
-  top: 220px;
-  z-index: -1000;
+  margin-top: 40px;
+  margin-bottom: 190px;
 `
 
 const FarmerImage = styled.img`
   position: absolute;
-  top: 200px;
+  top: 40px;
   right: 0;
   height: 500px;
   width: 800px;
-  z-index: 1000;
-`
-
-const Triangle = styled.div`
-  width: 0;
-  height: 0;
-  border-bottom: 1000px solid rgba(234, 234, 234, 0.65);
-  border-left: 1000px solid transparent;
-`
-
-const FarmerShadowImage = styled.div`
-  position: absolute;
-  top: 0;
-  right: -100px;
   z-index: -1000;
 `
 
@@ -491,3 +526,19 @@ const CTAButton = styled.button`
   color: white;
   font-size: 17px;
 `
+
+const FooterContent = styled.div`
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const FooterColLg = styled.div`
+  width: 300px;
+`;
+
+const FooterCol = styled.div`
+
+`;
