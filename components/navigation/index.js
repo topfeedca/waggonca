@@ -1,38 +1,41 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function Navigation(props) {
+import { AppLinkAddress } from '../../constants'
 
+export default function Navigation(props) {
   return (
     <NavigationWrapper>
-      <LogoIMG src="/img/waggon-logo.png" alt="waggon" />
+      <NavBrand href="/">
+        <LogoIMG src="/img/waggon-logo.png" alt="waggon" />
+      </NavBrand>
       <NavigationMenu>
         <MenuItem>
-          <MenuLink href="/#">
-            Discover
+          <MenuLink href="/vendors">
+            Vendors
           </MenuLink>
         </MenuItem>
         <MenuItem>
-          <MenuLink href="/#">
-            What we do
+          <MenuLink href="/buyers">
+            Buyers
           </MenuLink>
         </MenuItem>
         <MenuItem>
-          <MenuLink href="/#">
+          <MenuLink href="/pricing">
             Pricing
           </MenuLink>
         </MenuItem>
         <MenuItem>
-          <MenuLink href="/#">
-            Contact
+          <MenuLink href="/support">
+            Support
           </MenuLink>
         </MenuItem>
       </NavigationMenu>
       <NavigationRight>
-        <MenuLink href="/#">
+        <MenuLink href={`${AppLinkAddress}/login`}>
           Log In
         </MenuLink>
-        <GetStartedButton>
+        <GetStartedButton href={AppLinkAddress}>
           Get Started
         </GetStartedButton>
       </NavigationRight>
@@ -47,6 +50,11 @@ const NavigationWrapper = styled.header`
   flex-direction: row;
   align-items: center;
 `
+
+const NavBrand = styled.a`
+
+`;
+
 const LogoIMG = styled.img`
   height: 56px;
   width: auto;
@@ -78,11 +86,15 @@ const MenuLink = styled.a`
   font-weight: 500;
   line-height: 1.18;
   text-align: left;
+
+  &:hover {
+    color: #7a7a7a !important;
+  }
 `
 
-const GetStartedButton = styled.button`
+const GetStartedButton = styled.a`
+  text-decoration: none;
   margin-left: 44px;
-
   background: #3dace4;
   border-radius: 50px;
   padding: 15px 44px;
@@ -91,4 +103,14 @@ const GetStartedButton = styled.button`
   font-size: 17px;
   font-weight: 500;
   line-height: 1.18;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: #43a6d8;
+  }
+
+  &:active {
+    background: #479fcc;
+  }
 `

@@ -7,13 +7,12 @@ import {
 import { usePlugin } from 'tinacms'
 import styled from 'styled-components'
 
-import { AppLinkAddress } from '../constants'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 
-export default function Home({ file, preview }) {
+export default function Vendors({ file, preview }) {
   const formOptions = {
-    label: 'Home Page',
+    label: 'Vendors Page',
     fields: [
       { label: 'Section A - Title', name: 'sectiona.title', component: 'text' },
       { label: 'Section A - Description', name: 'sectiona.description', component: 'textarea' },
@@ -63,7 +62,7 @@ export default function Home({ file, preview }) {
             <FarmerSectionInfo>
               <h1>{sectiona.title || 'Section A Title'}</h1>
               <p>{data.sectiona.description || 'Section A Description'}</p>
-              <CTAButton href={AppLinkAddress}>
+              <CTAButton>
                 Try it now
               </CTAButton>
             </FarmerSectionInfo>
@@ -159,7 +158,7 @@ export const getStaticProps = async function ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: 'content/home.json',
+      fileRelativePath: 'content/vendors.json',
       parse: parseJson,
     })
   }
@@ -169,8 +168,8 @@ export const getStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: 'content/home.json',
-        data: (await import('../content/home.json')).default,
+        fileRelativePath: 'content/vendors.json',
+        data: (await import('../content/vendors.json')).default,
       },
     },
   }

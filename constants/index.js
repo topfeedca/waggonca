@@ -1,0 +1,1 @@
+export const AppLinkAddress = 'https://waggon.ca';
