@@ -39,17 +39,17 @@ export default function Pricing({ file, preview }) {
   const {
     sectiona,
     sectionb,
-    sectionc1,
-    sectionc2,
+    sectionc,
     sectiond,
     sectione,
-    sectionf
+    sectionf,
+    sectiong
   } = data;
 
   return (
     <div className="container">
       <Head>
-        <title>Waggon | Your local online farmer's market</title>
+        <title>Waggon | Pricing</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/fonts/fonts.css" />
       </Head>
@@ -58,92 +58,162 @@ export default function Pricing({ file, preview }) {
         <Navigation />
 
         <ContentWrapper>
-          <Section>
-            <FarmerSectionInfo>
+          <SectionRow>
+            <SectionInfo>
               <h1>{sectiona.title || 'Section A Title'}</h1>
-              <p>{data.sectiona.description || 'Section A Description'}</p>
-              <CTAButton>
-                Try it now
-              </CTAButton>
-            </FarmerSectionInfo>
-            <FarmerImage src="/img/Farmer.svg" alt="Farmer" />
-          </Section>
 
-          <Section>
-            <BuildSectionInfo>
-              <h1>{sectionb.title || 'Section B Title'}</h1>
-              <p>{sectionb.description || 'Section B Description'}</p>
-            </BuildSectionInfo>
-            <BuildSectionImage src="/img/Phone.png" alt="Phone" />
-            <SwirlBackground src="/img/SwirlBackground.svg" alt="Swirl" />
-          </Section>
+              <img src="img/Ellipse_10.svg" alt="icon" />
 
-          <DoubleSection>
-            <DoubleSectionInfoA>
-              <div className="img">
-                <CustomersImage src="/img/NewCustomers.svg" alt="Customers" />
+              <div className="price">
+                <span className="amount">
+                  $0
+                </span>
+                <span className="time">
+                  /month
+                </span>
+                <span className="save">
+                  Save 19%
+                </span>
               </div>
-              <div className="details">
-                <h1>{sectionc1.title || 'Section C1 Title'}</h1>
-                <p>{sectionc1.description || 'Section C1 Description'}</p>
-                <LearnMoreLink href="/">
-                  Learn More {' ->'}
-                </LearnMoreLink>
-              </div>
-            </DoubleSectionInfoA>
-            <DoubleSectionInfoB>
-              <div className="img">
-                <OfferingsImage src="/img/Offerings.png" alt="Offerings" />
-              </div>
-              <div className="details">
-                <h1>{sectionc2.title || 'Section C2 Title'}</h1>
-                <p>{sectionc2.description || 'Section C2 Description'}</p>
-                <LearnMoreLink href="/">
-                  Learn More {' ->'}
-                </LearnMoreLink>
-              </div>
-            </DoubleSectionInfoB>
-            <DoubleBackgroundImage src="img/Path_34.svg" alt="Blob" />
-          </DoubleSection>
 
-          <GreenBlobImage src="img/Path_344.svg" alt="Other Blob" />
+              <SignUpButton>
+                Sign up
+              </SignUpButton>
+            </SectionInfo>
+            <SectionInfo>
+              <h1>{sectionb.title || 'Section A Title'}</h1>
 
+              <img src="img/Ellipse_10.svg" alt="icon" />
+
+              <div className="price">
+                <span className="amount">
+                  $45
+                </span>
+                <span className="time">
+                  /month
+                </span>
+                <span className="save">
+                  Save 21%
+                </span>
+              </div>
+
+              <SignUpButton>
+                Sign up
+              </SignUpButton>
+            </SectionInfo>
+            <SectionInfoFave>
+              <div className="banner">
+                Most Popular
+              </div>
+              <h1>{sectionc.title || 'Section A Title'}</h1>
+
+              <img src="img/Ellipse_10.svg" alt="icon" />
+
+              <div className="price">
+                <span className="amount">
+                  $75
+                </span>
+                <span className="time">
+                  /month
+                </span>
+                <span className="save">
+                  Save 23%
+                </span>
+              </div>
+
+              <SignUpButton>
+                Sign up
+              </SignUpButton>
+            </SectionInfoFave>
+            <SectionInfo>
+              <h1>{sectiond.title || 'Section A Title'}</h1>
+
+              <img src="img/Ellipse_10.svg" alt="icon" />
+
+              <div className="price">
+                <span className="amount">
+                  $175
+                </span>
+                <span className="time">
+                  /month
+                </span>
+                <span className="save">
+                  Save 25%
+                </span>
+              </div>
+
+              <SignUpButton>
+                Sign up
+              </SignUpButton>
+            </SectionInfo>
+          </SectionRow>
           <Section>
             <SectionInfo>
-              <h1>{sectiond.title || 'Section D Title'}</h1>
-              <p>{sectiond.description || 'Section D Title'}</p>
-              <CTAButton>
-                Try it now
-              </CTAButton>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
+              <div style={{ width: '100%', maxWidth: '200px' }}>
+                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>Features</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Orders</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Products</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Directory Listing</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Support</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Online Store</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Product Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Locations</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Customer Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Abandoned Cart Recovery</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Basic Reporting</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Category Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Online Payments</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Inventory Tracking</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Supplier Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Advanced Reporting</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Manual Order Creation</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Discount Codes</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Staff Accounts</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Multi-Store Support</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+                  Free
+                </div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>50</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>10</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ color: 'blue', fontSize: 12 }}>Base Support</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2.9% + 30c</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+              </div>
+              <div>
+                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+                  Paid
+                </div>
+              </div>
+              <div>
+                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+                  Business
+                </div>
+              </div>
+              <div>
+                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+                  Marketplace
+                </div>
+              </div>
+            </div>
             </SectionInfo>
-            <SalesPersonImage src="img/Group_27.svg" alt="Sales" />
           </Section>
-
-          <Spacer />
-
-          <AntiSection>
-            <AntiSectionInfo>
-              <h1>{sectione.title || 'Section E Title'}</h1>
-              <p>{sectione.description || 'Section E Description'}</p>
-              <CTAButton>
-                Try it now
-              </CTAButton>
-            </AntiSectionInfo>
-            <MobileServiceImage src="img/Group_66.svg" alt="Mobile Ready" />
-          </AntiSection>
-
-          <Spacer />
-
-          <CenteredSection>
-            <CenteredSectionInfo>
-              <h1>{sectionf.title || 'Section F Title'}</h1>
-              <p>{sectionf.description || 'Section F Description'}</p>
-              <CTAButton>
-                Get Started
-              </CTAButton>
-            </CenteredSectionInfo>
-          </CenteredSection>
-          <Spacer />
         </ContentWrapper>
       </Container>
       <Footer />
@@ -179,285 +249,115 @@ const Container = styled.div`
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  /* overflow: hidden; */
 `
 
 const ContentWrapper = styled.div`
   height: 100%;
   width: 100%;
-  min-height: 800px;
+  // min-height: 800px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 `
 
-const Spacer = styled.div`
-  margin-bottom: 150px;
-`
-
-const Section = styled.section`
-  min-height: 400px;
+const Section = styled.div`
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
+  margin-bottom: 80px;
 `
 
-const SectionInfo = styled.div`
-  h1 {
-    max-width: 581px;
-    min-height: 40px;
-    font-size: 44px;
-    font-weight: 500;
-    text-align: left;
-    line-height: 1.18;
-    color: #484848;
-  }
-
-  p {
-    width: 500px;
-    height: 48px;
-    font-size: 17px;
-    line-height: 1.59;
-    text-align: left;
-    color: #484848;
-    margin-bottom: 40px;
-  }
-`
-
-const AntiSection = styled.section`
-  display: flex;
-  justify-content: flex-end;
-  min-height: 400px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 220px;
-  margin-bottom: 220px;
-  position: relative;
-`
-
-const AntiSectionInfo = styled.div`
-  h1 {
-    width: 581px;
-    min-height: 40px;
-    font-size: 44px;
-    font-weight: 500;
-    text-align: left;
-    line-height: 1.18;
-    color: #484848;
-  }
-
-  p {
-    width: 500px;
-    height: 48px;
-    font-size: 17px;
-    line-height: 1.59;
-    text-align: left;
-    color: #484848;
-    margin-bottom: 40px;
-  }
-`
-
-const CenteredSection = styled.section`
-  position: relative;
-  align-items: center;
-  padding-top: 200px;
-`
-
-const CenteredSectionInfo = styled.div`
-  margin: 0 auto;
-  text-align: center;
-
-  h1 {
-    font-size: 44px;
-    font-weight: 500;
-    color: #484848;
-    margin: 0 auto;
-  }
-
-  p {
-    width: 100%;
-    max-width: 370px;
-    font-size: 17px;
-    color: #484848;
-    margin-bottom: 40px;
-    margin: 17px auto 40px auto;
-  }
-`
-
-const DoubleSection = styled.section`
-  position: relative;
+const SectionRow = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
-  // justify-content: space-around;
-  align-items: center;
-  margin-top: 150px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 80px;
+`;
 
-  .img {
-    height: 200px;
-  }
-
-  .details {
-    h1 {
-      font-weight: 900;
-    }
-
-    p {
-      height: 100px;
-    }
-  }
-`
-
-const DoubleSectionInfoA = styled.div`
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 300px;
-  height: 400px;
-  padding: 30px;
-  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
-  margin-left: auto;
-  margin-right: 14px;
-`
-
-const DoubleSectionInfoB = styled.div`
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 300px;
-  height: 400px;
-  padding: 30px;
-  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
-
-  margin-left: 14px;
-  margin-right: auto;
-`
-
-const CustomersImage = styled.img`
-  height: auto;
-  width: 250px;
-  display: flex;
-  margin: 10px auto;
-`
-
-const OfferingsImage = styled.img`
-  height: auto;
-  width: 200px;
-  display: flex;
-  margin: 10px auto;
-`
-
-const DoubleBackgroundImage = styled.img`
-  position: absolute;
-  height: 700px;
-  width: auto;
-  top: -118px;
-  left: 100px;
-  right: 0;
-  bottom: 0;
-  z-index: -1000;
-`
-
-const LearnMoreLink = styled.a`
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 500;
-  color: #3099ce;
-`
-
-const GreenBlobImage = styled.img`
-  display: flex;
-  height: 200px;
-  width: auto;
-  margin: 0 auto;
-  padding-left: 120px;
-`
-
-const SalesPersonImage = styled.img`
-  position: absolute;
-  height: 560px;
-  width: auto;
-  top: 0;
-  right: 0;
-`
-
-const FarmerSectionInfo = styled(SectionInfo)`
-  margin-top: 40px;
-  margin-bottom: 190px;
-`
-
-const FarmerImage = styled.img`
-  position: absolute;
-  top: 40px;
-  right: 0;
-  height: 500px;
-  width: 800px;
-  z-index: -1000;
-`
-
-const BuildSectionInfo = styled(SectionInfo)`
-  margin-left: 138px;
-  margin-top: 260px;
-  margin-bottom: 324px;
-  
-  h1,
-  p {
-    color: white;
-  }
+const SectionInfo = styled.div`
+  padding: 26px;
+  border-radius: 3px;
+  border: 1px solid #707070;
+  min-width: 200px;
 
   h1 {
-    max-width: 580px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #484848;
+  }
+
+  img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 14px;
   }
 
   p {
-    max-width: 382px;
+    margin-top: 18px;
+    font-size: 18px;
+    color: #484848;
+  }
+
+  .price {
+    .amount {
+      font-weight: 900;
+      font-size: 18px;
+    }
+  
+    .time {
+      margin-left: 8px;
+      font-size: 12px;
+    }
+
+    .save {
+      display: block;
+      margin-top: 18px;
+      font-size: 14px;
+      font-style: italic;
+      color: red;
+      margin-bottom: 44px;
+    }
+
+    .details {
+      display: block;
+      margin-top: 28px;
+      margin-bottom: 28px;
+      font-size: 14px;
+      color: #404040;
+    }
+  }
+`
+
+const SectionInfoFave = styled(SectionInfo)`
+  position: relative;
+
+  .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    padding-left: 16px;
+    height: 36px;
+    margin-top: -36px;
+    background: green;
+    color: white;
   }
 `;
 
-const BuildSectionImage = styled.img`
-  position: absolute;
-  top: 66px;
-  right: -410px;
-  height: 1000px;
-  width: 920px;
-`;
-
-const MobileServiceImage = styled.img`
-  position: absolute;
-  top: 60px;
-  left: -180px;
-  height: 700px;
-  width: auto;
-`;
-
-const SwirlBackground = styled.img`
-  position: absolute;
-  /* overflow-x: hidden; */
-  overflow: hidden;
-  top: 40px;
-  right: -436px;
-  height: 924px;
-  width: 1642px;
-  z-index: -1000;
-  border-radius: 18px;
-  /* margin-right: -300px; */
-`;
-
-const CTAButton = styled.button`
+const SignUpButton = styled.button`
   background: #3dace4;
-  border-radius: 50px;
-  padding: 18px 68px;
+  border-radius: 3px;
+  margin-bottom: 12px;
   border: none;
-  color: white;
-  font-size: 17px;
-  outline: none;
   cursor: pointer;
+  padding: 14px 24px;
+  color: white;
 
   &:hover {
     background: #43a6d8;
