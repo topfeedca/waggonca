@@ -46,6 +46,8 @@ export default function Pricing({ file, preview }) {
     sectiong
   } = data;
 
+  const mobile = true;
+
   return (
     <div className="container">
       <Head>
@@ -151,128 +153,137 @@ export default function Pricing({ file, preview }) {
             </SectionInfo>
           </SectionRow>
           <Section>
-            <SectionInfo>
-            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
-              <div style={{ width: '100%' }}>
-                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>Features</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', display: 'flex', alignItems: 'center', paddingLeft: 10 }}>Orders</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Products</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Directory Listing</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Support</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Online Store</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Product Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Locations</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Customer Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Abandoned Cart Recovery</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Basic Reporting</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Category Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Online Payments</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Inventory Tracking</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Supplier Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Manual Order Creation</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Discount Codes</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Staff Accounts</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Advanced Reporting</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Multi-Store Support</div>
-              </div>
-              <div style={{ textAlign: 'center', width: '100%' }}>
-                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+            <NewFeaturesTable>
+              <NewFeaturesTableHeading>
+                <TableTitle>
+                  Features
+                </TableTitle>
+                <TableData>Orders</TableData>
+                <TableData>Products</TableData>
+                <TableData>Support</TableData>
+                <TableData>Product Management</TableData>
+                <TableData>Online Store</TableData>
+                <TableData>Locations</TableData>
+                <TableData>Customer Management</TableData>
+                <TableData>Abandon Cart Recovery</TableData>
+                <TableData>Inventory Management</TableData>
+                <TableData>Basic Reporting</TableData>
+                <TableData>Distrubution Management</TableData>
+                <TableData>Directory Map</TableData>
+                <TableData>Online Payments</TableData>
+                <TableData>Manual Order Creation</TableData>
+                <TableData>Category Management</TableData>
+                <TableData>Discount Codes</TableData>
+                <TableData>Supplier Management</TableData>
+                <TableData>Staff Accounts</TableData>
+                <TableData>Advanced Reporting</TableData>
+                <TableData>Multi-Store Support</TableData>
+              </NewFeaturesTableHeading>
+              <NewFeaturesTableData>
+                <TableTitle>
                   Free
-                </div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, background: '#eaeaea', width: '100%' }}>50</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>10</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, background: '#eaeaea' }}>2</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'purple', fontSize: 12 }}>Base Support</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>2.9% + 30c</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-              </div>
-              <div style={{ textAlign: 'center', width: '100%' }}>
-                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+                </TableTitle>
+                <TableData><GreenDot /></TableData>
+                <TableData><RedEx>X</RedEx></TableData>
+                <TableData>50</TableData>
+                {/* <TableData><Unlimited>unlimited</Unlimited></TableData> */}
+                <TableData><GreenDot /></TableData>
+                <TableData><Support>Chat + Email</Support></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+              </NewFeaturesTableData>
+              <NewFeaturesTableData>
+                <TableTitle>
                   Paid
-                </div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>200</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>5</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ color: 'darkblue', fontSize: 12 }}>Chat + Email</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2.9% + 30c</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>3</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-              </div>
-              <div style={{ textAlign: 'center', width: '100%' }}>
-                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
+                </TableTitle>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+              </NewFeaturesTableData>
+              <NewFeaturesTableData>
+                <TableTitle>
                   Business
-                </div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ color: 'darkpurple', fontSize: 12 }}>24/7 Support</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2.9% + 30c</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>10</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-              </div>
-              <div style={{ textAlign: 'center', width: '100%' }}>
-                <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
-                  Marketplace
-                </div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ color: 'darkpurple', fontSize: 12 }}>24/7 Support</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2.9% + 30c</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14, color: 'green' }}>Unlimited</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-              </div>
-            </div>
-            </SectionInfo>
+                </TableTitle>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+              </NewFeaturesTableData>
+              <NewFeaturesTableData>
+                <TableTitle>
+                  Enterprise
+                </TableTitle>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+                <TableData><GreenDot /></TableData>
+              </NewFeaturesTableData>
+              <NewFeaturesTableFooter>
+
+              </NewFeaturesTableFooter>
+            </NewFeaturesTable>
           </Section>
         </ContentWrapper>
       </Container>
@@ -327,6 +338,25 @@ const HeroWrapper = styled.div`
     font-size: 52px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.14);
   }
+
+  @media screen and (max-width: 400px) {
+    height: 140px;
+    margin: 0;
+    padding: 0;
+
+    h1 {
+      height: 200px;
+      margin: 0;
+      padding: 0;
+      font-size: 42px;
+      text-align: center;
+      position: absolute;
+      top: -148px;
+      left: 0;
+      right: 0;
+    }
+  }
+  
 `;
 
 const HeroImage = styled.img`
@@ -368,6 +398,10 @@ const SectionRow = styled.div`
   justify-content: space-around;
   text-align: center;
   margin-bottom: 140px;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const SectionInfo = styled.div`
@@ -424,6 +458,11 @@ const SectionInfo = styled.div`
       color: #404040;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    margin: 10px;
+    margin-bottom: 60px;
+  }
 `
 
 const SectionInfoFave = styled(SectionInfo)`
@@ -444,6 +483,9 @@ const SectionInfoFave = styled(SectionInfo)`
     margin-top: -36px;
     background: #3cb371;
     color: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    z-index: -1000;
   }
 `;
 
@@ -463,4 +505,70 @@ const SignUpButton = styled.button`
   &:active {
     background: #479fcc;
   }
+`;
+
+const NewFeaturesTable = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+`;
+
+const NewFeaturesTableHeading = styled.div`
+  text-align: left;
+  padding-left: 10px;
+
+  div:first-child {
+    padding-left: 0px;
+  }
+`;
+
+const NewFeaturesTableData = styled.div`
+  
+`;
+
+const NewFeaturesTableFooter = styled.div`
+  padding-right: 10px;
+`;
+
+const TableTitle = styled.div`
+  font-family: RobotoBold;
+  height: 40px;
+  padding-left: 10px;
+`;
+
+const TableData = styled.div`
+  margin: 10px 0;
+  height: 40px;
+`;
+
+const GreenDot = styled.div`
+  background: #3cb371;
+  border-radius: 50%;
+  margin: 10px auto;
+  height: 12px;
+  width: 12px;
+`;
+
+const RedEx = styled.div`
+  color: red;
+  font-size: 14px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+`;
+
+const Unlimited = styled.span`
+  font-size: 10px;
+  color: #3cb371;
+`;
+
+const Support = styled.span`
+  font-size: 10px;
+  color: purple;
 `;

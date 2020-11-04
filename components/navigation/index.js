@@ -31,7 +31,7 @@ export default function Navigation(props) {
           </MenuLink>
         </MenuItem>
       </NavigationMenu>
-      <NavigationRight>
+      <NavigationRight className="nav-cta">
         <MenuLink href={`${AppLinkAddress}/login`}>
           Log In
         </MenuLink>
@@ -49,6 +49,12 @@ const NavigationWrapper = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (max-width: 400px) {
+    nav {
+      display: none;
+    }
+  }
 `
 
 const NavBrand = styled.a`
@@ -59,7 +65,7 @@ const LogoIMG = styled.img`
   height: 56px;
   width: auto;
 `
-const NavigationMenu = styled.div`
+const NavigationMenu = styled.nav`
   display: flex;
   flex-direction: row;
   margin-left: auto;
