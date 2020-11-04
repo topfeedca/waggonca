@@ -56,11 +56,14 @@ export default function Pricing({ file, preview }) {
 
       <Container>
         <Navigation />
-
         <ContentWrapper>
+          <HeroWrapper>
+            <h1>PRICING OVERVIEW</h1>
+            <HeroImage src="img/pricing-background.png" alt="pricing background" />
+          </HeroWrapper>
           <SectionRow>
             <SectionInfo>
-              <h1>{sectiona.title || 'Section A Title'}</h1>
+              <h1>{sectiona.title || 'Free'}</h1>
 
               <img src="img/Ellipse_10.svg" alt="icon" />
 
@@ -81,7 +84,7 @@ export default function Pricing({ file, preview }) {
               </SignUpButton>
             </SectionInfo>
             <SectionInfo>
-              <h1>{sectionb.title || 'Section A Title'}</h1>
+              <h1>{sectionb.title || 'Paid'}</h1>
 
               <img src="img/Ellipse_10.svg" alt="icon" />
 
@@ -103,9 +106,9 @@ export default function Pricing({ file, preview }) {
             </SectionInfo>
             <SectionInfoFave>
               <div className="banner">
-                Most Popular
+                most popular
               </div>
-              <h1>{sectionc.title || 'Section A Title'}</h1>
+              <h1>{sectionc.title || 'Business'}</h1>
 
               <img src="img/Ellipse_10.svg" alt="icon" />
 
@@ -126,7 +129,7 @@ export default function Pricing({ file, preview }) {
               </SignUpButton>
             </SectionInfoFave>
             <SectionInfo>
-              <h1>{sectiond.title || 'Section A Title'}</h1>
+              <h1>{sectiond.title || 'Marketplace'}</h1>
 
               <img src="img/Ellipse_10.svg" alt="icon" />
 
@@ -150,53 +153,53 @@ export default function Pricing({ file, preview }) {
           <Section>
             <SectionInfo>
             <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
-              <div style={{ width: '100%', maxWidth: '200px' }}>
+              <div style={{ width: '100%' }}>
                 <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>Features</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Orders</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Products</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Directory Listing</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Support</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Online Store</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Product Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Locations</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Customer Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Abandoned Cart Recovery</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Basic Reporting</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Category Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Online Payments</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Inventory Tracking</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Supplier Management</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Manual Order Creation</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Discount Codes</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Staff Accounts</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Advanced Reporting</div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15 }}>Multi-Store Support</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', display: 'flex', alignItems: 'center', paddingLeft: 10 }}>Orders</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Products</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Directory Listing</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Support</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Online Store</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Product Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Locations</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Customer Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Abandoned Cart Recovery</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Basic Reporting</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Category Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Online Payments</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Inventory Tracking</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Supplier Management</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Manual Order Creation</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Discount Codes</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Staff Accounts</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Advanced Reporting</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, fontSize: 15, background: '#eaeaea', paddingLeft: 10, display: 'flex', alignItems: 'center' }}>Multi-Store Support</div>
               </div>
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: 'center', width: '100%' }}>
                 <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
                   Free
                 </div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>50</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>10</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ color: 'purple', fontSize: 12 }}>Base Support</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ fontSize: 14 }}>2.9% + 30c</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
-                <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, background: '#eaeaea', width: '100%' }}>50</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>10</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, background: '#eaeaea' }}>2</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'purple', fontSize: 12 }}>Base Support</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>2.9% + 30c</div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
+                <div style={{ height: 40, marginTop: 10, marginBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eaeaea' }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
               </div>
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: 'center', width: '100%' }}>
                 <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
                   Paid
                 </div>
@@ -220,7 +223,7 @@ export default function Pricing({ file, preview }) {
                 <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
                 <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
               </div>
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: 'center', width: '100%' }}>
                 <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
                   Business
                 </div>
@@ -244,7 +247,7 @@ export default function Pricing({ file, preview }) {
                 <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ width: 10, height: 10, background: 'green', borderRadius: '50%', margin: '0 auto'}} /></div>
                 <div style={{ height: 40, marginTop: 10, marginBottom: 10 }}><div style={{ margin: '0 auto', color: 'red', fontWeight: '900', fontSize: 16 }}>X</div></div>
               </div>
-              <div style={{ textAlign: 'center' }}>
+              <div style={{ textAlign: 'center', width: '100%' }}>
                 <div style={{ marginBottom: '30px', fontWeight: '900', fontSize: 18 }}>
                   Marketplace
                 </div>
@@ -308,12 +311,46 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
+const HeroWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-top: -110px;
+  margin-bottom: 40px;
+  
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size: 52px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.14);
+  }
+`;
+
+const HeroImage = styled.img`
+  position: absolute;
+  top: -200px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1000;
+
+  // position: absolute;
+  // top: -200px;
+  // left: 0;
+  // right: 0;
+  // width: 100%;
+  // z-index: -2000;
+`;
+
 const ContentWrapper = styled.div`
   height: 100%;
   width: 100%;
   // min-height: 800px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 140px;
+  margin-bottom: 140px;
 `
 
 const Section = styled.div`
@@ -321,7 +358,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 140px;
 `
 
 const SectionRow = styled.div`
@@ -330,18 +367,20 @@ const SectionRow = styled.div`
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 140px;
 `;
 
 const SectionInfo = styled.div`
-  padding: 26px;
+  background: white;
+  padding: 16px 26px;
   border-radius: 3px;
   border: 1px solid #707070;
   min-width: 200px;
 
   h1 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 22px;
+    // font-weight: 900;
+    font-family: RobotoBold;
     color: #484848;
   }
 
@@ -360,12 +399,12 @@ const SectionInfo = styled.div`
   .price {
     .amount {
       font-weight: 900;
-      font-size: 18px;
+      font-size: 19px;
     }
   
     .time {
       margin-left: 8px;
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .save {
@@ -396,13 +435,14 @@ const SectionInfoFave = styled(SectionInfo)`
     left: 0;
     right: 0;
     font-size: 14px;
+    font-family: RobotoBold;
     display: flex;
     align-items: center;
     text-align: right;
     padding-left: 16px;
     height: 36px;
     margin-top: -36px;
-    background: green;
+    background: #3cb371;
     color: white;
   }
 `;
