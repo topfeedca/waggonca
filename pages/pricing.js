@@ -61,7 +61,7 @@ export default function Pricing({ file, preview }) {
         <ContentWrapper>
           <HeroWrapper>
             <h1>PRICING OVERVIEW</h1>
-            <HeroImage src="img/pricing-background.png" alt="pricing background" />
+            {/* <HeroImage src="img/pricing-background.png" alt="pricing background" /> */}
           </HeroWrapper>
           <SectionRow>
             <SectionInfo>
@@ -334,7 +334,7 @@ const HeroWrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: white;
+    color: #555;
     font-size: 52px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.14);
   }
@@ -399,7 +399,7 @@ const SectionRow = styled.div`
   text-align: center;
   margin-bottom: 140px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -459,7 +459,7 @@ const SectionInfo = styled.div`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
     margin: 10px;
     margin-bottom: 60px;
   }

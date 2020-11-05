@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }  
 
  * {
-   border-sizing: border-box;
+   box-sizing: border-box;
  }
   
   body {
@@ -122,7 +122,7 @@ export default class Site extends App {
               {!isProduction && (
                 <div className="edit-link-wrapper">
                   <div className="edit-link-btn">
-                  <EditLink cms={this.cms} />
+                  {/* <EditLink cms={this.cms} /> */}
                   </div>
                 </div>
               )}

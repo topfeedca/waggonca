@@ -16,7 +16,6 @@ export default function Footer(props) {
           </p>
         </FooterColLg>
         <FooterCol>
-          <h4>Waggon</h4>
           <ul>
             <li>
               <a href="/">Home</a>
@@ -33,7 +32,6 @@ export default function Footer(props) {
           </ul>
         </FooterCol>
         <FooterCol>
-          <h4>Legal</h4>
           <ul>
             <li>
               <a href="/">Terms</a>
@@ -50,7 +48,6 @@ export default function Footer(props) {
           </ul>
         </FooterCol>
         <FooterCol>
-          <h4>Contact</h4>
           <ul>
             <li>
               <a href="/support">24/7 Chat Support</a>
@@ -75,20 +72,21 @@ const FooterWrapper = styled.footer`
 `
 
 const FooterContent = styled.div`
-  padding-top: 50px;
-  padding-bottom: 40px;
   width: 100%;
   max-width: 1100px;
+  padding: 50px 10px 40px 10px;
   margin: 0 auto;
   color: #484848;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   h3 {
     font-size: 17px;
     font-weight: 900;
     margin-bottom: 30px !important;
+    margin-top: 0;
   }
 
   h4 {
@@ -113,12 +111,25 @@ const FooterContent = styled.div`
   .copyright {
     margin-top: 56px;
   }
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0 20px 0;
+  }
 `;
 
 const FooterColLg = styled.div`
   width: 430px;
+  height: 100%;
+
+  @media screen and (max-width: 420px) {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 `;
 
 const FooterCol = styled.div`
-
+  height: 100%;
 `;
