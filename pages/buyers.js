@@ -7,8 +7,8 @@ import {
 import { usePlugin } from 'tinacms'
 import styled from 'styled-components'
 
-import Navigation from '../components/navigation'
-import Footer from '../components/Footer'
+// import Navigation from '../components/navigation'
+// import Footer from '../components/Footer'
 
 export default function Buyers({ file, preview }) {
   const formOptions = {
@@ -54,7 +54,8 @@ export default function Buyers({ file, preview }) {
         <link rel="stylesheet" href="/fonts/fonts.css" />
       </Head>
 
-      <Container>
+      <h1>buyers</h1>
+      {/* <Container>
         <Navigation />
 
         <ContentWrapper>
@@ -146,7 +147,7 @@ export default function Buyers({ file, preview }) {
           <Spacer />
         </ContentWrapper>
       </Container>
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

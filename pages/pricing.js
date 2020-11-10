@@ -7,8 +7,8 @@ import {
 import { usePlugin } from 'tinacms'
 import styled from 'styled-components'
 
-import Navigation from '../components/navigation'
-import Footer from '../components/Footer'
+// import Navigation from '../components/navigation'
+// import Footer from '../components/Footer'
 
 export default function Pricing({ file, preview }) {
   const formOptions = {
@@ -56,12 +56,13 @@ export default function Pricing({ file, preview }) {
         <link rel="stylesheet" href="/fonts/fonts.css" />
       </Head>
 
-      <Container>
+      <h1>pricing</h1>
+
+      {/* <Container>
         <Navigation />
         <ContentWrapper>
           <HeroWrapper>
             <h1>PRICING OVERVIEW</h1>
-            {/* <HeroImage src="img/pricing-background.png" alt="pricing background" /> */}
           </HeroWrapper>
           <SectionRow>
             <SectionInfo>
@@ -186,7 +187,6 @@ export default function Pricing({ file, preview }) {
                 <TableData><GreenDot /></TableData>
                 <TableData><RedEx>X</RedEx></TableData>
                 <TableData>50</TableData>
-                {/* <TableData><Unlimited>unlimited</Unlimited></TableData> */}
                 <TableData><GreenDot /></TableData>
                 <TableData><Support>Chat + Email</Support></TableData>
                 <TableData><GreenDot /></TableData>
@@ -287,7 +287,7 @@ export default function Pricing({ file, preview }) {
           </Section>
         </ContentWrapper>
       </Container>
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }
