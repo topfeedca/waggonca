@@ -2,18 +2,21 @@ import styled from 'styled-components'
 // import { Link as ReactRouterLink } from 'react-router-dom'
 
 export const FooterContainer = styled.div`
-  background-color: #fff;
+  background-color: #efefef;
+  border-top: 2px solid #cecece;
+  /* background-image: url(/img/blob_green-01.svg); */
 `
 
 
 export const FooterWrapper = styled.div`
-  padding: 48px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  padding-top: 20px;
 `
 
 export const FooterLinksContainer = styled.div`
@@ -45,7 +48,6 @@ export const FooterLinkItems = styled.div`
 
   ${(props) => props.noShow && `
     width: 100%;
-    max-width: 400px;
   `}
 
   @media screen and (max-width: 420px) {
@@ -57,7 +59,7 @@ export const FooterLinkItems = styled.div`
   }
 
   ${(props) => props.lg && `
-    width: 425px;
+    // width: 425px;
 
     @media screen and (max-width: 420px) {
       width: 100%;
@@ -101,8 +103,8 @@ export const FooterLinkBlank = ({ to, children }) => {
 }
 
 export const SocialMedia = styled.div`
-  max-width: 1000px;
   width: 100%;
+  max-width: 1100px;
 `
 
 export const SocialMediaWrapper = styled.div`
@@ -110,7 +112,7 @@ export const SocialMediaWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1100px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
