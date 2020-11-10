@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   background-color: #fff;
 `
 
+
 export const FooterWrapper = styled.div`
   padding: 48px 24px;
   display: flex;
