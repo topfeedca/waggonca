@@ -96,7 +96,7 @@ export const FooterLink = styled.a`
 const BlankLink = styled(FooterLink)``
 
 export const FooterLinkBlank = ({ to, children }) => {
-  return <BlankLink href={to} target="_blank" aria-label={children} >{children}</BlankLink>
+  return <BlankLink href={to} target="_blank" aria-label={children}>{children}</BlankLink>
 }
 
 export const SocialMedia = styled.div`
