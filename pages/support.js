@@ -13,7 +13,7 @@ import InfoSection from '../components/InfoSection'
 import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'
 
-import { buyersPage as seo } from '../seo'
+import { supportPage as seo } from '../seo'
 
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
