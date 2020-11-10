@@ -8,7 +8,7 @@ import { usePlugin } from 'tinacms'
 import styled from 'styled-components'
 
 import Navigation from '../components/navigation'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
 export default function Vendors({ file, preview }) {
   const formOptions = {
