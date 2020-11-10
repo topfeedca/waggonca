@@ -366,13 +366,6 @@ const HeroImage = styled.img`
   right: 0;
   width: 100%;
   z-index: -1000;
-
-  // position: absolute;
-  // top: -200px;
-  // left: 0;
-  // right: 0;
-  // width: 100%;
-  // z-index: -2000;
 `;
 
 const ContentWrapper = styled.div`
@@ -413,7 +406,6 @@ const SectionInfo = styled.div`
 
   h1 {
     font-size: 22px;
-    // font-weight: 900;
     font-family: RobotoBold;
     color: #484848;
   }

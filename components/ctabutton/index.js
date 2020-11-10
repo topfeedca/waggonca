@@ -43,17 +43,17 @@ const Button = styled.div`
   border-radius: 50px;
   padding: 18px 68px;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 17px;
   outline: none;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
-    background: #43a6d8;
+    background: '#3299c9';
   }
 
   &:active {
-    background: #479fcc;
+    background: #1293ce;
   }
 `;

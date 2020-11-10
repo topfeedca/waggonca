@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
@@ -22,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     overflow-x: hidden;
 
+    font-family: 'Roboto';
+  }
+
+  * {
     font-family: 'Roboto';
   }
 
@@ -58,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 4px;
     margin: 8px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.2s;
 
     &:active,
     &:focus,
@@ -81,7 +86,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: '#3dace4',
   },
 }
 
@@ -111,6 +116,9 @@ export default class Site extends App {
     const { Component, pageProps } = this.props
     return (
       <>
+        <Head>
+          <link rel="stylesheet" href="/fonts/fonts.css" />
+        </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <TinaProvider cms={this.cms}>

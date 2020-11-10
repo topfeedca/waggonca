@@ -3,8 +3,6 @@
   src: url('./Roboto-Regular.ttf');
   src: url('Roboto-Regular.ttf') format('woff'),
     url('Roboto-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -12,6 +10,4 @@
   src: url('./Roboto-Bold.ttf');
   src: url('Roboto-Bold.ttf') format('woff'),
     url('Roboto-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
