@@ -7,7 +7,7 @@ import {
 import { usePlugin } from 'tinacms'
 
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 import Sidebar from '../components/Sidebar'
 import InfoSection from '../components/InfoSection'
 import SplitInfoSection from '../components/SplitInfoSection'
