@@ -9,7 +9,7 @@ export const buyersPage = {
 }
 
 export const vendorsPage = {
-  title: 'waggon | Vendors',
+  title: 'waggon | vendors',
   description: 'Sell your products to customers in your area.'
 }
 
