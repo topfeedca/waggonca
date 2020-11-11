@@ -116,9 +116,6 @@ export default class Site extends App {
     const { Component, pageProps } = this.props
     return (
       <>
-        <Head>
-          <link rel="stylesheet" href="/fonts/fonts.css" />
-        </Head>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <TinaProvider cms={this.cms}>
