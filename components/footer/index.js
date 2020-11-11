@@ -31,7 +31,7 @@ export default function Footer() {
       <FooterWrapper>
         <FooterLinkItems lg>
           <FooterLinkTitle>
-            waggon
+            waggon!
           </FooterLinkTitle>
           <FooterText>
             A robust CSA and farm share management tool that
@@ -40,7 +40,6 @@ export default function Footer() {
           <WebsiteRights>&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
         </FooterLinkItems>
         <FooterLinksContainer>
-          <FooterLinksWrapper>
             <FooterLinkItems noShow>
               <FooterLinkTitle>
                 waggon
@@ -51,7 +50,6 @@ export default function Footer() {
               </FooterText>
               <WebsiteRights>&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
             </FooterLinkItems>
-          </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>

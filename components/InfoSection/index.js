@@ -32,12 +32,13 @@ export default function InfoSection(props) {
     img,
     alt,
     data,
+    imgOffset,
   } = props;
   return (
     <>
       <InfoContainer lightBg={true} id={id}>
         <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
+          <InfoRow imgStart={imgStart} imgOffset={imgOffset}>
             <Column1>
               <TextWrapper>
                 <Heading lightText={false}>{data && data.title ? data.title : headline}</Heading>

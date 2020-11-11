@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
+  padding-top: 30px;
   background: ${({ lightBg }) => (lightBg ? '#fff' : '#010606')};
 
   @media screen and (max-width: 768px) {
@@ -23,6 +24,7 @@ export const InfoWrapper = styled.div`
 `
 
 export const InfoRow = styled.div`
+  position: relative;
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -31,6 +33,22 @@ export const InfoRow = styled.div`
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
   }
+
+  ${(props) => props.imgStart && `
+    img {
+      margin-left: -200px;
+    }
+  `}
+
+  /* ${(props) => props.imgOffset && `
+    img {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      width: 720px;
+      height: auto;
+    }
+  `} */
 `
 
 export const Column1 = styled.div`
