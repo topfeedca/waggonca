@@ -137,6 +137,12 @@ export const SocialLogo = styled.a`
     width: auto;
     height: 56px;
   }
+
+  @media screen and (max-width: 820px) {
+    img {
+      margin-bottom: 30px;
+    }
+  }
 `
 
 export const WebsiteRights = styled.small`
@@ -155,6 +161,10 @@ export const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
+  
+  @media screen and (max-width: 820px) {
+    margin-bottom: 24px;
+  }
 `
 
 export const SocialIconsLink = styled.a`

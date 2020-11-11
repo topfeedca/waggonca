@@ -2,12 +2,7 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
-  padding-top: 30px;
   background: ${({ lightBg }) => (lightBg ? '#fff' : '#010606')};
-
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
 `
 
 export const InfoWrapper = styled.div`
@@ -20,7 +15,11 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
-  margin-top: 200px;
+  padding-top: 200px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 100px;
+  }
 `
 
 export const InfoRow = styled.div`
@@ -38,8 +37,15 @@ export const InfoRow = styled.div`
     img {
       margin-left: -200px;
     }
-  `}
 
+    @media screen and (max-width: 768px) {
+      img {
+        margin-left: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  `}
   /* ${(props) => props.imgOffset && `
     img {
       position: absolute;

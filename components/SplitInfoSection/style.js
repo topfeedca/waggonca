@@ -19,6 +19,11 @@ export const SplitInfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    height: 1200px;
+    padding: 0;
+  }
 `
 
 export const SplitInfoRow = styled.div`
