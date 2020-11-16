@@ -62,7 +62,7 @@ export const FeaturesTableHeading = styled.div`
 `;
 
 export const FeaturesTableData = styled.div`
-  
+  font-size: 12px;
 `;
 
 export const FeaturesTableFooter = styled.div`
@@ -78,6 +78,7 @@ export const TableTitle = styled.div`
 export const TableData = styled.div`
   margin: 10px 0;
   height: 40px;
+  font-size: 12px;
 `;
 
 export const GreenDot = styled.div`
@@ -102,20 +103,26 @@ export const RedEx = styled.div`
 `;
 
 export const Unlimited = styled.span`
-  font-size: 12px;
+  font-size: 10px;
   color: #3cb371;
-  font-weight: 900;
 
   &:before {
     content: 'Unlimited';
   }
 `;
 
-export const Support = styled.span`
-  font-size: 11px;
+export const Support = styled.div`
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 10px;
   color: purple;
 `;
 
 export const SupportPlus = styled(Support)`
   color: darkblue;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    max-width: 50px;
+  }
 `;

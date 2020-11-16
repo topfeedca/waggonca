@@ -69,7 +69,7 @@ export default function FeaturesSection(props) {
                 <TableData><GreenDot /></TableData>
                 <TableData><GreenDot /></TableData>
                 <TableData><GreenDot /></TableData>
-                <TableData><GreenDot /></TableData>
+                <TableData>2.9% + 30&cent;</TableData>
                 <TableData><GreenDot /></TableData>
                 <TableData><RedEx /></TableData>
                 <TableData><RedEx /></TableData>
@@ -96,7 +96,7 @@ export default function FeaturesSection(props) {
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
-                  <TableData><GreenDot /></TableData>
+                  <TableData>2.9% + 30&cent;</TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
@@ -110,7 +110,7 @@ export default function FeaturesSection(props) {
                   </TableTitle>
                   <TableData><Unlimited /></TableData>
                   <TableData><Unlimited /></TableData>
-                  <TableData><SupportPlus>24/7 - Support</SupportPlus></TableData>
+                  <TableData><SupportPlus>24/7 Support</SupportPlus></TableData>
                   <TableData>10</TableData>
                   <TableData><Unlimited /></TableData>
                   <TableData><GreenDot /></TableData>
@@ -121,7 +121,7 @@ export default function FeaturesSection(props) {
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
-                  <TableData><GreenDot /></TableData>
+                  <TableData>2.9% + 30&cent;</TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
@@ -135,7 +135,7 @@ export default function FeaturesSection(props) {
                   </TableTitle>
                   <TableData><Unlimited /></TableData>
                   <TableData><Unlimited /></TableData>
-                  <TableData><SupportPlus>24/7 - Support</SupportPlus></TableData>
+                  <TableData><SupportPlus>24/7 Support</SupportPlus></TableData>
                   <TableData><Unlimited /></TableData>
                   <TableData><Unlimited /></TableData>
                   <TableData><GreenDot /></TableData>
@@ -146,7 +146,7 @@ export default function FeaturesSection(props) {
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
-                  <TableData><GreenDot /></TableData>
+                  <TableData>2.9% + 30&cent;</TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
