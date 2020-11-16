@@ -75,15 +75,12 @@ export default function Home({ file, preview }) {
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      {/* <HeroSection /> */}
       <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
       <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn />
       <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
       <InfoSection {...homeObjOne} data={sectiond} img={laptopImg} />
       <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} imgStart />
       <CTASection {...homeObjThree} data={sectionf} />
-      {/* <CTASection />
-      <CTASection /> */}
       <Footer />
     </>
   )

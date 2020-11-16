@@ -1,34 +1,20 @@
 {
   "herosection": {
-    "title": "Pricing Overview",
+    "title": "PRICING OVERVIEW",
     "description": ""
   },
-  "sectiona": {
-    "title": "Free",
-    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
-  },
-  "sectionb": {
-    "title": "Paid",
-    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you. Showcase and share your online store so you can make finding your products easy for new customers. Bottom line, let’s grow your business."
-  },
-  "sectionc": {
-    "title": "Business",
-    "description": "Showcase and share your online store so you can make finding your products easy for new customers."
-  },
-  "sectiond": {
-    "title": "Marketplace",
-    "description": "Offer an experience like nothing they have had before and keep them coming back for more."
-  },
-  "sectione": {
-    "title": "Increase efficiency and sales on your farm",
-    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
-  },
-  "sectionf": {
-    "title": "An essential software suite for small and medium scale farmers. We offer 24/7 support",
-    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
-  },
-  "sectiong": {
-    "title": "Grow & market your farm",
-    "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about."
+  "plansdata": {
+    "plana": {
+      "name": "Free"
+    },
+    "planb": {
+      "name": "Paid"
+    },
+    "planc": {
+      "name": "Business"
+    },
+    "pland": {
+      "name": "Marketplace"
+    }
   }
 }

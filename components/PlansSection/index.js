@@ -1,97 +1,149 @@
 import React from 'react'
 
-import { Button } from '../common/Button'
-
 import {
   PlansContainer,
   PlansWrapper,
-  TextWrapper,
-  Heading,
-  Subtitle,
-  BtnWrapper,
-  ImgWarpper,
-  Img,
   SectionRow,
-  SectionInfo,
+  PlanCard,
   SignUpButton,
-  SectionInfoFave,
-  SectionInfoTitle,
-  SectionInfoDetails,
+  PlanCardFave,
+  PlanCardTitle,
+  PlanCardDetails,
+  ViewFeaturesButton,
 } from './style'
 
 export default function PlansSection(props) {
+  const {
+    data,
+    freeOnly
+  } = props;
+
+  const {
+    plana,
+    planb,
+    planc,
+    pland,
+  } = data;
   return (
     <>
-      <PlansContainer lightBg={true} id="plans-section">
+      <PlansContainer id="plans-section">
         <PlansWrapper>
           <SectionRow>
-            <SectionInfo>
-              <SectionInfoTitle>{'Free'}</SectionInfoTitle>
+            <PlanCard>
+              <PlanCardTitle>{plana.name || 'Fre'}</PlanCardTitle>
 
               <img src="img/Ellipse_10.svg" alt="icon" />
 
-              <SectionInfoDetails>
+              <PlanCardDetails>
                 <span>{'$0'}</span>
                 <span>{'/month'}</span>
                 <span>{'Save 19%'}</span>
                 <span>{'(with one time $199 setup fee)'}</span>
-              </SectionInfoDetails>
+              </PlanCardDetails>
 
-              <SignUpButton>
+              <SignUpButton href={'/pricing'}>
                 Sign up
               </SignUpButton>
-            </SectionInfo>
-            <SectionInfo>
-              <SectionInfoTitle>{'Paid'}</SectionInfoTitle>
 
-              <img src="img/Ellipse_10.svg" alt="icon" />
+              <ViewFeaturesButton
+                to="features-section"
+                duration={500}
+                offset={-100}
+                exact="true"
+                smooth={true}
+                spy={true}
+              >
+                View Features
+              </ViewFeaturesButton>
+            </PlanCard>
+            {!freeOnly && (
+              <>
+                <PlanCard>
+                  <PlanCardTitle>{planb.name || 'Paid'}</PlanCardTitle>
 
-              <SectionInfoDetails>
-                <span>{'$0'}</span>
-                <span>{'/month'}</span>
-                <span>{'Save 19%'}</span>
-                <span>{'(with one time $299 setup fee)'}</span>
-              </SectionInfoDetails>
+                  <img src="img/Ellipse_10.svg" alt="icon" />
 
-              <SignUpButton>
-                Sign up
-              </SignUpButton>
-            </SectionInfo>
-            <SectionInfoFave>
-              <div className="banner">
-                most popular
-              </div>
-              <SectionInfoTitle>{'Business'}</SectionInfoTitle>
+                  <PlanCardDetails>
+                    <span>{'$0'}</span>
+                    <span>{'/month'}</span>
+                    <span>{'Save 19%'}</span>
+                    <span>{'(with one time $299 setup fee)'}</span>
+                  </PlanCardDetails>
 
-              <img src="img/Ellipse_10.svg" alt="icon" />
+                  <SignUpButton>
+                    Sign up
+                  </SignUpButton>
 
-              <SectionInfoDetails>
-                <span>{'$0'}</span>
-                <span>{'/month'}</span>
-                <span>{'Save 19%'}</span>
-                <span>{'(with one time $399 setup fee)'}</span>
-              </SectionInfoDetails>
+                  <ViewFeaturesButton
+                    to="features-section"
+                    duration={500}
+                    offset={-100}
+                    exact="true"
+                    smooth={true}
+                    spy={true}
+                  >
+                    View Features
+                  </ViewFeaturesButton>
+                </PlanCard>
+                <PlanCardFave>
+                  <div className="banner">
+                    most popular
+                  </div>
+                  <PlanCardTitle>{planc.name || 'Business'}</PlanCardTitle>
 
-              <SignUpButton>
-                Sign up
-              </SignUpButton>
-            </SectionInfoFave>
-            <SectionInfo>
-              <SectionInfoTitle>{'Marketplace'}</SectionInfoTitle>
+                  <img src="img/Ellipse_10.svg" alt="icon" />
 
-              <img src="img/Ellipse_10.svg" alt="icon" />
+                  <PlanCardDetails>
+                    <span>{'$0'}</span>
+                    <span>{'/month'}</span>
+                    <span>{'Save 19%'}</span>
+                    <span>{'(with one time $399 setup fee)'}</span>
+                  </PlanCardDetails>
 
-              <SectionInfoDetails>
-                <span>{'$0'}</span>
-                <span>{'/month'}</span>
-                <span>{'Save 19%'}</span>
-                <span>{'(with one time $499 setup fee)'}</span>
-              </SectionInfoDetails>
+                  <SignUpButton>
+                    Sign up
+                  </SignUpButton>
 
-              <SignUpButton>
-                Sign up
-              </SignUpButton>
-            </SectionInfo>
+                  <ViewFeaturesButton
+                    to="features-section"
+                    duration={500}
+                    offset={-100}
+                    exact="true"
+                    smooth={true}
+                    spy={true}
+                  >
+                    View Features
+                  </ViewFeaturesButton>
+                </PlanCardFave>
+                <PlanCard>
+                  <PlanCardTitle>{pland.name || 'Marketplace'}</PlanCardTitle>
+
+                  <img src="img/Ellipse_10.svg" alt="icon" />
+
+                  <PlanCardDetails>
+                    <span>{'$0'}</span>
+                    <span>{'/month'}</span>
+                    <span>{'Save 19%'}</span>
+                    <span>{'(with one time $499 setup fee)'}</span>
+                  </PlanCardDetails>
+
+                  <SignUpButton>
+                    Sign up
+                  </SignUpButton>
+
+                  <ViewFeaturesButton
+                    to="features-section"
+                    duration={500}
+                    offset={-100}
+                    exact="true"
+                    smooth={true}
+                    spy={true}
+                  >
+                    View Features
+                  </ViewFeaturesButton>
+                </PlanCard>
+              </>
+            )}
           </SectionRow>
         </PlansWrapper>
       </PlansContainer> 
