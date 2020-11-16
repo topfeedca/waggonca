@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Link as ReactScrollLink } from 'react-scroll'
+// import { Link as ReactScrollLink } from 'react-scroll'
 
-export const Button = styled(ReactScrollLink)`
+export const Button = styled.a`
   border-radius: 50px;
   background: ${({ primary }) => (primary ? '#3dace4' : '#010606')};
   white-space: nowrap;
@@ -15,6 +15,7 @@ export const Button = styled(ReactScrollLink)`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? '#3299c9' : '#3dace4')};
