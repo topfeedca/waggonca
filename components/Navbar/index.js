@@ -18,7 +18,7 @@ export default function Navbar({ toggle }) {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo href="/">
             <img src="/img/waggon-logo.png" alt="waggon" />
           </NavLogo>
           <MobileIcon onClick={toggle}>

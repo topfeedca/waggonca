@@ -17,7 +17,7 @@ export default function Sidebar ({ isOpen, toggle }) {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <SidebarHeader>
-        <SidebarLogo to="/">
+        <SidebarLogo href="/">
           <img src="/img/waggon-logo.png" alt="waggon" />
         </SidebarLogo>
         <Icon onClick={toggle}>
@@ -26,24 +26,24 @@ export default function Sidebar ({ isOpen, toggle }) {
       </SidebarHeader>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink href="/buyers">
             Buyers
           </SidebarLink>
-          <SidebarLink to="discover" onClick={toggle}>
+          <SidebarLink href="/vendors">
             Vendors
           </SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>
+          <SidebarLink href="/pricing">
             Pricing
           </SidebarLink>
-          <SidebarLink to="signup" onClick={toggle}>
+          <SidebarLink href="/support">
             Support
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrapper>
-          <SidebarLink to="signup" onClick={toggle}>
+          <SidebarLink href="https://app.waggon.ca/login">
             Log In
           </SidebarLink>
-          <SidebarRoute to="signin">Get Started</SidebarRoute>
+          <SidebarRoute href="https://app.waggon.ca/signup">Get Started</SidebarRoute>
         </SidebarBtnWrapper>
       </SidebarWrapper>
     </SidebarContainer>

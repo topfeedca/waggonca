@@ -44,7 +44,7 @@ export default function SplitInfoSection(props) {
             <Column1>
               <ColumnCard>
                 <ImgWarpper>
-                  <Img className="image-a" src={'img/customers.svg'} alt={'Customers'} />
+                  <Img className="image-a" src={'img/Customers.svg'} alt={'Customers'} />
                 </ImgWarpper>
                 <TextWrapper>
                   <Heading lightText={false}>{dataOne ? dataOne.title : 'title'}</Heading>
