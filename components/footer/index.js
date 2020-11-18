@@ -85,19 +85,19 @@ export default function Footer() {
               <img src="/img/waggon-logo.png" alt="waggon" />
             </SocialLogo>
             <SocialIcons>
-              <SocialIconsLink href="/" target="_blank" aria-label="Facebook">
+              <SocialIconsLink href="https://www.facebook.com/waggonco" target="_blank" aria-label="Facebook">
                 <FaFacebook />
               </SocialIconsLink>
-              <SocialIconsLink href="/" target="_blank" aria-label="Instagram">
+              <SocialIconsLink href="https://www.instagram.com/waggonco/" target="_blank" aria-label="Instagram">
                 <FaInstagram />
               </SocialIconsLink>
-              <SocialIconsLink href="/" target="_blank" aria-label="Youtube">
+              {/* <SocialIconsLink href="/" target="_blank" aria-label="Youtube">
                 <FaYoutube />
-              </SocialIconsLink>
-              <SocialIconsLink href="/" target="_blank" aria-label="Twitter">
+              </SocialIconsLink> */}
+              <SocialIconsLink href="https://twitter.com/waggonco" target="_blank" aria-label="Twitter">
                 <FaTwitter />
               </SocialIconsLink>
-              <SocialIconsLink href="/" target="_blank" aria-label="LinkedIn">
+              <SocialIconsLink href="https://www.linkedin.com/company/waggonco/" target="_blank" aria-label="LinkedIn">
                 <FaLinkedin />
               </SocialIconsLink>
             </SocialIcons>

@@ -13,6 +13,8 @@ import {
   NavBtnLink,
 } from './style'
 
+import { AppLinkAddress } from '../../constants'
+
 export default function Navbar({ toggle }) {
   return (
     <>
@@ -56,12 +58,12 @@ export default function Navbar({ toggle }) {
           </NavMenu>
           <NavBtn>
             <NavLink
-              href="https://app.waggon.ca/login"
+              href={`${AppLinkAddress}/login`}
             >
               Log In
             </NavLink>
             <NavBtnLink
-              href="https://app.waggon.ca/signup"
+              href={`${AppLinkAddress}/signup`}
             >
               Get Started
             </NavBtnLink>

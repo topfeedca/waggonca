@@ -5,13 +5,10 @@ import {
   useGithubToolbarPlugins,
 } from 'react-tinacms-github'
 import { usePlugin } from 'tinacms'
-// import styled from 'styled-components'
 
-// import { AppLinkAddress } from '../constants'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Sidebar from '../components/Sidebar'
-// import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
 import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'

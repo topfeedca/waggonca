@@ -1,1 +1,1 @@
-export const AppLinkAddress = 'https://waggon.ca';
+export const AppLinkAddress = 'https://app.waggon.ca/';
