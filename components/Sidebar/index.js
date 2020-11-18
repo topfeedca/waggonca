@@ -13,6 +13,8 @@ import {
   SidebarHeader,
 } from './style'
 
+import { AppLinkAddress } from '../../constants'
+
 export default function Sidebar ({ isOpen, toggle }) {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -40,10 +42,16 @@ export default function Sidebar ({ isOpen, toggle }) {
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrapper>
-          <SidebarLink href="https://app.waggon.ca/login">
+          <SidebarLink
+            href={`${AppLinkAddress}/login`}
+          >
             Log In
           </SidebarLink>
-          <SidebarRoute href="https://app.waggon.ca/signup">Get Started</SidebarRoute>
+          <SidebarRoute
+            href={`${AppLinkAddress}/signup`}
+          >
+              Get Started
+          </SidebarRoute>
         </SidebarBtnWrapper>
       </SidebarWrapper>
     </SidebarContainer>

@@ -39,7 +39,7 @@ export default function Navigation(props) {
           <MenuLink href={`${AppLinkAddress}/login`}>
             Log In
           </MenuLink>
-          <GetStartedButton href={AppLinkAddress}>
+          <GetStartedButton href={`${AppLinkAddress}/signup`}>
             Get Started
           </GetStartedButton>
         </NavigationRight>
