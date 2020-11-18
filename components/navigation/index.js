@@ -97,7 +97,7 @@ const NavigationRight = styled.div`
   margin-right: 0;
   align-items: center;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     display: none;
   }
 `
@@ -110,7 +110,7 @@ const MobileIconWrapper = styled.div`
   display: none;
   margin-left: auto;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     display: flex;
   }
 `

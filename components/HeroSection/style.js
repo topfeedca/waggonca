@@ -9,7 +9,7 @@ export const HeroContainer = styled.div`
   padding: 0 30px;
   height: 922px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 420px) {
     /* height: 450px;
     padding: 0;
     margin-top: 180px; */
@@ -39,7 +39,7 @@ export const HeroH1 = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 60px;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 420px) {
     font-size: 45px;
   }
 `

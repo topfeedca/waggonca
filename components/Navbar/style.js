@@ -3,121 +3,51 @@ import styled from 'styled-components'
 // import { Link as ReactScrollLink } from 'react-scroll'
 
 export const Nav = styled.nav`
-  background: #fff;
-  height: 80px;
-  margin-top: -80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
-  }
+  z-index: 1000;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 10px 10px -10px rgba(33, 35, 38, 0.1);
 `
 
 export const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
   width: 100%;
-  padding: 0 24px;
+  height: 80px;
+  margin: 0 auto;
   max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
 `
 
 export const NavLogo = styled.a`
-  color: #484848;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
+  margin-right: auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  font-weight: bold;
-  text-decoration: none;
-
-  img {
-    height: auto;
-    width: 56px;
-  }
 `
 
-export const MobileIcon = styled.div`
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #484848;
-  }
+export const LogoImg = styled.img`
+  height: 32px;
+  width: auto;
+  margin-right: 8px;
 `
 
-export const NavMenu = styled.ul`
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-  margin-right: -22px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
+export const LogoBrand = styled.span`
 
-export const NavItem = styled.li`
-  height: 80px;
-`
-
-// export const NavLink = styled(ReactScrollLink)`
-//   color: #484848;
-//   display: flex;
-//   align-items: center;
-//   text-decoration: none;
-//   padding: 0 1rem;
-//   height: 100%;
-//   cursor: pointer;
-//   &.active {
-//     border-bottom: 3px solid #3dace4;
-//   }
-// `
-
-export const NavLink = styled.a`
-  color: #484848;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  &.active {
-    border-bottom: 3px solid #3dace4;
-  }
-`
-
-export const NavBtn = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 300px;
-  justify-content: space-between;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `
 
 export const NavBtnLink = styled.a`
   border-radius: 50px;
   background: #3dace4;
   white-space: nowrap;
-  padding: 14px 44px;
+  padding: 10px 40px;
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
   outline: none;
   border: none;
   cursor: pointer;
@@ -128,4 +58,47 @@ export const NavBtnLink = styled.a`
     background: #3299c9;
     color: #fff;
   }
+`
+
+export const DesktopNavMenu = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`
+
+export const NavMenuLeft = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+`
+
+export const NavMenuRight = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+export const NavMenuLink = styled.a`
+  margin-right: 2rem;
+  font-size: 15px;
+  line-height: 1;
+`
+
+export const MobileNavMenu = styled.div`
+  display: none;
+  flex-direction: row;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+`
+
+export const MobileHamburger = styled.div`
+
 `
