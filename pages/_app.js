@@ -42,7 +42,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .edit-link-wrapper {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
   }
 
   .edit-link-btn {
@@ -127,7 +132,7 @@ export default class Site extends App {
               {!isProduction && (
                 <div className="edit-link-wrapper">
                   <div className="edit-link-btn">
-                  {/* <EditLink cms={this.cms} /> */}
+                  <EditLink cms={this.cms} />
                   </div>
                 </div>
               )}
