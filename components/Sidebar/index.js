@@ -42,11 +42,11 @@ export default function Sidebar ({ isOpen, toggle }) {
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrapper>
-          <SidebarLink
+          {/* <SidebarLink
             href={`${AppLinkAddress}/login`}
           >
             Log In
-          </SidebarLink>
+          </SidebarLink> */}
           <SidebarRoute
             href={`${AppLinkAddress}/signup`}
           >

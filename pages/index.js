@@ -20,7 +20,7 @@ import Head from 'next/head'
 
 export default function Home({ file, preview }) {
   const formOptions = {
-    label: 'Home Page',
+    label: `${seo.contentLabel} Page`,
     fields: [
       { label: 'Section A - Title', name: 'sectiona.title', component: 'text' },
       { label: 'Section A - Description', name: 'sectiona.description', component: 'textarea' },

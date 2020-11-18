@@ -61,7 +61,7 @@ export const ColumnCard = styled.div`
   background: white;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
-  @media screen and (max-width: 490px) {
+  @media screen and (max-width: 420px) {
     padding: 20px;
   }
 `
@@ -83,7 +83,7 @@ export const Heading = styled.h1`
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 420px) {
     font-size: 32px;
   }
 `

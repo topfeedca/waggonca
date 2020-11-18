@@ -23,6 +23,9 @@ import {
   SocialIcons,
   SocialIconsLink,
   FooterText,
+  LegalLinks,
+  LegalLinksItem,
+  LegalLink,
 } from './style'
 
 export default function Footer() {
@@ -37,7 +40,7 @@ export default function Footer() {
             A robust CSA and farm share management tool that
             offers a unique way to track and interact with your customers.
           </FooterText>
-          <WebsiteRights>&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
+          <WebsiteRights className="top" >&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
         </FooterLinkItems>
         <FooterLinksContainer>
             <FooterLinkItems noShow>
@@ -62,15 +65,6 @@ export default function Footer() {
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>
-                Legal
-              </FooterLinkTitle>
-              <FooterLink to="/">Terms</FooterLink>
-              <FooterLink to="/">Privacy</FooterLink>
-              <FooterLink to="/">Cookies</FooterLink>
-              <FooterLink to="/">Copyright</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>
                 Contact Us
               </FooterLinkTitle>
               <FooterLink to="/">24/7 chat support</FooterLink>
@@ -85,6 +79,14 @@ export default function Footer() {
               <img src="/img/waggon-logo.png" alt="waggon" />
             </SocialLogo>
             <SocialIcons>
+              <LegalLinks className="legal-links">
+                <LegalLink href="/terms">
+                  Terms
+                </LegalLink>
+                <LegalLink href="/privacy">
+                  Privacy
+                </LegalLink>
+              </LegalLinks>
               <SocialIconsLink href="https://www.facebook.com/waggonco" target="_blank" aria-label="Facebook">
                 <FaFacebook />
               </SocialIconsLink>
@@ -103,6 +105,7 @@ export default function Footer() {
             </SocialIcons>
           </SocialMediaWrapper>
         </SocialMedia>
+          <WebsiteRights className="bottom" >&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
       </FooterWrapper>
     </FooterContainer>
   )
