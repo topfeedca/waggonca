@@ -16,6 +16,11 @@ export const FooterContainer = styled.div`
     display: none;
   }
 
+  .large {
+    width: 100%;
+    /* max-width: 400px; */
+  }
+
   @media screen and (max-width: 768px) {
     .top {
       display: none;
@@ -23,6 +28,10 @@ export const FooterContainer = styled.div`
 
     .bottom {
       display: block;
+    }
+
+    .large {
+      max-width: 330px;
     }
   }
 `
@@ -78,7 +87,7 @@ export const FooterLinkItems = styled.div`
   @media screen and (max-width: 768px) {
     margin: 0;
     padding: 10px;
-    width: 100%;
+    /* width: 100%; */
 
     ${(props) => props.noShow && 'display: none;'}
   }
@@ -156,6 +165,7 @@ export const SocialLogo = styled.a`
   align-items: center;
   margin-bottom: 16px;
   font-weight: bold;
+  margin: 0;
 
   img {
     width: auto;
@@ -165,6 +175,7 @@ export const SocialLogo = styled.a`
   @media screen and (max-width: 768px) {
     img {
       margin-bottom: 30px;
+      margin: 0 auto;
     }
   }
 `
@@ -177,7 +188,7 @@ export const WebsiteRights = styled.small`
 
   @media screen and (max-width: 768px) {
     text-align: center;
-    margin-top: 0;
+    margin-top: 24px;
     margin-bottom: 24px;
   }
 `
@@ -187,7 +198,8 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
+  width: 100%;
+  /* max-width: 400px; */
   margin-bottom: 24px;
 
   @media screen and (max-width: 768px) {
@@ -196,6 +208,7 @@ export const SocialIcons = styled.div`
     padding-left: 40px;
     padding-right: 40px;
     width: 100%;
+    max-width: 400px;
   }
 `
 
@@ -230,6 +243,7 @@ export const LegalLinks = styled.div`
     right: 0;
     left: 0;
     width: 100%;
+    padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -285,9 +299,22 @@ export const LegalLink = styled.a`
   &:hover {
     color: #3dace4;
   }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0.5rem;
+  }
 `
 
 export const LegalSocialWrapper = styled.div`
   width: 100%;
   max-width: 1100px;
+`
+
+export const SocialLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 360px;
+  margin: 2rem;
 `

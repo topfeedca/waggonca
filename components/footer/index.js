@@ -26,15 +26,18 @@ import {
   LegalLinks,
   LegalLinksItem,
   LegalLink,
+  SocialLinks
 } from './style'
 
 export default function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <FooterLinkItems lg>
+        <FooterLinkItems lg className="large">
           <FooterLinkTitle>
-            waggon!
+            <SocialLogo to="/">
+              <img src="/img/waggon-logo.png" alt="waggon" />
+            </SocialLogo>
           </FooterLinkTitle>
           <FooterText>
             A robust CSA and farm share management tool that
@@ -45,7 +48,9 @@ export default function Footer() {
         <FooterLinksContainer>
             <FooterLinkItems noShow>
               <FooterLinkTitle>
-                waggon
+                <SocialLogo to="/">
+                  <img src="/img/waggon-logo.png" alt="waggon" />
+                </SocialLogo>
               </FooterLinkTitle>
               <FooterText>
                 A robust CSA and farm share management tool that
@@ -75,9 +80,6 @@ export default function Footer() {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrapper>
-            <SocialLogo to="/">
-              <img src="/img/waggon-logo.png" alt="waggon" />
-            </SocialLogo>
             <SocialIcons>
               <LegalLinks className="legal-links">
                 <LegalLink href="/terms">
@@ -87,21 +89,23 @@ export default function Footer() {
                   Privacy
                 </LegalLink>
               </LegalLinks>
-              <SocialIconsLink href="https://www.facebook.com/waggonco" target="_blank" aria-label="Facebook">
-                <FaFacebook />
-              </SocialIconsLink>
-              <SocialIconsLink href="https://www.instagram.com/waggonco/" target="_blank" aria-label="Instagram">
-                <FaInstagram />
-              </SocialIconsLink>
-              {/* <SocialIconsLink href="/" target="_blank" aria-label="Youtube">
-                <FaYoutube />
-              </SocialIconsLink> */}
-              <SocialIconsLink href="https://twitter.com/waggonco" target="_blank" aria-label="Twitter">
-                <FaTwitter />
-              </SocialIconsLink>
-              <SocialIconsLink href="https://www.linkedin.com/company/waggonco/" target="_blank" aria-label="LinkedIn">
-                <FaLinkedin />
-              </SocialIconsLink>
+              <SocialLinks>
+                <SocialIconsLink href="https://www.facebook.com/waggonco" target="_blank" aria-label="Facebook">
+                  <FaFacebook />
+                </SocialIconsLink>
+                <SocialIconsLink href="https://www.instagram.com/waggonco/" target="_blank" aria-label="Instagram">
+                  <FaInstagram />
+                </SocialIconsLink>
+                {/* <SocialIconsLink href="/" target="_blank" aria-label="Youtube">
+                  <FaYoutube />
+                </SocialIconsLink> */}
+                <SocialIconsLink href="https://twitter.com/waggonco" target="_blank" aria-label="Twitter">
+                  <FaTwitter />
+                </SocialIconsLink>
+                <SocialIconsLink href="https://www.linkedin.com/company/waggonco/" target="_blank" aria-label="LinkedIn">
+                  <FaLinkedin />
+                </SocialIconsLink>
+              </SocialLinks>
             </SocialIcons>
           </SocialMediaWrapper>
         </SocialMedia>
