@@ -85,9 +85,25 @@ export const NavMenuRight = styled.div`
 `
 
 export const NavMenuLink = styled.a`
-  margin-right: 2rem;
+  /* margin-right: 2rem;
   font-size: 15px;
-  line-height: 1;
+  line-height: 1; */
+
+  color: #999;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: #494949;
+  }
+  &.active {
+    color: #000;
+  }
 `
 
 export const MobileNavMenu = styled.div`

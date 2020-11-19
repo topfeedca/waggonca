@@ -4,10 +4,10 @@ export const homePage = {
   description: 'An online platform for local vendors to sell their products online. A simple set of tools designed to quickly get your products online and available.'
 }
 
-export const buyersPage = {
-  contentLabel: 'Buyers',
-  title: 'waggon | Buyers',
-  description: 'Buy great food online from your local farmers.'
+export const contactPage = {
+  contentLabel: 'Contact',
+  title: 'waggon | Contact',
+  description: 'Get a hold of a waggon professional today.'
 }
 
 export const vendorsPage = {

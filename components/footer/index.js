@@ -63,10 +63,10 @@ export default function Footer() {
               <FooterLinkTitle>
                 Navigation
               </FooterLinkTitle>
-              <FooterLink to="/buyers">Buyers</FooterLink>
               <FooterLink to="/vendors">Vendors</FooterLink>
               <FooterLink to="/pricing">Pricing</FooterLink>
               <FooterLink to="/support">Support</FooterLink>
+              <FooterLink to="/contact">Contact</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>

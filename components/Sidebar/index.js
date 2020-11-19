@@ -28,9 +28,6 @@ export default function Sidebar ({ isOpen, toggle }) {
       </SidebarHeader>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink href="/buyers">
-            Buyers
-          </SidebarLink>
           <SidebarLink href="/vendors">
             Vendors
           </SidebarLink>
@@ -39,6 +36,9 @@ export default function Sidebar ({ isOpen, toggle }) {
           </SidebarLink>
           <SidebarLink href="/support">
             Support
+          </SidebarLink>
+          <SidebarLink href="/contact">
+            Contact Us
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrapper>
