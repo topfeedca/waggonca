@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <FooterLinkItems lg>
+        <FooterLinkItems lg className="large">
           <FooterLinkTitle>
             waggon!
           </FooterLinkTitle>
@@ -37,7 +37,7 @@ export default function Footer() {
             A robust CSA and farm share management tool that
             offers a unique way to track and interact with your customers.
           </FooterText>
-          <WebsiteRights>&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
+          <WebsiteRights className="top">&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
         </FooterLinkItems>
         <FooterLinksContainer>
             <FooterLinkItems noShow>
@@ -48,7 +48,7 @@ export default function Footer() {
                 A robust CSA and farm share management tool that
                 offers a unique way to track and interact with your customers.
               </FooterText>
-              <WebsiteRights>&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
+              <WebsiteRights className="top">&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
             </FooterLinkItems>
           <FooterLinksWrapper>
             <FooterLinkItems>
@@ -102,6 +102,7 @@ export default function Footer() {
               </SocialIconsLink>
             </SocialIcons>
           </SocialMediaWrapper>
+          <WebsiteRights className="bottom">&copy; {new Date().getFullYear()} waggon all rights reserved.</WebsiteRights>
         </SocialMedia>
       </FooterWrapper>
     </FooterContainer>

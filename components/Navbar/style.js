@@ -94,6 +94,7 @@ export const NavLink = styled.a`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
   &.active {
     border-bottom: 3px solid #3dace4;
   }
