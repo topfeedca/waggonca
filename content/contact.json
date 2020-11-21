@@ -1,7 +1,7 @@
 {
   "sectiona": {
-    "title": "Contact",
-    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
+    "title": "Contact Us",
+    "description": "Looking to reach out to us at waggon? Feel free to contact us on the following channels."
   },
   "sectionb": {
     "title": "Build your business and get more sales",
@@ -25,6 +25,7 @@
   },
   "sectionf": {
     "title": "Grow & market your farm",
-    "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about."
+    "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about.",
+    "btnLabel": "Getter Done!"
   }
 }

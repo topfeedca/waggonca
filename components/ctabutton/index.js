@@ -48,6 +48,7 @@ const Button = styled.div`
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
 
   &:hover {
     background: '#3299c9';

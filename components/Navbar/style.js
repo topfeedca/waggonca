@@ -95,6 +95,7 @@ export const NavLink = styled.a`
   text-decoration: none;
   color: #555;
   font-size: 16px;
+  transition: 0.2s ease-in-out;
 
   &:hover {
     color: #111;
@@ -115,7 +116,7 @@ export const NavBtnLink = styled.a`
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;

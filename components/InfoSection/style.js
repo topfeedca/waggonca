@@ -11,6 +11,7 @@ export const InfoWrapper = styled.div`
   /* height: 860px; */
   width: 100%;
   max-width: 1100px;
+  min-height: 600px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
@@ -19,6 +20,7 @@ export const InfoWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     padding-top: 100px;
+    min-height: none;
   }
 `
 

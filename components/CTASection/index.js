@@ -49,7 +49,7 @@ export default function CTASection(props) {
                 primary={1}
                 dark={0}
               >
-                Get Started
+                {data && data.btnLabel ? data.btnLabel : 'Get Started'}
               </Button>
             </BtnWrapper>
           </TextWrapper>
