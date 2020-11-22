@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import {
+
+} from 'styled-system'
 // import { Link as ReactRouterLink } from 'react-router-dom'
 // import { Link as ReactScrollLink } from 'react-scroll'
 
@@ -86,8 +89,8 @@ export const NavMenuItem = styled.li`
 `
 
 export const NavMenuBtn = styled.li`
-  line-height: 60px;
-  padding: 0;
+  display: flex;
+  align-items: center;
 `
 
 
@@ -107,7 +110,7 @@ export const NavLink = styled.a`
 `
 
 export const NavBtnLink = styled.a`
-  border-radius: 50px;
+  /* border-radius: 50px;
   background: #3dace4;
   white-space: nowrap;
   padding: 10px 40px;
@@ -122,6 +125,31 @@ export const NavBtnLink = styled.a`
     transition: all 0.2s ease-in-out;
     background: #3299c9;
     color: #fff;
+  } */
+  border-radius: 8px;
+  background: #3dace4;
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? '22px  52px' : '14px 44px')};
+  padding: ${({ small }) => (small ? '10px  40px' : '14px 44px')};
+  color: #fff;
+  font-size: ${({ big }) => (big ? '20px' : '17px')};
+  font-size: ${({ small }) => (small ? '14px' : '17px')};
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: transparent;
+    border: 2px solid #3299c9;
+    border-radius: 45px;
+    color: #3299c9;
   }
 `
 

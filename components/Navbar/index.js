@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FiMenu } from 'react-icons/fi'
 
 import {
@@ -19,10 +19,10 @@ import {
 } from './style'
 
 import { AppLinkAddress } from '../../constants'
+import { Button } from '../common/Button';
 
 export default function Navbar(props) {
   const { toggle } = props;
-  let pathName;
 
   return (
     <>
@@ -55,11 +55,18 @@ export default function Navbar(props) {
             <DesktopNavMenuRight>
               <NavMenuItem href={`${AppLinkAddress}/login`}>Log in</NavMenuItem>
               <NavMenuBtn>
-                <NavBtnLink
+                <Button
+                  small
+                  variant="primary"
+                  href={`${AppLinkAddress}/login`}  
+                >
+                  Get Started
+                </Button>
+                {/* <NavBtnLink
                   href={`${AppLinkAddress}/signup`}
                 >
                   Get Started
-                </NavBtnLink>
+                </NavBtnLink> */}
               </NavMenuBtn>
             </DesktopNavMenuRight>
             <MobileHamburger onClick={toggle}>
