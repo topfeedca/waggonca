@@ -18,7 +18,7 @@ import { homePage as seo } from '../seo'
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
 
-export default function Home({ file, preview }) {
+export default function Home({ file }) {
   const formOptions = {
     label: `${seo.contentLabel} Page`,
     fields: [
@@ -75,8 +75,8 @@ export default function Home({ file, preview }) {
       <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
       <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn />
       <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
-      <InfoSection {...homeObjOne} data={sectiond} img={laptopImg} />
-      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} imgStart />
+      <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
+      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />
       <CTASection {...homeObjThree} data={sectionf} />
       <Footer />
     </>

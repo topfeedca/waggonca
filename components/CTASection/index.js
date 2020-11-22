@@ -1,4 +1,5 @@
 import React from 'react'
+import { AppLinkAddress } from '../../constants';
 
 import { Button } from '../common/Button'
 
@@ -40,14 +41,9 @@ export default function CTASection(props) {
             <Subtitle darkText={true}>{data && data.description ? data.description : description}</Subtitle>
             <BtnWrapper>
               <Button
-                to="home"
-                duration={500}
-                offset={-80}
-                exact="true"
-                smooth={true}
-                spy={true}
-                primary={1}
-                dark={0}
+                large
+                variant="primary"
+                href={`${AppLinkAddress}/signup`}
               >
                 {data && data.btnLabel ? data.btnLabel : 'Get Started'}
               </Button>

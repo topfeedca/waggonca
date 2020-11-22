@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const FooterContainer = styled.div`
   width: 100%;
   max-width: 1600px;
-  background-color: #efefef;
+  background-color: #f4f4f4;
   margin: 0 auto;
   /* background-image: url(/img/blob_green-01.svg); */
 
@@ -43,8 +43,8 @@ export const FooterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
-  background-color: #efefef;
+  max-width: 1200px;
+  background-color: #f4f4f4;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -140,14 +140,14 @@ export const FooterLinkBlank = ({ to, children }) => {
 
 export const SocialMedia = styled.div`
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
 `
 
 export const SocialMediaWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 
   @media screen and (max-width: 768px) {
@@ -307,7 +307,7 @@ export const LegalLink = styled.a`
 
 export const LegalSocialWrapper = styled.div`
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
 `
 
 export const SocialLinks = styled.div`

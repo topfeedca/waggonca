@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
@@ -6,6 +5,8 @@ import {
   TinacmsGithubProvider,
 } from 'react-tinacms-github'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+import theme from '../styles/theme'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -88,12 +89,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `
-
-const theme = {
-  colors: {
-    primary: '#3dace4',
-  },
-}
 
 export default class Site extends App {
   constructor(props) {
