@@ -47,8 +47,8 @@ export default function SplitInfoSection(props) {
                   <Img className="image-a" src={'img/Customers.svg'} alt={'Customers'} />
                 </ImgWarpper>
                 <TextWrapper>
-                  <Heading lightText={false}>{dataOne ? dataOne.title : 'title'}</Heading>
-                  <Subtitle darkText={true}>{dataOne ? dataOne.description : 'description'}</Subtitle>
+                  <Heading>{dataOne ? dataOne.title : 'title'}</Heading>
+                  <Subtitle>{dataOne ? dataOne.description : 'description'}</Subtitle>
                   <Link href={dataOne ? dataOne.link : '/#'}>Learn More</Link>
                 </TextWrapper>
               </ColumnCard>
@@ -59,8 +59,8 @@ export default function SplitInfoSection(props) {
                   <Img className="image-b" src={'img/Offerings.png'} alt={'Offerings'} />
                 </ImgWarpper>
                 <TextWrapper>
-                  <Heading lightText={false}>{dataTwo ? dataTwo.title : 'title'}</Heading>
-                  <Subtitle darkText={true}>{dataTwo ? dataTwo.description : 'description'}</Subtitle>
+                  <Heading>{dataTwo ? dataTwo.title : 'title'}</Heading>
+                  <Subtitle>{dataTwo ? dataTwo.description : 'description'}</Subtitle>
                   <Link href={dataOne ? dataTwo.link : '/#'}>Learn More</Link>
                 </TextWrapper>
               </ColumnCard>

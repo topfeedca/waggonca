@@ -16,7 +16,6 @@ const composed = () => {
 export const Section = styled.section`
   /* padding-top: 0;
   padding-bottom: 0; */
-  ${composed}
 
   img {
       display: block;
@@ -42,6 +41,8 @@ export const Section = styled.section`
     padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px;
   }
+
+  ${composed}
 `
 
 export const Container = styled.div`

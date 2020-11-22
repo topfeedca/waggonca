@@ -16,10 +16,23 @@ export default function InfoSection(props) {
     id,
     img,
     data,
+    accent,
   } = props;
+
+  function getBgColor() {
+    if (accent) {
+      return '#3DAEE4'
+    }
+
+    if (imgStart) {
+      return '#f4f4f4'
+    }
+
+    return '#fff'
+  }
   return (
     <>
-      <Section id={id} bg={imgStart ? '#f4f4f4' : '#fff'}>
+      <Section id={id} bg={getBgColor()}>
         <Container>
           <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} p={'2', '3', '4'}>
             {imgStart && (
@@ -28,14 +41,14 @@ export default function InfoSection(props) {
               </Col>
             )}
             <Col centerLine>
-              <Heading fontSize={['32px', '40px', '48px']}>
+              <Heading color={accent ? '#fff' : '#494949'} fontSize={['32px', '40px', '48px']}>
                 {data && data.title && data.title}
               </Heading>
-              <Subtitle>
+              <Subtitle color={accent ? '#fff' : '#494949'}>
                 {data && data.description && data.description}
               </Subtitle>
               <Button
-                variant="primary"
+                variant={accent ? 'none' : 'primary'}
                 href={`${AppLinkAddress}/signup`}
               >
                 Try it now
