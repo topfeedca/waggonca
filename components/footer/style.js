@@ -34,7 +34,6 @@ export const FooterContainer = styled.div`
       max-width: 330px;
     }
   }
-`
 
   @media screen and (max-width: 768px) {
     .top {
@@ -75,11 +74,7 @@ export const FooterLinksContainer = styled.div`
   justify-content: center;
   width: 100%;
 
-<<<<<<< HEAD
-  @media screen and (min-width: 420px) {
-=======
   @media screen and (max-width: 768px) {
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
     padding-top: 32px;
     /* display: none; */
     width: 100%;
@@ -91,11 +86,7 @@ export const FooterLinksContainer = styled.div`
 export const FooterLinksWrapper = styled.div`
   display: flex;
 
-<<<<<<< HEAD
-  @media screen and (max-width: 420px) {
-=======
   @media screen and (max-width: 768px) {
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
     flex-direction: row;
     padding: 0;
     margin: 0;
@@ -139,8 +130,6 @@ export const FooterLinkItems = styled.div`
     ${(props) => props.noShow && 'display: none;'}
   }
 
-<<<<<<< HEAD
-=======
   ${(props) => props.lg && `
     // width: 425px;
 
@@ -150,7 +139,6 @@ export const FooterLinkItems = styled.div`
       padding: 0 40px;
     }
   `}
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
 
   @media screen and (min-width: 768px) {
     ${(props) => props.lg && `
@@ -199,16 +187,7 @@ export const FooterLinkBlank = ({ to, children }) => {
 
 export const SocialMedia = styled.div`
   width: 100%;
-<<<<<<< HEAD
-  max-width: 1100px;
-  padding: 1rem 6rem 1rem 1rem;
-
-  @media screen and (max-width: 768px) {
-    padding: 0;
-  }
-=======
   max-width: 1200px;
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
 `
 
 export const SocialMediaWrapper = styled.div`
@@ -242,12 +221,8 @@ export const SocialLogo = styled.a`
 
   @media screen and (max-width: 768px) {
     img {
-<<<<<<< HEAD
-      margin: 1rem 0;
-=======
       margin-bottom: 30px;
       margin: 0 auto;
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
     }
   }
 `
@@ -260,12 +235,8 @@ export const WebsiteRights = styled.small`
 
   @media screen and (max-width: 768px) {
     text-align: center;
-<<<<<<< HEAD
-    margin: 22px 0;
-=======
     margin-top: 24px;
     margin-bottom: 24px;
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
   }
 `
 
@@ -274,12 +245,6 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-  width: 240px;
-  
-  @media screen and (max-width: 768px) {
-    margin-bottom: 24px;
-=======
   width: 100%;
   /* max-width: 400px; */
   margin-bottom: 24px;
@@ -291,7 +256,6 @@ export const SocialIcons = styled.div`
     padding-right: 40px;
     width: 100%;
     max-width: 400px;
->>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
   }
 `
 

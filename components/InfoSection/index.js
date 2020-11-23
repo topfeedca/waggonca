@@ -30,7 +30,7 @@ export default function InfoSection(props) {
                 </Col>
               )}
               <Col>
-                <ContentWrapper centered>
+                <ContentWrapper centerLine>
                   <Heading color={accent ? '#fff' : '#494949'} fontSize={['32px', '40px', '48px']}>
                     {data && data.title && data.title}
                   </Heading>
