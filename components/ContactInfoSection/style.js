@@ -121,14 +121,6 @@ export const SocialList = styled.ul`
 export const SocialListItem = styled.li``
 
 export const ContactUsLink = styled(ReactScrollLink)`
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 50px;
-  border: 2px solid #105050;
-  border-radius: 3px;
-  margin-top: 24px; */
   margin-top: 24px;
   background: #3dace4;
   border-radius: 50px;

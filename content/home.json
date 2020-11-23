@@ -1,7 +1,7 @@
 {
   "sectiona": {
-    "title": "Increase efficiency and sales on your farm",
-    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
+    "title": "Bring your local products to the online market.",
+    "description": "Use waggon to keep your customers, inventory, orders and payments in sync."
   },
   "sectionb": {
     "title": "Build your business and get more sales",
@@ -26,5 +26,9 @@
   "sectionf": {
     "title": "Grow & market your farm",
     "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about."
+  },
+  "sectiong": {
+    "title": "Enterprise level services, made for local vendors.",
+    "description": "Get access to powerful services and techniques used by Enterprise level businesses, and help keep you ahead of the compatition."
   }
 }

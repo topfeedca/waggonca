@@ -56,7 +56,8 @@ export default function Home({ file }) {
     sectionc2,
     sectiond,
     sectione,
-    sectionf
+    sectionf,
+    sectiong,
   } = data;
 
   const farmerImg = '/img/Farmer.svg'
@@ -73,8 +74,9 @@ export default function Home({ file }) {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
+      <CTASection {...homeObjThree} data={sectiong} btnLink />
       <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent imgHeight="40%" />
-      <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
+      {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
       <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
       <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />
       <CTASection {...homeObjThree} data={sectionf} />

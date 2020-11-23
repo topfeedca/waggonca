@@ -50,7 +50,7 @@ const theme = {
     success: {
       lighter: '#92D3F3',
       light: '#FFE194',
-      base: '#3ce075',
+      base: '#3cb371',
       dark: '#FFE194',
       darker: '#FFB800'
     },

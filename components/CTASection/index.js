@@ -6,54 +6,18 @@ import { Section, Container, Row, ContentWrapper, Col, getBgColor } from '../../
 import { Button } from '../common/Button'
 
 import {
-  InfoContainer,
-  InfoWrapper,
-  TextWrapper,
   Heading,
   Subtitle,
-  BtnWrapper,
-  ImgWarpper,
-  Img,
 } from './style'
 
 export default function CTASection(props) {
   const {
-    lightBg,
-    imgStart,
     id,
-    headline,
-    lightText,
-    description,
-    darkText,
-    dark,
-    dark2,
-    primary,
-    buttonLabel,
-    img,
-    alt,
     data,
-    offsetImg,
     accent,
   } = props;
   return (
     <>
-      {/* <InfoContainer lightBg={true} id={id}>
-        <InfoWrapper>
-          <ContentWrapper>
-            <Heading lightText={false}>{data && data.title ? data.title : headline}</Heading>
-            <Subtitle darkText={true}>{data && data.description ? data.description : description}</Subtitle>
-            <BtnWrapper>
-              <Button
-                large
-                variant="primary"
-                href={`${AppLinkAddress}/signup`}
-              >
-                {data && data.btnLabel ? data.btnLabel : 'Get Started'}
-              </Button>
-            </BtnWrapper>
-          </ContentWrapper>
-        </InfoWrapper>
-      </InfoContainer>  */}
       <Section id={id} bg={getBgColor()}>
         <Container>
           <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} px={'0', '6', '3'}>
@@ -66,8 +30,66 @@ export default function CTASection(props) {
                   {data && data.description && data.description}
                 </Subtitle>
                 <Button
+                  to="about"
+                  outlined
                   variant={accent ? 'none' : 'primary'}
-                  href={`${AppLinkAddress}/signup`}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  variant={accent ? 'none' : 'primary'}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  outlined
+                  variant={accent ? 'none' : 'danger'}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  outlined
+                  variant={accent ? 'none' : 'warning'}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  outlined
+                  variant={accent ? 'none' : 'info'}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  outlined
+                  variant={accent ? 'none' : 'success'}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  outlined
+                  disabled
+                  variant={accent ? 'none' : 'success'}
+                  // href={`${AppLinkAddress}/signup`}
+                >
+                  Try it now
+                </Button>
+                <Button
+                  to="about"
+                  btnLink
+                  variant={accent ? 'none' : 'primary'}
+                  // href={`${AppLinkAddress}/signup`}
                 >
                   Try it now
                 </Button>
