@@ -204,7 +204,7 @@ export const WebsiteRights = styled.small`
 
   @media screen and (max-width: 768px) {
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: 40px;
     /* margin-bottom: 24px; */
   }
 `

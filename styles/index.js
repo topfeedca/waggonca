@@ -17,7 +17,8 @@ export const ContentWrapper = styled.div`
   
   @media screen and (max-width: 768px) {
     /* height: calc(100vh - ${MobileNavbarHeight}px); */
-    min-height: 400px;
+    /* min-height: 400px; */
+    min-height: calc(100vh - ${MobileNavbarHeight}px);
     padding: 0 1rem;
 
     margin-top: 40px;
@@ -26,7 +27,8 @@ export const ContentWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     /* height: calc(100vh - ${DesktopNavbarHeight}px); */
-    min-height: 700px;
+    /* min-height: 700px; */
+    min-height: calc(100vh - ${DesktopNavbarHeight}px);
   }
 
   ${props => props.centered && `
