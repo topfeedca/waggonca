@@ -166,7 +166,7 @@ const StyledButtonLink = styled.a`
   color: #555;
   font-size: 17px;
   outline: none;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -184,9 +184,16 @@ const StyledButtonLink = styled.a`
     font-size: 20px;
   `}
 
+  &:hover,
+  &:active,
+  &:focus {
+    transition: all 0.2s ease-in-out;
+    text-decoration: underline;
+  }
+
   
   ${({variant}) => variant && variant == 'primary' && `
-    color: ${theme.colors.primary.base};
+    color: ${theme.colors.primary.light};
 
     &:hover {
       transition: all 0.2s ease-in-out;
@@ -256,9 +263,12 @@ const StyledButtonLink = styled.a`
     border-color: #ddd;
     background: transparent;
     cursor: not-allowed;
+    transition: all 0.2s ease-in-out;
+
 
     &:hover,
     &:active {
+      transition: all 0.2s ease-in-out;
       color: #ddd;
       border-color: #ddd;
       background: transparent;
