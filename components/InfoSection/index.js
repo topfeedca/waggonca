@@ -23,14 +23,14 @@ export default function InfoSection(props) {
     <>
       <Section id={id} bg={getBgColor(accent, imgStart)}>
         <Container>
-            <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} px={'0', '6', '3'}>
+            <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} px={['3', '6', '0']}>
               {imgStart && (
                 <Col display="flex" justifyContent="flex-start" pr={['0', '5']}>
                   <Img src={img} alt={img} />
                 </Col>
               )}
               <Col>
-                <ContentWrapper centered>
+                <ContentWrapper centerLine>
                   <Heading color={accent ? '#fff' : '#494949'} fontSize={['32px', '40px', '48px']}>
                     {data && data.title && data.title}
                   </Heading>

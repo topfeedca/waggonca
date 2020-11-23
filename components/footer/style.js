@@ -34,8 +34,27 @@ export const FooterContainer = styled.div`
       max-width: 330px;
     }
   }
-`
 
+  @media screen and (max-width: 768px) {
+    .top {
+      display: none;
+    }
+
+    .bottom {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .top {
+      display: block;
+    }
+
+    .bottom {
+      display: none;
+    }
+  }
+`
 
 export const FooterWrapper = styled.div`
   display: flex;
@@ -57,6 +76,10 @@ export const FooterLinksContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     padding-top: 32px;
+    /* display: none; */
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 `
 
@@ -82,6 +105,21 @@ export const FooterLinkItems = styled.div`
 
   ${(props) => props.noShow && `
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  `}
+
+  ${(props) => props.lg && `
+    // width: 425px;
+    padding: 4rem;
+    
+    @media screen and (max-width: 768px) {
+      // width: 100%;
+      display: block;
+      // padding: 0 4rem 1rem 4rem;
+    }
   `}
 
   @media screen and (max-width: 768px) {
@@ -106,6 +144,15 @@ export const FooterLinkItems = styled.div`
     ${(props) => props.lg && `
       display: none;
   `}
+  }
+
+  @media screen and (min-width: 420px) {
+    padding-top: 32px;
+    /* display: none; */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin: 0 1rem;
   }
 `
 
