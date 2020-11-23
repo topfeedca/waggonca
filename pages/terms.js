@@ -13,14 +13,14 @@ import InfoSection from '../components/InfoSection'
 import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'
 
-import { buyersPage as seo } from '../seo'
+import { termsPage as seo } from '../seo'
 
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
 
-export default function Buyers({ file, preview }) {
+export default function Terms({ file, preview }) {
   const formOptions = {
-    label: 'Buyers Page',
+    label: `${seo.contentLabel} Page`,
     fields: [
       { label: 'Section A - Title', name: 'sectiona.title', component: 'text' },
       { label: 'Section A - Description', name: 'sectiona.description', component: 'textarea' },
@@ -90,7 +90,7 @@ export const getStaticProps = async function ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: 'content/buyers.json',
+      fileRelativePath: 'content/terms.json',
       parse: parseJson,
     })
   }
@@ -100,8 +100,8 @@ export const getStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: 'content/buyers.json',
-        data: (await import('../content/buyers.json')).default,
+        fileRelativePath: 'content/terms.json',
+        data: (await import('../content/terms.json')).default,
       },
     },
   }

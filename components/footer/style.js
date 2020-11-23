@@ -2,23 +2,39 @@ import styled from 'styled-components'
 // import { Link as ReactRouterLink } from 'react-router-dom'
 
 export const FooterContainer = styled.div`
-  background-color: #efefef;
-  /* background-image: url(/img/blob_green-01.svg); */
   width: 100%;
+  max-width: 1600px;
+  background-color: #f4f4f4;
+  margin: 0 auto;
+  /* background-image: url(/img/blob_green-01.svg); */
 
-  /* .top {
-    background: pink;
-    display: none;
+  .top {
+    display: block;
   }
 
   .bottom {
-    background: orange;
-    display: block;
-  } */
-
-  .large  {
-    padding: 0 2rem 2rem 2rem;
+    display: none;
   }
+
+  .large {
+    width: 100%;
+    /* max-width: 400px; */
+  }
+
+  @media screen and (max-width: 768px) {
+    .top {
+      display: none;
+    }
+
+    .bottom {
+      display: block;
+    }
+
+    .large {
+      max-width: 330px;
+    }
+  }
+`
 
   @media screen and (max-width: 768px) {
     .top {
@@ -47,16 +63,23 @@ export const FooterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
+  background-color: #f4f4f4;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 `
 
 export const FooterLinksContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
 
+<<<<<<< HEAD
   @media screen and (min-width: 420px) {
+=======
+  @media screen and (max-width: 768px) {
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
     padding-top: 32px;
     /* display: none; */
     width: 100%;
@@ -68,7 +91,11 @@ export const FooterLinksContainer = styled.div`
 export const FooterLinksWrapper = styled.div`
   display: flex;
 
+<<<<<<< HEAD
   @media screen and (max-width: 420px) {
+=======
+  @media screen and (max-width: 768px) {
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
     flex-direction: row;
     padding: 0;
     margin: 0;
@@ -104,14 +131,26 @@ export const FooterLinkItems = styled.div`
     }
   `}
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 768px) {
     margin: 0;
     padding: 10px;
-    width: 100%;
+    /* width: 100%; */
 
     ${(props) => props.noShow && 'display: none;'}
   }
 
+<<<<<<< HEAD
+=======
+  ${(props) => props.lg && `
+    // width: 425px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      display: block;
+      padding: 0 40px;
+    }
+  `}
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
 
   @media screen and (min-width: 768px) {
     ${(props) => props.lg && `
@@ -141,6 +180,7 @@ export const FooterLink = styled.a`
   margin-bottom: 32px;
   font-size: 14px;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     color: #3299c9;
@@ -159,19 +199,23 @@ export const FooterLinkBlank = ({ to, children }) => {
 
 export const SocialMedia = styled.div`
   width: 100%;
+<<<<<<< HEAD
   max-width: 1100px;
   padding: 1rem 6rem 1rem 1rem;
 
   @media screen and (max-width: 768px) {
     padding: 0;
   }
+=======
+  max-width: 1200px;
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
 `
 
 export const SocialMediaWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 
   @media screen and (max-width: 768px) {
@@ -189,6 +233,7 @@ export const SocialLogo = styled.a`
   align-items: center;
   margin-bottom: 16px;
   font-weight: bold;
+  margin: 0;
 
   img {
     width: auto;
@@ -197,7 +242,12 @@ export const SocialLogo = styled.a`
 
   @media screen and (max-width: 768px) {
     img {
+<<<<<<< HEAD
       margin: 1rem 0;
+=======
+      margin-bottom: 30px;
+      margin: 0 auto;
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
     }
   }
 `
@@ -206,21 +256,42 @@ export const WebsiteRights = styled.small`
   color: #484848;
   margin-top: 48px;
   display: block;
+  margin-bottom: 24px;
 
   @media screen and (max-width: 768px) {
     text-align: center;
+<<<<<<< HEAD
     margin: 22px 0;
+=======
+    margin-top: 24px;
+    margin-bottom: 24px;
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
   }
 `
 
 export const SocialIcons = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   width: 240px;
   
   @media screen and (max-width: 768px) {
     margin-bottom: 24px;
+=======
+  width: 100%;
+  /* max-width: 400px; */
+  margin-bottom: 24px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    max-width: 400px;
+>>>>>>> 714daf6fef845e8dacefb710d80a5b57d064dba5
   }
 `
 
@@ -228,6 +299,8 @@ export const SocialIconsLink = styled.a`
   color: #484848;
   font-size: 24px;
   transition: 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     color: #3dace4;
@@ -236,8 +309,97 @@ export const SocialIconsLink = styled.a`
 
 export const FooterText = styled.p`
   font-size: 17px;
+  width: 100%;
+  max-width: 400px;
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+`
+
+export const LegalLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+`
+
+export const LegalLinksItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 80px;
+  box-sizing: border-box;
+  color: #484848;
+
+  ${(props) => props.noShow && `
+    width: 100%;
+  `}
+
+  @media screen and (max-width: 420px) {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+
+    ${(props) => props.noShow && 'display: none;'}
+  }
+
+  ${(props) => props.lg && `
+    // width: 425px;
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      display: block;
+      padding: 0 40px;
+    }
+  `}
+
+  @media screen and (min-width: 768px) {
+    ${(props) => props.lg && `
+      display: none;
+  `}
+  }
+`
+
+export const LegalLink = styled.a`
+  color: #484848;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 2rem;
+
+  &:hover {
+    color: #3dace4;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0.5rem;
+  }
+`
+
+export const LegalSocialWrapper = styled.div`
+  width: 100%;
+  max-width: 1200px;
+`
+
+export const SocialLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 360px;
+  margin: 2rem;
 `

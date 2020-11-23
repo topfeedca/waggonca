@@ -13,12 +13,12 @@ import InfoSection from '../components/InfoSection'
 import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'
 
-import { supportPage as seo } from '../seo'
+import { privacyPage as seo } from '../seo'
 
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
 
-export default function Support({ file, preview }) {
+export default function Privacy({ file, preview }) {
   const formOptions = {
     label: `${seo.contentLabel} Page`,
     fields: [
@@ -90,7 +90,7 @@ export const getStaticProps = async function ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: 'content/support.json',
+      fileRelativePath: 'content/privacy.json',
       parse: parseJson,
     })
   }
@@ -100,8 +100,8 @@ export const getStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: 'content/support.json',
-        data: (await import('../content/support.json')).default,
+        fileRelativePath: 'content/privacy.json',
+        data: (await import('../content/privacy.json')).default,
       },
     },
   }

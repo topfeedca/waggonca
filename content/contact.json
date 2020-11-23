@@ -1,0 +1,31 @@
+{
+  "sectiona": {
+    "title": "Contact Us",
+    "description": "Looking to reach out to us at waggon? Feel free to contact us on the following channels."
+  },
+  "sectionb": {
+    "title": "Build your business and get more sales",
+    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you. Showcase and share your online store so you can make finding your products easy for new customers. Bottom line, let’s grow your business."
+  },
+  "sectionc1": {
+    "title": "Target the right customers",
+    "description": "Showcase and share your online store so you can make finding your products easy for new customers."
+  },
+  "sectionc2": {
+    "title": "Offer the right experience",
+    "description": "Offer an experience like nothing they have had before and keep them coming back for more."
+  },
+  "sectiond": {
+    "title": "Increase efficiency and sales on your farm",
+    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
+  },
+  "sectione": {
+    "title": "An essential software suite for small and medium scale farmers. We offer 24/7 support",
+    "description": "Track every part of your operations while offering your clients an effective way to find and purchase from you."
+  },
+  "sectionf": {
+    "title": "Grow & market your farm",
+    "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about.",
+    "btnLabel": "Getter Done!"
+  }
+}

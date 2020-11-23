@@ -18,9 +18,9 @@ import { homePage as seo } from '../seo'
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
 
-export default function Home({ file, preview }) {
+export default function Home({ file }) {
   const formOptions = {
-    label: 'Home Page',
+    label: `${seo.contentLabel} Page`,
     fields: [
       { label: 'Section A - Title', name: 'sectiona.title', component: 'text' },
       { label: 'Section A - Description', name: 'sectiona.description', component: 'textarea' },
@@ -73,10 +73,10 @@ export default function Home({ file, preview }) {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
-      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn />
+      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent imgHeight="40%" />
       <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
-      <InfoSection {...homeObjOne} data={sectiond} img={laptopImg} />
-      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} imgStart />
+      <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
+      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />
       <CTASection {...homeObjThree} data={sectionf} />
       <Footer />
     </>

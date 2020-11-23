@@ -19,7 +19,7 @@ import Head from 'next/head'
 
 export default function Pricing({ file, preview }) {
   const formOptions = {
-    label: 'Pricing Page',
+    label: `${seo.contentLabel} Page`,
     fields: [
       { label: 'Hero Section - Title', name: 'herosection.title', component: 'text' },
       { label: 'Hero Section - Description', name: 'herosection.description', component: 'text' },

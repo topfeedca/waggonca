@@ -22,7 +22,7 @@ export const homeObjTwo = {
   headline: 'Unlimited Transactions with zero fees',
   description: 'Get access to our exclusive app that allows you to send unlimited transactions witout getting charged any fees.',
   buttonLabel: 'Learn More',
-  imgStart: false,
+  imgStart: true,
   img: 'images/save.svg',
   alt: 'Save',
   dark: false,

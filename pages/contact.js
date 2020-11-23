@@ -9,16 +9,16 @@ import { usePlugin } from 'tinacms'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Sidebar from '../components/Sidebar'
-import InfoSection from '../components/InfoSection'
-import SplitInfoSection from '../components/SplitInfoSection'
+import ContactInfoSection from '../components/ContactInfoSection'
 import CTASection from '../components/CTASection'
 
-import { supportPage as seo } from '../seo'
+import { contactPage as seo } from '../seo'
 
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
+import ContactForm from '../components/ContactForm'
 
-export default function Support({ file, preview }) {
+export default function Contact({ file, preview }) {
   const formOptions = {
     label: `${seo.contentLabel} Page`,
     fields: [
@@ -36,6 +36,7 @@ export default function Support({ file, preview }) {
       { label: 'Section E - Description', name: 'sectione.description', component: 'textarea' },
       { label: 'Section F - Title', name: 'sectionf.title', component: 'text' },
       { label: 'Section F - Description', name: 'sectionf.description', component: 'textarea' },
+      { label: 'Section F - Button Label', name: 'sectionf.btnLabel', component: 'text' }
     ],
   }
 
@@ -59,10 +60,7 @@ export default function Support({ file, preview }) {
     sectionf
   } = data;
 
-  const farmerImg = '/img/Farmer.svg'
-  const phoneImg = '/img/Phone.png'
-  const laptopImg = '/img/Laptop.svg'
-  const selectionsImg = '/img/Selections.svg'
+  const ContactImg = '/img/customers.svg'
 
   return (
     <>
@@ -72,11 +70,8 @@ export default function Support({ file, preview }) {
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} />
-      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn />
-      <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
-      <InfoSection {...homeObjOne} data={sectiond} img={laptopImg} />
-      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} imgStart />
+      <ContactInfoSection {...homeObjOne} data={sectiona} img={ContactImg} />
+      <ContactForm />
       <CTASection {...homeObjThree} data={sectionf} />
       <Footer />
     </>
@@ -90,7 +85,7 @@ export const getStaticProps = async function ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: 'content/support.json',
+      fileRelativePath: 'content/contact.json',
       parse: parseJson,
     })
   }
@@ -100,8 +95,8 @@ export const getStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: 'content/support.json',
-        data: (await import('../content/support.json')).default,
+        fileRelativePath: 'content/contact.json',
+        data: (await import('../content/contact.json')).default,
       },
     },
   }
