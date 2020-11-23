@@ -56,11 +56,11 @@ const composed = () => {
   )
 }
 
-export const FooterContainer = styled.footer`
-  ${composed}
-`
-
 export const Section = styled.section`
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
   img {
     max-width: 100%;
     display: block;
