@@ -13,6 +13,7 @@ export const NavbarContainer = styled.div`
   position: sticky;
   top: 0%;
   z-index: 1000;
+  background: #fff;
 `
 
 export const NavbarContent = styled.div`
