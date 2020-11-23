@@ -26,7 +26,7 @@ export const ContentWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     /* height: calc(100vh - ${DesktopNavbarHeight}px); */
-    min-height: 800px;
+    min-height: 700px;
   }
 
   ${props => props.centered && `
