@@ -1,18 +1,14 @@
 import styled from 'styled-components'
-import { typography } from 'styled-system'
+import { typography, color } from 'styled-system'
 
 export const Heading = styled.h1`
   margin-bottom: 12px;
-  /* font-size: 48px; */
   line-height: 1.1;
   font-weight: 600;
   max-width: 550px;
   color: #494949;
 
-  /* @media screen and (max-width: 420px) {
-    font-size: 32px;
-  } */
-
+  ${color}
   ${typography}
 `
 
@@ -22,8 +18,14 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: #494949;
+
+  ${color}
+  ${typography}
 `
 
 export const Img = styled.img`
-  
+  display: block;
+  max-width: 100%;
+  margin: 4rem auto;
 `
+

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import {
 
 } from 'styled-system'
+
+import { MobileNavbarHeight, DesktopNavbarHeight} from '../../styles'
+
 // import { Link as ReactRouterLink } from 'react-router-dom'
 // import { Link as ReactScrollLink } from 'react-scroll'
 
@@ -34,12 +37,12 @@ export const Nav = styled.nav`
   box-shadow: 0 10px 10px -10px rgba(33,35,38,0.1);
 
   @media screen and (max-width: 768px) {
-    height: 60px;
+    height: ${MobileNavbarHeight}px;
     padding: 0 1rem;
   }
 
   @media screen and (min-width: 768px) {
-    height: 80px;
+    height: ${DesktopNavbarHeight}px;
   }
 `
 
@@ -52,12 +55,12 @@ export const NavLogo = styled.a`
 `
 
 export const LogoImg = styled.img`
-  height: 38px;
+  height: 30px;
   width: auto;
 `
 
 export const LogoBrand = styled.span`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #494949;
   margin-left: 6px;

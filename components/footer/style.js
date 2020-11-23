@@ -226,6 +226,8 @@ export const SocialIconsLink = styled.a`
 
 export const FooterText = styled.p`
   font-size: 17px;
+  width: 100%;
+  max-width: 400px;
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;

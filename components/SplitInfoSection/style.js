@@ -62,7 +62,9 @@ export const ColumnCard = styled.div`
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
   @media screen and (max-width: 420px) {
-    padding: 20px;
+    padding: 10px;
+    box-shadow: none;
+    width: 100%;
   }
 `
 
@@ -81,7 +83,7 @@ export const Heading = styled.h1`
   font-size: 32px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
+  color: #494949;
 
   @media screen and (max-width: 420px) {
     font-size: 32px;
@@ -95,7 +97,7 @@ export const Subtitle = styled.p`
   min-height: 100px;
   font-size: 17px;
   line-height: 24px;
-  color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
+  color: #494949;
 `
 
 export const BtnWrapper = styled.div`
@@ -118,8 +120,8 @@ export const ImgWarpper = styled.div`
 `
 
 export const Img = styled.img`
-  display: flex;
-  margin: 0 auto 40px auto;
+  display: block;
+  max-width: 100%;
 `
 
 export const Link = styled.a`
