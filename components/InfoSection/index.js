@@ -25,8 +25,10 @@ export default function InfoSection(props) {
         <Container>
             <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} px={['3', '6', '0']}>
               {imgStart && (
-                <Col display="flex" justifyContent="flex-start" pr={['0', '5']}>
-                  <Img src={img} alt={img} />
+                <Col display="flex" justifyContent="flex-start" mr={['0', '0', '5']} mb={['0', '0', '5']} mt={['5', '0', '0']}>
+                  {/* <ContentWrapper centered> */}
+                    <Img src={img} alt={img} />
+                  {/* </ContentWrapper> */}
                 </Col>
               )}
               <Col>
@@ -46,8 +48,10 @@ export default function InfoSection(props) {
                 </ContentWrapper>
               </Col>
               {!imgStart && (
-                <Col display="flex" justifyContent="flex-end" p={['2', '3']}>
-                  <Img src={img} alt={img} />
+                <Col display="flex" justifyContent="flex-end" mb={['5', '0', '0']}>
+                  {/* <ContentWrapper centered> */}
+                    <Img src={img} alt={img} />
+                  {/* </ContentWrapper> */}
                 </Col>
               )}
           </Row>

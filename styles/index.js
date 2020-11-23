@@ -11,19 +11,22 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  height: calc(100vh - ${MobileNavbarHeight}px);
-  /* min-height: 400px; */
+  /* height: calc(100vh - ${MobileNavbarHeight}px); */
+  min-height: 400px;
   justify-content: center;
   
   @media screen and (max-width: 768px) {
-    height: calc(100vh - ${MobileNavbarHeight}px);
-    /* min-height: 400px; */
+    /* height: calc(100vh - ${MobileNavbarHeight}px); */
+    min-height: 400px;
     padding: 0 1rem;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   @media screen and (min-width: 768px) {
-    height: calc(100vh - ${DesktopNavbarHeight}px);
-    /* min-height: 800px; */
+    /* height: calc(100vh - ${DesktopNavbarHeight}px); */
+    min-height: 800px;
   }
 
   ${props => props.centered && `
@@ -37,6 +40,13 @@ export const ContentWrapper = styled.div`
     justify-content: center;
     text-align: center;
   `}
+
+/* @media screen and (max-width: 768px) {
+    img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  } */
 `;
 
 export function getBgColor(accent, imgStart) {

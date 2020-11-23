@@ -109,13 +109,17 @@ export const ImgWarpper = styled.div`
   .image-a {
     width: 100%;
     max-width: 340px;
+    margin: 0 auto;
     height: auto;
+    margin-bottom: 1rem;
   }
 
   .image-b {
     width: 100%;
     max-width: 230px;
     height: auto;
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
   }
 `
 
