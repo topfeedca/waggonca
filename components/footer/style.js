@@ -2,10 +2,7 @@ import styled from 'styled-components'
 // import { Link as ReactRouterLink } from 'react-router-dom'
 
 export const FooterContainer = styled.div`
-  background: #f4f4f4;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-
+  /* background: #f4f4f4; */
   width: 100%;
   /* max-width: 1600px;
   background-color: #f4f4f4;
@@ -75,6 +72,8 @@ export const FooterWrapper = styled.div`
   max-width: 1600px;
   background-color: #f4f4f4;
   margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 `
 
 export const FooterLinkItems = styled.div`
