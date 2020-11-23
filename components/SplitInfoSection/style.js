@@ -62,7 +62,9 @@ export const ColumnCard = styled.div`
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
   @media screen and (max-width: 420px) {
-    padding: 20px;
+    padding: 10px;
+    box-shadow: none;
+    width: 100%;
   }
 `
 
@@ -118,8 +120,8 @@ export const ImgWarpper = styled.div`
 `
 
 export const Img = styled.img`
-  display: flex;
-  margin: 0 auto 40px auto;
+  display: block;
+  max-width: 100%;
 `
 
 export const Link = styled.a`

@@ -73,7 +73,7 @@ export default function Home({ file }) {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
-      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent />
+      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent imgHeight="40%" />
       <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
       <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
       <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />

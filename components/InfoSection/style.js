@@ -24,5 +24,8 @@ export const Subtitle = styled.p`
 `
 
 export const Img = styled.img`
-  
+  display: block;
+  max-width: 100%;
+  margin: 4rem auto;
 `
+

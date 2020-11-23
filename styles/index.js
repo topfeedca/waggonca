@@ -1,7 +1,50 @@
 import styled from 'styled-components'
 import { compose, background, color, flexbox, layout, space } from 'styled-system'
 
-const SecitonSpacing = 150;
+export const SecitonSpacing = 150;
+
+export const DesktopNavbarHeight = 80;
+
+export const MobileNavbarHeight = 60;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: calc(100vh - ${MobileNavbarHeight}px);
+  /* min-height: 400px; */
+  justify-content: center;
+  
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - ${MobileNavbarHeight}px);
+    /* min-height: 400px; */
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: calc(100vh - ${DesktopNavbarHeight}px);
+    /* min-height: 800px; */
+  }
+
+  ${props => props.centered && `
+    position: relative;
+    width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  `}
+`;
+
+export function getBgColor(accent, imgStart) {
+  if (accent) return '#3DAEE4'
+  if (imgStart) return '#f4f4f4'
+
+  return '#fff'
+}
 
 const composed = () => {
   return compose(
@@ -9,37 +52,18 @@ const composed = () => {
     space,
     color,
     layout,
-    background
+    background,
   )
 }
 
+export const FooterContainer = styled.footer`
+  ${composed}
+`
+
 export const Section = styled.section`
-  /* padding-top: 0;
-  padding-bottom: 0; */
-
   img {
-      display: block;
-      /* max-width: 100%; */
-      width: 100%;
-      /* max-width: 280px; */
-      height: auto;
-    }
-
-  @media screen and (min-width: 52em) and (max-width: 64em) {
-    img {
-      max-width: 540px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    padding-top: ${SecitonSpacing / 2}px;
-    padding-top: ${SecitonSpacing / 2}px;
-    background: orange;
-  }
-
-  @media screen and (min-width: 64em) {
-    padding-top: ${SecitonSpacing}px;
-    padding-bottom: ${SecitonSpacing}px;
+    max-width: 100%;
+    display: block;
   }
 
   ${composed}

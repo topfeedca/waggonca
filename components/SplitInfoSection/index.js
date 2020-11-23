@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { ContentWrapper } from '../../styles'
+
 import { Button } from '../common/Button'
 
 import {
