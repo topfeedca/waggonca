@@ -21,7 +21,7 @@ const theme = {
   colors: {
     primary: {
       lighter: '#92D3F3',
-      light: '63BFEB',
+      light: '#63BFEB',
       base: '#3DAEE4',
       dark: '#189BDA',
       darker: '#0587C6'
