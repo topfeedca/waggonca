@@ -18,6 +18,14 @@ export const FeaturesWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 140px;
+
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
+
+  @media screen and (max-width: 870px) {
+    padding: 18px;
+  }
 `
 
 export const SectionRow = styled.div`
@@ -26,6 +34,10 @@ export const SectionRow = styled.div`
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
+
+  /* border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16); */
 
   @media screen and (max-width: 870px) {
     flex-direction: column;
@@ -42,9 +54,9 @@ export const FeaturesTable = styled.div`
   text-align: center;
   font-size: 13px;
 
-  border-radius: 3px;
-  border: 1px solid #707070;
+  /* border-radius: 3px;
   padding: 30px;
+  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16); */
 
   @media screen and (max-width: 870px) {
     border-radius: 0;
@@ -55,11 +67,16 @@ export const FeaturesTable = styled.div`
 
 export const FeaturesTableHeading = styled.div`
   text-align: left;
-  padding-left: 10px;
+  padding: 0;
 
-  div:first-child {
-    padding-left: 0px;
+  > div {
+    display: flex;
+    justify-content: flex-start;  
   }
+
+  /* div:first-child {
+    padding-left: 0px;
+  } */
 `;
 
 export const FeaturesTableData = styled.div`
@@ -77,29 +94,47 @@ export const TableTitle = styled.div`
 `;
 
 export const TableData = styled.div`
-  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
+  min-width: 30px;
   font-size: 12px;
+  padding: 4px;
+  border: 1px solid #999;
+
+  &:nth-child(odd) {
+    /* background: #f1f1f1; */
+  }
+
+  @media screen and (min-width: 870px) {
+    border: none;
+
+    &:nth-child(odd) {
+      background: transparent;
+    }
+  }
 `;
 
 export const GreenDot = styled.div`
   background: #3cb371;
   border-radius: 50%;
   margin: 10px auto;
-  height: 12px;
-  width: 12px;
+  height: 10px;
+  width: 10px;
 `;
 
-export const RedEx = styled.div`
-  color: red;
-  font-size: 14px;
+export const GrayDash = styled.div`
+  color: #999;
+  font-size: 24px;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: bold;
   text-align: center;
   margin: 10px auto;
 
   &:before {
-    content: 'X'
+    content: '-';
+    margin-left: -5px;
   }
 `;
 
@@ -127,3 +162,9 @@ export const SupportPlus = styled(Support)`
     max-width: 50px;
   }
 `;
+
+export const FeaturesTableTitle = styled.h2`
+  color: #494949;
+  text-align: center;
+  margin-bottom: 3rem;
+`

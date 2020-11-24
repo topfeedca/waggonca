@@ -30,15 +30,16 @@ export default function PlansSection(props) {
         <PlansWrapper>
           <SectionRow>
             <PlanCard>
-              <PlanCardTitle>{plana.name || 'Fre'}</PlanCardTitle>
+              <PlanCardTitle>{plana.name || 'Free'}</PlanCardTitle>
 
               <img src="img/Ellipse_10.svg" alt="icon" />
 
               <PlanCardDetails>
-                <span>{'$0'}</span>
+                <span>{plana.price || '$0'}</span>
                 <span>{'/month'}</span>
                 <span>{'Save 19%'}</span>
-                <span>{'(with one time $199 setup fee)'}</span>
+                <span>{'50 Orders, 10 Products, 2 Locations'}</span>
+                {/* <span>{'(with one time $199 setup fee)'}</span> */}
               </PlanCardDetails>
 
               <SignUpButton href={'/pricing'}>
@@ -64,10 +65,11 @@ export default function PlansSection(props) {
                   <img src="img/Ellipse_10.svg" alt="icon" />
 
                   <PlanCardDetails>
-                    <span>{'$0'}</span>
+                    <span>{planb.price || '$42'}</span>
                     <span>{'/month'}</span>
                     <span>{'Save 19%'}</span>
-                    <span>{'(with one time $299 setup fee)'}</span>
+                    <span>{'200 Orders, Unlimited Products, 5 Locations, 3 Staff Accounts'}</span>
+                    {/* <span>{'(with one time $299 setup fee)'}</span> */}
                   </PlanCardDetails>
 
                   <SignUpButton>
@@ -94,10 +96,11 @@ export default function PlansSection(props) {
                   <img src="img/Ellipse_10.svg" alt="icon" />
 
                   <PlanCardDetails>
-                    <span>{'$0'}</span>
+                    <span>{planc.price || '$68'}</span>
                     <span>{'/month'}</span>
                     <span>{'Save 19%'}</span>
-                    <span>{'(with one time $399 setup fee)'}</span>
+                    <span>{'Unlimited Orders, Unlimited Products, Unlimited Locations, 10 Staff Accounts'}</span>
+                    {/* <span>{'(with one time $399 setup fee)'}</span> */}
                   </PlanCardDetails>
 
                   <SignUpButton>
@@ -116,15 +119,16 @@ export default function PlansSection(props) {
                   </ViewFeaturesButton>
                 </PlanCardFave>
                 <PlanCard>
-                  <PlanCardTitle>{pland.name || 'Marketplace'}</PlanCardTitle>
+                  <PlanCardTitle>{pland.name || 'Enterprise'}</PlanCardTitle>
 
                   <img src="img/Ellipse_10.svg" alt="icon" />
 
                   <PlanCardDetails>
-                    <span>{'$0'}</span>
+                    <span>{plana.pricd || '$109'}</span>
                     <span>{'/month'}</span>
                     <span>{'Save 19%'}</span>
-                    <span>{'(with one time $499 setup fee)'}</span>
+                    <span>{'Unlimited Orders, Unlimited Products, Unlimited Locations, Unlimited Staff Accounts'}</span>
+                    {/* <span>{'(with one time $499 setup fee)'}</span> */}
                   </PlanCardDetails>
 
                   <SignUpButton>

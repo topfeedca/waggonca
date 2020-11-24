@@ -74,6 +74,10 @@ export const DesktopNavMenuLeft = styled.ul`
   margin-right: auto;
   list-style: none;
 
+  li:first-child {
+    padding-left: 4rem;
+  }
+
   @media screen and (max-width: 870px) {
     display: none;
   }

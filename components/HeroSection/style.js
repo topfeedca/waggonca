@@ -78,16 +78,16 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
 
 export const BackgroundImage = styled.img`
   position: absolute;
-  top: -130px;
+  top: -200px;
   left: 0;
   right: 0;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1550px;
   z-index: -1000;
   margin: 0 auto;
 
   @media screen and (max-width: 870px) {
-    height: 77%;
-    top: -30px;
+    height: 80%;
+    top: -80px;
   }
 `

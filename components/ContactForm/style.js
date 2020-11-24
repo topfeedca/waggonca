@@ -27,16 +27,18 @@ export const Form = styled.form`
   flex-direction: column;
   margin: 0 auto;
   background: #fff;
+  padding: 50px;
+
   box-shadow: 0 15px 50px 0 rgba(41,44,60,0.16);
 
   @media screen and (max-width: 870px) {
     max-width: none;
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
   }
 
   @media screen and (min-width: 870px) {
     max-width: 650px;
-    padding: 4rem;
+    /* padding: 4rem; */
   }
 `
 
