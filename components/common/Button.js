@@ -39,7 +39,7 @@ const StyledButton = styled.a`
   display: block;
   border-radius: 8px;
   white-space: nowrap;
-  width: 160px;
+  /* width: 160px; */
   padding: 14px 44px;
   color: #fff;
   font-size: 17px;
@@ -60,13 +60,13 @@ const StyledButton = styled.a`
   ${({small}) => small && `
     padding: 10px 40px;
     font-size: 14px;
-    width: 120px;
+    // width: 120px;
   `}
 
   ${({large}) => large && `
     padding: 18px 48px;
     font-size: 20px;
-    width: 200px;
+    // width: 200px;
   `}
   
   ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.base};`}
@@ -107,7 +107,7 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
     display: block;
   border-radius: 8px;
   white-space: nowrap;
-  width: 160px;
+  /* width: 160px; */
   padding: 14px 44px;
   color: #fff;
   font-size: 17px;
@@ -128,13 +128,13 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
   ${({small}) => small && `
     padding: 10px 40px;
     font-size: 14px;
-    width: 120px;
+    // width: 120px;
   `}
 
   ${({large}) => large && `
     padding: 18px 48px;
     font-size: 20px;
-    width: 200px;
+    // width: 200px;
   `}
   
   ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.base};`}
@@ -297,7 +297,7 @@ const StyledButtonOutline = styled.a`
   display: block;
   border-radius: 8px;
   white-space: nowrap;
-  width: 160px;
+  /* width: 160px; */
   padding: 14px 44px;
   /* color: #fff; */
   color: #555;
@@ -319,13 +319,13 @@ const StyledButtonOutline = styled.a`
   ${({small}) => small && `
     padding: 10px 40px;
     font-size: 14px;
-    width: 120px;
+    // width: 120px;
   `}
 
   ${({large}) => large && `
     padding: 18px 48px;
     font-size: 20px;
-    width: 200px;
+    // width: 200px;
   `}
   
   ${({variant}) => variant && variant == 'primary' && `

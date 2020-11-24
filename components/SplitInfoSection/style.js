@@ -4,7 +4,7 @@ export const SplitInfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? '#fff' : '#010606')};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     padding: 100px 0;
   }
 `
@@ -21,7 +21,7 @@ export const SplitInfoWrapper = styled.div`
   padding: 0 24px;
   justify-content: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     /* height: 1200px; */
     padding: 0;
   }
@@ -33,7 +33,7 @@ export const SplitInfoRow = styled.div`
   align-items: center;
   grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
   }
 `
