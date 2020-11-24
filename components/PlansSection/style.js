@@ -35,11 +35,14 @@ export const SectionRow = styled.div`
 `;
 
 export const PlanCard = styled.div`
-  background: white;
+  background: #fff;
   padding: 16px 26px;
   border-radius: 3px;
-  border: 1px solid #707070;
-  min-width: 230px;
+  /* border: 1px solid #707070; */
+  min-width: 280px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
   img {
     height: 80px;
@@ -50,6 +53,10 @@ export const PlanCard = styled.div`
   @media screen and (max-width: 870px) {
     margin: 10px;
     margin-bottom: 60px;
+    margin-right: 0;
+    margin-left: 0;
+    border: none;
+    padding-bottom: 30px;
   }
 `
 
@@ -145,7 +152,7 @@ export const PlanCardDetails = styled.div`
     display: block;
     margin-top: 28px;
     margin-bottom: 28px;
-    font-size: 12px;
+    font-size: 13px;
     color: #404040;
   }
 `

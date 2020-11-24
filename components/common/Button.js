@@ -58,7 +58,7 @@ const StyledButton = styled.a`
   background: #555;
   
   ${({small}) => small && `
-    padding: 10px 40px;
+    padding: 10px 16px;
     font-size: 14px;
     // width: 120px;
   `}
@@ -126,7 +126,7 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
   background: #555;
   
   ${({small}) => small && `
-    padding: 10px 40px;
+    padding: 10px 16px;
     font-size: 14px;
     // width: 120px;
   `}
@@ -317,7 +317,7 @@ const StyledButtonOutline = styled.a`
   background: transparent;
   
   ${({small}) => small && `
-    padding: 10px 40px;
+    padding: 10px 16px;
     font-size: 14px;
     // width: 120px;
   `}

@@ -5,16 +5,20 @@
   },
   "plansdata": {
     "plana": {
-      "name": "Free"
+      "name": "Free",
+      "price": "$0"
     },
     "planb": {
-      "name": "Paid"
+      "name": "Paid",
+      "price": "$42"
     },
     "planc": {
-      "name": "Business"
+      "name": "Business",
+      "price": "$68"
     },
     "pland": {
-      "name": "Marketplace"
+      "name": "Enterprise",
+      "price": "$109"
     }
   }
 }

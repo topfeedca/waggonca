@@ -12,9 +12,10 @@ import {
   TableData,
   Support,
   SupportPlus,
-  RedEx,
+  GrayDash,
   GreenDot,
   Unlimited,
+  FeaturesTableTitle,
 } from './style'
 
 export default function FeaturesSection(props) {
@@ -25,6 +26,9 @@ export default function FeaturesSection(props) {
     <>
       <FeaturesContainer lightBg={true} id="features-section">
         <FeaturesWrapper>
+          <FeaturesTableTitle>
+            Our Features
+          </FeaturesTableTitle>
           <SectionRow>
             <FeaturesTable>
               <FeaturesTableHeading>
@@ -59,7 +63,7 @@ export default function FeaturesSection(props) {
                 <TableData>50</TableData>
                 <TableData>10</TableData>
                 <TableData><Support>Chat + Email</Support></TableData>
-                <TableData><RedEx /></TableData>
+                <TableData><GrayDash /></TableData>
                 <TableData>2</TableData>
                 <TableData><GreenDot /></TableData>
                 <TableData><GreenDot /></TableData>
@@ -71,11 +75,11 @@ export default function FeaturesSection(props) {
                 <TableData><GreenDot /></TableData>
                 <TableData>2.9% + 30&cent;</TableData>
                 <TableData><GreenDot /></TableData>
-                <TableData><RedEx /></TableData>
-                <TableData><RedEx /></TableData>
-                <TableData><RedEx /></TableData>
-                <TableData><RedEx /></TableData>
-                <TableData><RedEx /></TableData>
+                <TableData><GrayDash /></TableData>
+                <TableData><GrayDash /></TableData>
+                <TableData><GrayDash /></TableData>
+                <TableData><GrayDash /></TableData>
+                <TableData><GrayDash /></TableData>
               </FeaturesTableData>
               {!freeOnly && (
                 <>
@@ -102,7 +106,7 @@ export default function FeaturesSection(props) {
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
-                  <TableData><RedEx /></TableData>
+                  <TableData><GrayDash /></TableData>
                 </FeaturesTableData>
                 <FeaturesTableData>
                   <TableTitle>
@@ -127,7 +131,7 @@ export default function FeaturesSection(props) {
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
                   <TableData><GreenDot /></TableData>
-                  <TableData><RedEx /></TableData>
+                  <TableData><GrayDash /></TableData>
                 </FeaturesTableData>
                 <FeaturesTableData>
                   <TableTitle>
