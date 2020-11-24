@@ -1,4 +1,16 @@
 import React from 'react'
+import { FaInfoCircle } from 'react-icons/fa'
+// import { css } from "styled-components"
+// import ReactTooltip from 'react-tooltip';
+
+// import {
+//   Tooltip,
+// } from 'react-tippy';
+
+// import Tooltip from "react-simple-tooltip"
+
+import SimpleTooltip from '../common/SimpleTooltip'
+import { Div } from '../../styles'
 
 import {
   PlansContainer,
@@ -10,6 +22,7 @@ import {
   PlanCardTitle,
   PlanCardDetails,
   ViewFeaturesButton,
+  Bolden,
 } from './style'
 
 export default function PlansSection(props) {
@@ -24,6 +37,7 @@ export default function PlansSection(props) {
     planc,
     pland,
   } = data;
+
   return (
     <>
       <PlansContainer id="plans-section">
@@ -37,9 +51,49 @@ export default function PlansSection(props) {
               <PlanCardDetails>
                 <span>{plana.price || '$0'}</span>
                 <span>{'/month'}</span>
-                <span>{'Save 19%'}</span>
-                <span>{'50 Orders, 10 Products, 2 Locations'}</span>
-                {/* <span>{'(with one time $199 setup fee)'}</span> */}
+                
+                  {/* <div style={{ }}>
+                    <SimpleTooltip
+                      content="Your store can process up to 50 orders a month."
+                    >
+                      Hover ME!
+                    </SimpleTooltip>
+                  </div> */}
+                
+                <ul>
+                  <li>
+                    50 Orders
+                    <SimpleTooltip
+                      content="Your store can process up to 50 orders a month."
+                    >
+                      <FaInfoCircle color="#adadad" />
+                    </SimpleTooltip>
+                  </li>
+                  <li>
+                    10 Products
+                    <SimpleTooltip
+                      content="😎"
+                    >
+                      <FaInfoCircle color="#adadad" />
+                    </SimpleTooltip>
+                  </li>
+                  <li>
+                    2 Locations
+                    <SimpleTooltip
+                      content="😎"
+                    >
+                      <FaInfoCircle color="#adadad" />
+                    </SimpleTooltip>
+                  </li>
+                  <li>
+                    Standard Support
+                    <SimpleTooltip
+                      content="😎"
+                    >
+                      <FaInfoCircle color="#adadad" />
+                    </SimpleTooltip>
+                  </li>
+                </ul>
               </PlanCardDetails>
 
               <SignUpButton href={'/pricing'}>
@@ -67,10 +121,43 @@ export default function PlansSection(props) {
                   <PlanCardDetails>
                     <span>{planb.price || '$42'}</span>
                     <span>{'/month'}</span>
-                    <span>{'Save 19%'}</span>
-                    <span>{'200 Orders, Unlimited Products, 5 Locations, 3 Staff Accounts'}</span>
-                    {/* <span>{'(with one time $299 setup fee)'}</span> */}
+                    <ul>
+                      <li>
+                        50 Orders
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Unlimited Products</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        5 Locations
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        3 Staff Accounts
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                    </ul>
                   </PlanCardDetails>
+                  
+                  <Div dislpay="flex" />
 
                   <SignUpButton>
                     Sign up
@@ -98,9 +185,40 @@ export default function PlansSection(props) {
                   <PlanCardDetails>
                     <span>{planc.price || '$68'}</span>
                     <span>{'/month'}</span>
-                    <span>{'Save 19%'}</span>
-                    <span>{'Unlimited Orders, Unlimited Products, Unlimited Locations, 10 Staff Accounts'}</span>
-                    {/* <span>{'(with one time $399 setup fee)'}</span> */}
+                    <ul>
+                      <li>
+                        <Bolden>Unlimited Orders</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Unlimited Products</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Unlimited Locations</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        10 Staff Accounts
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                    </ul>
                   </PlanCardDetails>
 
                   <SignUpButton>
@@ -126,9 +244,48 @@ export default function PlansSection(props) {
                   <PlanCardDetails>
                     <span>{plana.pricd || '$109'}</span>
                     <span>{'/month'}</span>
-                    <span>{'Save 19%'}</span>
-                    <span>{'Unlimited Orders, Unlimited Products, Unlimited Locations, Unlimited Staff Accounts'}</span>
-                    {/* <span>{'(with one time $499 setup fee)'}</span> */}
+                    <ul>
+                      <li>
+                        <Bolden>Unlimited Orders</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Unlimited Products</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Unlimited Locations</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Unlimited Staff Accounts</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                      <li>
+                        <Bolden>Multi-Store Support</Bolden>
+                        <SimpleTooltip
+                          content="😎"
+                        >
+                          <FaInfoCircle color="#adadad" />
+                        </SimpleTooltip>
+                      </li>
+                    </ul>
                   </PlanCardDetails>
 
                   <SignUpButton>

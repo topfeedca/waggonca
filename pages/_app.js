@@ -5,6 +5,7 @@ import {
   TinacmsGithubProvider,
 } from 'react-tinacms-github'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import 'react-tippy/dist/tippy.css'
 
 import theme from '../styles/theme'
 

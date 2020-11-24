@@ -1,13 +1,20 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('./Roboto-Regular.ttf');
-  src: url('Roboto-Regular.ttf') format('woff'),
-    url('Roboto-Regular.ttf') format('truetype');
+  src: url('./Roboto/Roboto-Regular.ttf');
+  src: url('./Roboto/Roboto-Regular.ttf') format('woff'),
+    url('./Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'RobotoBold';
-  src: url('./Roboto-Bold.ttf');
-  src: url('Roboto-Bold.ttf') format('woff'),
-    url('Roboto-Bold.ttf') format('truetype');
+  src: url('./Roboto/Roboto-Bold.ttf');
+  src: url('./Roboto/Roboto-Bold.ttf') format('woff'),
+    url('./Roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./OpenSans/OpenSans-Regular.ttf');
+  src: url('./OpenSans/OpenSans-Regular.ttf') format('woff'),
+    url('./OpenSans/OpenSans-Regular.ttf') format('truetype');
 }

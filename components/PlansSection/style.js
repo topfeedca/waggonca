@@ -40,6 +40,7 @@ export const PlanCard = styled.div`
   border-radius: 3px;
   /* border: 1px solid #707070; */
   min-width: 280px;
+  /* min-height: 500px; */
   margin-right: 1rem;
   margin-left: 1rem;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
@@ -57,6 +58,7 @@ export const PlanCard = styled.div`
     margin-left: 0;
     border: none;
     padding-bottom: 30px;
+    /* min-height: 570px; */
   }
 `
 
@@ -84,13 +86,13 @@ export const PlanCardFave = styled(PlanCard)`
 `;
 
 export const SignUpButton = styled.a`
-  display: inline-block;
+  display: inline-flex;
   background: #3dace4;
   border-radius: 3px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   border: none;
   cursor: pointer;
-  padding: 14px 24px;
+  padding: 10px 24px;
   color: white;
   text-decoration: none;
 
@@ -109,7 +111,8 @@ export const ViewFeaturesButton = styled(ReactScrollLink)`
   cursor: pointer;
   font-size: 14px;
   text-decoration: none;
-  margin-top: 12px;
+  margin-top: 16px;
+  margin-bottom: 8px;
 
   &:hover {
     color: #43a6d8;
@@ -128,10 +131,12 @@ export const PlanCardTitle = styled.h1`
 
 export const PlanCardDetails = styled.div`
   color: #494949;
+  display: flex;
+  flex-direction: column;
 
   span:nth-child(1) {
     font-weight: 900;
-    font-size: 19px;
+    font-size: 38px;
   }
 
   span:nth-child(2) {
@@ -139,7 +144,27 @@ export const PlanCardDetails = styled.div`
     font-size: 11px;
   }
 
-  span:nth-child(3) {
+  ul {
+    margin: 50px auto 15px auto;
+    width: 180px;
+    min-height: 240px;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #494949;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    font-family: 'OpenSans';
+    /* background: pink; */
+  }
+
+  /* span:nth-child(3) {
     display: block;
     margin-top: 18px;
     font-size: 14px;
@@ -154,5 +179,17 @@ export const PlanCardDetails = styled.div`
     margin-bottom: 28px;
     font-size: 13px;
     color: #404040;
+  } */
+
+  @media screen and (max-width: 870px) {
+    span:nth-child(1) {
+      /* font-size: 28px; */
+    }
   }
+`
+
+export const Bolden = styled.div`
+  display: inline-block;
+  font-weight: bolder;
+  font-weight: 900;
 `
