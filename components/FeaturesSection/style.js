@@ -4,7 +4,7 @@ export const FeaturesContainer = styled.div`
   color: #484848;
   background: ${({ lightBg }) => (lightBg ? '#ffffff' : '#010606')};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     padding: 0;
   }
 `
@@ -27,7 +27,7 @@ export const SectionRow = styled.div`
   justify-content: space-around;
   text-align: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     flex-direction: column;
   }
 `;
@@ -46,7 +46,7 @@ export const FeaturesTable = styled.div`
   border: 1px solid #707070;
   padding: 30px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     border-radius: 0;
     border: none;
     padding: 0;
@@ -123,7 +123,7 @@ export const SupportPlus = styled(Support)`
   color: darkblue;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     max-width: 50px;
   }
 `;

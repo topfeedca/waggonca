@@ -37,7 +37,7 @@ export const HeroH1 = styled.h1`
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     font-size: 60px;
   }
   @media screen and (max-width: 420px) {
@@ -51,7 +51,7 @@ export const HeroP = styled.p`
   font-size: 24px;
   text-align: center;
   max-width: 600px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     font-size: 24px;
   }
   @media screen and (max-width: 480px) {
@@ -86,7 +86,7 @@ export const BackgroundImage = styled.img`
   z-index: -1000;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     height: 77%;
     top: -30px;
   }

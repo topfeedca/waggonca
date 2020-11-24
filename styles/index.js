@@ -15,7 +15,7 @@ export const ContentWrapper = styled.div`
   min-height: 400px;
   justify-content: center;
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     /* height: calc(100vh - ${MobileNavbarHeight}px); */
     /* min-height: 400px; */
     min-height: calc(100vh - ${MobileNavbarHeight}px);
@@ -25,7 +25,7 @@ export const ContentWrapper = styled.div`
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 870px) {
     /* height: calc(100vh - ${DesktopNavbarHeight}px); */
     /* min-height: 700px; */
     min-height: calc(100vh - ${DesktopNavbarHeight}px);
@@ -43,7 +43,7 @@ export const ContentWrapper = styled.div`
     text-align: center;
   `}
 
-/* @media screen and (max-width: 768px) {
+/* @media screen and (max-width: 870px) {
     img {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -76,7 +76,27 @@ export const Section = styled.section`
   img {
     max-width: 100%;
     display: block;
+    margin: 0 auto;
   }
+
+  @media screen and (min-width: 870px) {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* @media screen and (max-width: 870px) {
+    img {
+      max-width: 670px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 870px) {
+    img {
+      max-width: 600px;
+    }
+  } */
 
   ${composed}
 `
@@ -95,7 +115,7 @@ export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     flex-direction: column;
   }
 

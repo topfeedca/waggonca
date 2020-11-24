@@ -52,7 +52,11 @@ export default function Navbar(props) {
               </NavMenuItem>
             </MobileNavMenu>
             <DesktopNavMenuRight>
-              <NavMenuItem href={`${AppLinkAddress}/login`}>Log in</NavMenuItem>
+              <NavMenuItem>
+                <NavLink href={`${AppLinkAddress}/login`}>
+                  Log in
+                </NavLink>
+              </NavMenuItem>
               <NavMenuBtn>
                 <Button
                   small

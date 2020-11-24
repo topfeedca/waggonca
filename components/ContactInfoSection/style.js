@@ -11,7 +11,7 @@ export const ContactInfoWrapper = styled.div`
   margin: 0 auto;
   padding: 120px 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     padding: 60px 0;
   }
 `
@@ -19,11 +19,11 @@ export const ContactInfoWrapper = styled.div`
 export const ContactInfoRow = styled.div`
   display: flex;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     flex-direction: column;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 870px) {
     flex-direction: row;
   }
 `
@@ -32,7 +32,7 @@ export const TextWrapper = styled.div`
   width: 100%;
   max-width: 540px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     padding: 1.5rem;
   }
 `
@@ -69,7 +69,7 @@ export const ImgWarpper = styled.div`
   align-items: center;
   padding: 3rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 870px) {
     padding: 1.5rem;
     margin-top: 60px;
   }

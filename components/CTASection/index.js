@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppLinkAddress } from '../../constants';
 
-import { Section, Container, Row, ContentWrapper, Col, getBgColor } from '../../styles'
+import { Section, Container, Row, ContentWrapper, Col, Div, getBgColor } from '../../styles'
 
 import { Button } from '../common/Button'
 
@@ -29,14 +29,15 @@ export default function CTASection(props) {
                 <Subtitle color={accent ? '#fff' : '#494949'}>
                   {data && data.description && data.description}
                 </Subtitle>
-                <Button
-                  variant="primary"
-                  rounded
-                  // variant={accent ? 'none' : 'primary'}
-                  href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
+                <Div maxWidth="200px">
+                  <Button
+                    rounded
+                    variant={accent ? 'none' : 'primary'}
+                    href={`${AppLinkAddress}/signup`}
+                  >
+                    Try it now
+                  </Button>
+                </Div>
               </ContentWrapper>
             </Col>
           </Row>
