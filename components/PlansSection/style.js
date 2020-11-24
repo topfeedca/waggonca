@@ -127,6 +127,7 @@ export const PlanCardTitle = styled.h1`
   font-size: 22px;
   font-family: RobotoBold;
   color: #484848;
+  font-weight: 400;
 `
 
 export const PlanCardDetails = styled.div`
@@ -189,7 +190,8 @@ export const PlanCardDetails = styled.div`
 `
 
 export const Bolden = styled.div`
-  display: inline-block;
-  font-weight: bolder;
+  /* display: inline-block;
+  font-weight: bold;
   font-weight: 900;
+  color: #494949; */
 `
