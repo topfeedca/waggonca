@@ -14,14 +14,15 @@ export const SplitInfoWrapper = styled.div`
   z-index: 1;
   height: 860px;
   width: 100%;
-  max-width: 1100px;
+  /* max-width: 1200px; */
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    height: 1200px;
+    /* height: 1200px; */
     padding: 0;
   }
 `

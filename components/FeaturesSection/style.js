@@ -11,7 +11,8 @@ export const FeaturesContainer = styled.div`
 
 export const FeaturesWrapper = styled.div`
   width: 100%;
-  max-width: 1100px;
+  /* max-width: 1200px; */
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

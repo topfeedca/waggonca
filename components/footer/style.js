@@ -4,10 +4,6 @@ import styled from 'styled-components'
 export const FooterContainer = styled.div`
   /* background: #f4f4f4; */
   width: 100%;
-  /* max-width: 1600px;
-  background-color: #f4f4f4;
-  margin: 0 auto; */
-  /* background-image: url(/img/blob_green-01.svg); */
 
   .top {
     display: block;
@@ -58,16 +54,7 @@ export const FooterContainer = styled.div`
 `
 
 export const FooterWrapper = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  background-color: #f4f4f4;
-  margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 20px; */
+
   width: 100%;
   max-width: 1600px;
   background-color: #f4f4f4;
@@ -79,66 +66,6 @@ export const FooterWrapper = styled.div`
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 16px;
-  text-align: left;
-  width: 160px;
-  box-sizing: border-box;
-  color: #484848;
-
-  ${(props) => props.noShow && `
-    width: 100%;
-
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  `}
-
-  ${(props) => props.lg && `
-    // width: 425px;
-    padding: 4rem;
-    
-    @media screen and (max-width: 768px) {
-      // width: 100%;
-      display: block;
-      // padding: 0 4rem 1rem 4rem;
-    }
-  `}
-
-  @media screen and (max-width: 768px) {
-    margin: 0;
-    padding: 10px;
-    // width: 100%;
-
-    ${(props) => props.noShow && 'display: none;'}
-  }
-
-  ${(props) => props.lg && `
-    // width: 425px;
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      display: block;
-      padding: 0 40px;
-    }
-  `}
-
-  @media screen and (min-width: 768px) {
-    ${(props) => props.lg && `
-      display: none;
-  `}
-  }
-
-  @media screen and (min-width: 420px) {
-    padding-top: 32px;
-    // display: none;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    margin: 0 1rem;
-  } */
 `
 
 export const FooterLinkTitle = styled.h1`

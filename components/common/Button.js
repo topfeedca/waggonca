@@ -7,7 +7,7 @@ export const Button = (props) => {
   if (props.btnLink) {
     return (
       <StyledButtonLink {...props}>
-
+        {props.children}
       </StyledButtonLink>
     )
   }
@@ -15,7 +15,7 @@ export const Button = (props) => {
   if (props.outlined) {
     return (
       <StyledButtonOutline {...props}>
-
+        {props.children}
       </StyledButtonOutline>
     )
   }
@@ -44,7 +44,10 @@ const StyledButton = styled.a`
   color: #fff;
   font-size: 17px;
   outline: none;
-  border: 2px solid transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  /* border: 2px solid transparent; */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -65,7 +68,6 @@ const StyledButton = styled.a`
     font-size: 20px;
     width: 200px;
   `}
-
   
   ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.base};`}
   ${({variant}) => variant && variant == 'danger' && `background: ${theme.colors.danger.base};`}
@@ -96,9 +98,13 @@ const StyledButton = styled.a`
       background: ${theme.colors.primary.lighter};
     }
   `}
+
+  ${({rounded}) => rounded && `
+    border-radius: 30px !important;
+  `}
 `
 const StyledReactScrollLink = styled(ReactScrollLink)`
-  display: block;
+    display: block;
   border-radius: 8px;
   white-space: nowrap;
   width: 160px;
@@ -106,7 +112,10 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
   color: #fff;
   font-size: 17px;
   outline: none;
-  border: 2px solid transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  /* border: 2px solid transparent; */
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -127,7 +136,6 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
     font-size: 20px;
     width: 200px;
   `}
-
   
   ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.base};`}
   ${({variant}) => variant && variant == 'danger' && `background: ${theme.colors.danger.base};`}
@@ -157,6 +165,11 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
     &:active {
       background: ${theme.colors.primary.lighter};
     }
+  `}
+
+  ${({rounded}) => rounded && `
+    border-radius: 30px !important;
+    background: red;
   `}
 `
 
@@ -184,53 +197,46 @@ const StyledButtonLink = styled.a`
     font-size: 20px;
   `}
 
-  &:hover,
-  &:active,
-  &:focus {
-    transition: all 0.2s ease-in-out;
-    text-decoration: underline;
-  }
-
   
   ${({variant}) => variant && variant == 'primary' && `
     color: ${theme.colors.primary.light};
-
+    
     &:hover {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.primary.dark};
     }
-
+    
     &:active {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.primary.darker}
     }
-  `}
+    `}
   ${({variant}) => variant && variant == 'danger' && `
     color: ${theme.colors.danger.base};
-
+    
     &:hover {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.danger.dark};
     }
-
+    
     &:active {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.danger.darker}
     }
-  `}
+    `}
   ${({variant}) => variant && variant == 'warning' && `
     color: ${theme.colors.warning.base};
-
+    
     &:hover {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.warning.dark};
     }
-
+    
     &:active {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.warning.darker}
     }
-  `}
+    `}
   ${({variant}) => variant && variant == 'info' && `
     color: ${theme.colors.info.base};
     
@@ -238,25 +244,25 @@ const StyledButtonLink = styled.a`
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.info.dark};
     }
-
+    
     &:active {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.info.darker}
     }
-  `}
+    `}
   ${({variant}) => variant && variant == 'success' && `
     color: ${theme.colors.success.base};
-
+    
     &:hover {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.success.base};
     }
-
+    
     &:active {
       transition: all 0.2s ease-in-out;
       color: ${theme.colors.success.darker}
     }
-  `}
+    `}
 
   ${({disabled}) => disabled && `
     color: #ddd;
@@ -264,8 +270,8 @@ const StyledButtonLink = styled.a`
     background: transparent;
     cursor: not-allowed;
     transition: all 0.2s ease-in-out;
-
-
+    
+    
     &:hover,
     &:active {
       transition: all 0.2s ease-in-out;
@@ -273,6 +279,17 @@ const StyledButtonLink = styled.a`
       border-color: #ddd;
       background: transparent;
     }
+    `}
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: all 0.2s ease-in-out;
+    text-decoration: underline;
+  }
+
+  ${({rounded}) => rounded && `
+    border-radius: 30px !important;
   `}
 `
 
@@ -286,7 +303,9 @@ const StyledButtonOutline = styled.a`
   color: #555;
   font-size: 17px;
   outline: none;
-  border: 2px solid transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -308,7 +327,6 @@ const StyledButtonOutline = styled.a`
     font-size: 20px;
     width: 200px;
   `}
-
   
   ${({variant}) => variant && variant == 'primary' && `
     border: 3px solid ${theme.colors.primary.base};
@@ -403,5 +421,9 @@ const StyledButtonOutline = styled.a`
       border-color: #ddd;
       background: transparent;
     }
+  `}
+
+  ${({rounded}) => rounded && `
+    border-radius: 30px !important;
   `}
 `

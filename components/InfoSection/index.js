@@ -40,6 +40,7 @@ export default function InfoSection(props) {
                     {data && data.description && data.description}
                   </Subtitle>
                   <Button
+                    rounded
                     variant={accent ? 'none' : 'primary'}
                     href={`${AppLinkAddress}/signup`}
                   >
