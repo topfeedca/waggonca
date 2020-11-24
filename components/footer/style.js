@@ -171,7 +171,7 @@ export const FooterText = styled.p`
 export const LegalSocialWrapper = styled.div`
   width: 100%;
   /* max-width: 1200px; */
-  max-width: 1000px;
+  max-width: 900px;
 `
 
 export const SocialLinks = styled.div`

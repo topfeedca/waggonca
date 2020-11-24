@@ -25,19 +25,24 @@ export default function InfoSection(props) {
         <Container>
             <Row display="flex">
               {imgStart && (
-                <Col display="flex" justifyContent="flex-start">
+                <Col display={["none", 'none', 'flex']} justifyContent="flex-start">
                   <Img src={img} alt={img} style={{ padding: '2rem' }} />
                 </Col>
               )}
               <Col>
                 <ContentWrapper centerLine>
+                  {/* <Col display={["flex", 'none', 'none']} justifyContent="flex-start"> */}
+                    <Div display={['block', 'block', 'none']} mt={imgStart ? '5' : '5'}>
+                      <Img src={img} alt={img} />
+                    </Div>
+                  {/* </Col> */}
                   <Heading color={accent ? '#fff' : '#494949'} fontSize={['28px', '32px', '38px']}>
                     {data && data.title && data.title}
                   </Heading>
                   <Subtitle color={accent ? '#fff' : '#494949'}>
                     {data && data.description && data.description}
                   </Subtitle>
-                  <Div maxWidth="200px">
+                  <Div maxWidth="200px" mb="5">
                     <Button
                       rounded
                       variant={accent ? 'none' : 'primary'}
@@ -49,10 +54,8 @@ export default function InfoSection(props) {
                 </ContentWrapper>
               </Col>
               {!imgStart && (
-                <Col display="flex" justifyContent="flex-end">
-                  {/* <ContentWrapper centered> */}
-                    <Img src={img} alt={img} style={{ padding: '2rem' }} />
-                  {/* </ContentWrapper> */}
+                <Col display={['none', 'none', 'flex']} justifyContent="flex-end">
+                  <Img src={img} alt={img} style={{ padding: '2rem' }} />
                 </Col>
               )}
           </Row>

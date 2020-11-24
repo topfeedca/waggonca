@@ -15,7 +15,7 @@ export const SplitInfoWrapper = styled.div`
   height: 860px;
   width: 100%;
   /* max-width: 1200px; */
-  max-width: 1000px;
+  max-width: 900px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;

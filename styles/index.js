@@ -21,8 +21,8 @@ export const ContentWrapper = styled.div`
     min-height: calc(100vh - ${MobileNavbarHeight}px);
     padding: 0 1rem;
 
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 870px) {
@@ -74,14 +74,25 @@ export const Section = styled.section`
   margin: 0 auto;
 
   img {
+    /* max-width: 300px; */
     max-width: 100%;
+    height: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* max-height: 100%; */
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   @media screen and (min-width: 870px) {
+    /* img {
+      max-width: 300px;
+      max-height: 200px;
+    } */
     img {
       max-width: 100%;
+      display: block;
+      /* margin: 0 auto; */
     }
   }
 
@@ -106,7 +117,7 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  ${props => props.fluid ? 'width: 100%;' : 'max-width: 1000px;'}
+  ${props => props.fluid ? 'width: 100%;' : 'max-width: 900px;'}
 
   ${composed}
 `

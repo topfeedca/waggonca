@@ -13,6 +13,7 @@ export const NavbarContainer = styled.div`
   position: sticky;
   top: 0%;
   z-index: 1000;
+  width: 100%;
   background: #fff;
 `
 
@@ -32,7 +33,7 @@ export const Nav = styled.nav`
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0 5rem;
+  padding: 0 4rem;
   border-bottom: none;
   box-sizing: border-box;
   box-shadow: 0 10px 10px -10px rgba(33,35,38,0.1);
