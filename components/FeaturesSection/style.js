@@ -98,10 +98,12 @@ export const TableData = styled.div`
   align-items: center;
   justify-content: center;
   height: 40px;
-  min-width: 30px;
+  /* min-width: 40px; */
   font-size: 12px;
+  line-height: 10px;
+  min-width: 100%;
   padding: 4px;
-  border: 1px solid #999;
+  border: 1px solid #ddd;
 
   &:nth-child(odd) {
     /* background: #f1f1f1; */
@@ -126,15 +128,13 @@ export const GreenDot = styled.div`
 
 export const GrayDash = styled.div`
   color: #999;
-  font-size: 24px;
+  font-size: 32px;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-weight: bold;
   text-align: center;
   margin: 10px auto;
 
   &:before {
     content: '-';
-    margin-left: -5px;
   }
 `;
 
