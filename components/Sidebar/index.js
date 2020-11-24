@@ -1,8 +1,8 @@
 import React from 'react'
 
+import { FiX } from 'react-icons/fi'
+
 import {
-  CloseIcon,
-  Icon,
   SidebarContainer,
   SidebarWrapper,
   SidebarMenu,
@@ -11,6 +11,9 @@ import {
   SidebarRoute,
   SidebarLogo,
   SidebarHeader,
+  SidebarBrand,
+  SidebarImg,
+  MobileHamburger
 } from './style'
 
 import { AppLinkAddress } from '../../constants'
@@ -20,11 +23,14 @@ export default function Sidebar ({ isOpen, toggle }) {
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <SidebarHeader>
         <SidebarLogo href="/">
-          <img src="/img/waggon-logo.png" alt="waggon" />
+          <SidebarImg src="/img/waggon-logo.png" alt="waggon" />
+          <SidebarBrand>
+            waggon
+          </SidebarBrand>
         </SidebarLogo>
-        <Icon onClick={toggle}>
-          <CloseIcon />
-        </Icon>
+        <MobileHamburger onClick={toggle}>
+          <FiX />
+        </MobileHamburger>
       </SidebarHeader>
       <SidebarWrapper>
         <SidebarMenu>
@@ -38,7 +44,7 @@ export default function Sidebar ({ isOpen, toggle }) {
             Support
           </SidebarLink>
           <SidebarLink href="/contact">
-            Contact Us
+            Contact
           </SidebarLink>
         </SidebarMenu>
         <SidebarBtnWrapper>

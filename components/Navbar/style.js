@@ -9,12 +9,18 @@ import { MobileNavbarHeight, DesktopNavbarHeight} from '../../styles'
 // import { Link as ReactScrollLink } from 'react-scroll'
 
 export const NavbarContainer = styled.div`
-  display: block;
+  /* display: block;
   position: sticky;
-  top: 0%;
+  top: -2px;
+  left: -2px;
+  right: -2px;
   z-index: 1000;
   width: 100%;
+  background: #fff; */
+  position: sticky;
+  top: 0;
   background: #fff;
+  z-index: 1000;
 `
 
 export const NavbarContent = styled.div`

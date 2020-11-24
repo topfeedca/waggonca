@@ -10,7 +10,7 @@ export const FeaturesContainer = styled.div`
 `
 
 export const FeaturesWrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   /* max-width: 1200px; */
   max-width: 900px;
   margin: 0 auto;
@@ -25,6 +25,7 @@ export const FeaturesWrapper = styled.div`
 
   @media screen and (max-width: 870px) {
     padding: 18px;
+    box-shadow: none;
   }
 `
 
@@ -101,9 +102,10 @@ export const TableData = styled.div`
   /* min-width: 40px; */
   font-size: 12px;
   line-height: 10px;
-  min-width: 100%;
+  min-width: 40px;
   padding: 4px;
-  border: 1px solid #ddd;
+  /* margin-top: 10px; */
+  border-bottom: 1px solid #ddd;
 
   &:nth-child(odd) {
     /* background: #f1f1f1; */

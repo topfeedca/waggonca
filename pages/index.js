@@ -6,6 +6,8 @@ import {
 } from 'react-tinacms-github'
 import { usePlugin } from 'tinacms'
 
+import { PageWrapper } from '../styles'
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Sidebar from '../components/Sidebar'
@@ -72,15 +74,17 @@ export default function Home({ file }) {
         <meta name="description" content={seo.description}></meta>
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
-      <CTASection {...homeObjThree} data={sectiong} btnLink />
-      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent imgHeight="40%" />
-      {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
-      <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
-      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />
-      <CTASection {...homeObjThree} data={sectionf} />
-      <Footer />
+      <PageWrapper>
+        <Navbar toggle={toggle} />
+        <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
+        <CTASection {...homeObjThree} data={sectiong} btnLink />
+        <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent imgHeight="40%" />
+        {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
+        <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
+        <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />
+        <CTASection {...homeObjThree} data={sectionf} />
+        <Footer />
+      </PageWrapper>
     </>
   )
 }

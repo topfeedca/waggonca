@@ -210,3 +210,10 @@ export const Td = styled.td`
 export const Div = styled.div`
   ${composed}
 `
+
+export const PageWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+
+  ${composed}
+`

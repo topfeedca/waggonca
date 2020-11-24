@@ -53,7 +53,7 @@ export default function SimpleTooltip(props) {
         }
       `}
     >
-      <Tooltip>
+      <Tooltip content="">
         {props.children}
       </Tooltip>
     </Tooltip>

@@ -1,7 +1,7 @@
-import { FaTimes } from 'react-icons/fa'
 import styled from 'styled-components'
 // import { Link as ReactRouterLink } from 'react-router-dom'
-import { Link as ReactScrollLink } from 'react-scroll'
+// import { Link as ReactScrollLink } from 'react-scroll'
+import { DesktopNavbarHeight, MobileNavbarHeight } from '../../styles'
 
 export const SidebarContainer = styled.div`
   position: fixed;
@@ -19,31 +19,13 @@ export const SidebarContainer = styled.div`
   /* right: 0; */
 `
 
-export const Icon = styled.div`
-  display: block;
-  background: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  outline: none;
-`
-
-export const CloseIcon = styled(FaTimes)`
-  color: #484848;
-`
-
 export const SidebarWrapper = styled.div`
   color: #484848;
 `
 
 export const SidebarMenu = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
-  text-align: center;
-
-  @media screen and (max-width: 420px) {
-    grid-template-rows: repeat(6, 60px);
-  }
+  /* background: pink; */
+  min-height: 400px;
 `
 
 export const SidebarLink = styled.a`
@@ -55,6 +37,7 @@ export const SidebarLink = styled.a`
   list-style: none;
   transition: 0.2s ease-in-out;
   color: #484848;
+  margin: 15% auto;
   cursor: pointer;
 
   &:hover {
@@ -96,8 +79,20 @@ export const SidebarHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
-  height: 84px;
+  /* height: 84px; */
   margin-bottom: 24px;
+  border-bottom: none;
+  box-sizing: border-box;
+  box-shadow: 0 10px 10px -10px rgba(33,35,38,0.1);
+
+  @media screen and (max-width: 870px) {
+    height: ${MobileNavbarHeight}px;
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: 870px) {
+    height: ${DesktopNavbarHeight}px;
+  }
 `
 
 export const SidebarLogo = styled.a`
@@ -111,7 +106,30 @@ export const SidebarLogo = styled.a`
   text-decoration: none;
 
   img {
-    height: auto;
-    width: 56px;
+    height: 30px;
+    width: auto;
   }
+`
+
+export const SidebarImg = styled.img`
+  height: 30px;
+  width: auto;
+`
+
+export const SidebarBrand = styled.span`
+  font-size: 20px;
+  font-weight: 700;
+  color: #494949;
+  margin-left: 6px;
+`
+
+export const MobileHamburger = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+
+  @media screen and (min-width: 870px) {
+    display: none;
+  }  
 `
