@@ -30,66 +30,10 @@ export default function CTASection(props) {
                   {data && data.description && data.description}
                 </Subtitle>
                 <Button
-                  to="about"
-                  outlined
-                  variant={accent ? 'none' : 'primary'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  variant={accent ? 'none' : 'primary'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  outlined
-                  variant={accent ? 'none' : 'danger'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  outlined
-                  variant={accent ? 'none' : 'warning'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  outlined
-                  variant={accent ? 'none' : 'info'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  outlined
-                  variant={accent ? 'none' : 'success'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  outlined
-                  disabled
-                  variant={accent ? 'none' : 'success'}
-                  // href={`${AppLinkAddress}/signup`}
-                >
-                  Try it now
-                </Button>
-                <Button
-                  to="about"
-                  btnLink
-                  variant={accent ? 'none' : 'primary'}
-                  // href={`${AppLinkAddress}/signup`}
+                  variant="primary"
+                  rounded
+                  // variant={accent ? 'none' : 'primary'}
+                  href={`${AppLinkAddress}/signup`}
                 >
                   Try it now
                 </Button>

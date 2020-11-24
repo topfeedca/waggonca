@@ -6,7 +6,8 @@ export const ContactInfoContainer = styled.div`
 `
 
 export const ContactInfoWrapper = styled.div`
-  max-width: 1100px;
+  /* max-width: 1200px; */
+  max-width: 1000px;
   margin: 0 auto;
   padding: 120px 0;
 

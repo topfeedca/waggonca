@@ -5,7 +5,8 @@ export const ContactFormContainer = styled.div`
 `
 
 export const ContactFormWrapper = styled.div`
-  max-width: 1100px;
+  /* max-width: 1200px; */
+  max-width: 1000px;
   margin: 0 auto;
   padding: 120px 0;
 

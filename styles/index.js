@@ -86,7 +86,7 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  ${props => props.fluid ? 'width: 100%' : 'max-width: 1200px'}
+  ${props => props.fluid ? 'width: 100%;' : 'max-width: 1000px;'}
 
   ${composed}
 `
