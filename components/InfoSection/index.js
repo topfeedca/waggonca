@@ -32,7 +32,7 @@ export default function InfoSection(props) {
               <Col>
                 <ContentWrapper centerLine>
                   {/* <Col display={["flex", 'none', 'none']} justifyContent="flex-start"> */}
-                    <Div display={['block', 'block', 'none']} mb="2">
+                    <Div display={['block', 'block', 'none']} mt={imgStart ? '5' : '5'}>
                       <Img src={img} alt={img} />
                     </Div>
                   {/* </Col> */}
@@ -42,7 +42,7 @@ export default function InfoSection(props) {
                   <Subtitle color={accent ? '#fff' : '#494949'}>
                     {data && data.description && data.description}
                   </Subtitle>
-                  <Div maxWidth="200px">
+                  <Div maxWidth="200px" mb="5">
                     <Button
                       rounded
                       variant={accent ? 'none' : 'primary'}
@@ -55,9 +55,7 @@ export default function InfoSection(props) {
               </Col>
               {!imgStart && (
                 <Col display={['none', 'none', 'flex']} justifyContent="flex-end">
-                  {/* <ContentWrapper centered> */}
-                    <Img src={img} alt={img} style={{ padding: '2rem' }} />
-                  {/* </ContentWrapper> */}
+                  <Img src={img} alt={img} style={{ padding: '2rem' }} />
                 </Col>
               )}
           </Row>
