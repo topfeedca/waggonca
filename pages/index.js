@@ -91,7 +91,7 @@ export default function Home({ file }) {
         <InfoSection data={sectionb} img={AddProduct02} imgStart accent noBtn />
         {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
         <InfoSection data={sectiond} img={PublicStore01} noBtn />
-        <InfoSection data={sectione} img={Store02} imgStart odd noBtn />
+        <InfoSection data={sectione} img={Store02} imgStart gray noBtn />
         {/* <CTASection data={sectionf} /> */}
         <CTASection
           data={sectionf}
