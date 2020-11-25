@@ -152,10 +152,10 @@ export const Section = styled.section`
         position: absolute;
         left: ${props => props.imgStart ? '44px' : 'auto'};
         right: ${props => props.imgStart ? 'auto' : '44px'};
-        /* top: auto;
+        /* top: auto; 
         bottom: auto; */
         width: 100%;
-        max-width: 330px;
+        max-width: 380px;
         z-index: -1;
         top: 130px;
       }
@@ -186,7 +186,7 @@ export const Section = styled.section`
         /* bottom: 34px; */
         /* top: 10%; */
         width: 100%;
-        max-width: 330px;
+        max-width: 530px;
         z-index: -1;
         top: 100px;
         /* display: block;
@@ -210,8 +210,9 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: ${SecitonSpacing * 2}px;
-    padding-bottom: ${SecitonSpacing}px;
+    padding-top: ${SecitonSpacing}px;
+    padding-bottom: ${SecitonSpacing * 2}px;
+    /* background: pink; */
     
     .sideImg {
       display: flex;
@@ -229,7 +230,7 @@ export const Section = styled.section`
         width: 100%;
         max-width: 600px;
         z-index: -1;
-        top: 100px;
+        top: 60px;
         /* bottom: 144px; */
         /* bottom: 44px; */
         /* display: block;
