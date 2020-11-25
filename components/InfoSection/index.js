@@ -28,13 +28,13 @@ export default function InfoSection(props) {
     <>
       <Section imgStart={imgStart} id={id} bg={backgroundColor}>
         <Container>
+          {imgStart && (
+            <Div className="sideImg" mr="4" width="100%">
+              <Img src={img} alt={img} />
+            </Div>
+          )}
           <Div display="flex" justifyContent="space-between" alignItems="center">
-            {imgStart && (
-              <Div className="sideImg" mr="4" width="100%">
-                <Img src={img} alt={img} />
-              </Div>
-            )}
-            <ContentWrapper centerLine bg={backgroundColor}>
+            <ContentWrapper centerLine bg={backgroundColor} imgStart={imgStart}>
               <Heading color={accent ? '#fff' : '#494949'}>
                 {data && data.title && data.title}
               </Heading>
@@ -56,12 +56,12 @@ export default function InfoSection(props) {
                 <Img src={img} alt={img} />
               </Div>
             </ContentWrapper>
-            {!imgStart && (
-              <Div className="sideImg" ml="4" width="100%">
-                <Img src={img} alt={img} />
-              </Div>
-            )}
           </Div>
+          {!imgStart && (
+            <Div className="sideImg" ml="4" width="100%">
+              <Img src={img} alt={img} />
+            </Div>
+          )}
             {/* <Row display="flex">
               {imgStart && (
                 <Col display={["none", 'none', 'flex']} justifyContent="flex-start">
