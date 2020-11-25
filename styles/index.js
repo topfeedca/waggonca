@@ -52,8 +52,8 @@ export const ContentWrapper = styled.div`
   ${props => props.centerLine && `
     // justify-content: center;
     // text-align: center;
-    padding-top: 25px;
-    padding-bottom: 75px;
+    // padding-top: 25px;
+    // padding-bottom: 75px;
     text-align: left;
   `}
 
@@ -103,8 +103,10 @@ export const Section = styled.section`
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding-top: ${SecitonSpacing / 2}px;
-  padding-bottom: ${SecitonSpacing / 2}px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  /* padding-top: ${SecitonSpacing / 4}px; */
+  /* padding-bottom: ${SecitonSpacing / 4}px; */
   position: relative;
   z-index: 1;
 
