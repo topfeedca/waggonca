@@ -29,7 +29,7 @@ export default function InfoSection(props) {
       <Section imgStart={imgStart} id={id} bg={backgroundColor}>
         <Container>
           {imgStart && (
-            <Div className="sideImg" mr="4" width="100%">
+            <Div className="sideImg" width="100%">
               <Img src={img} alt={img} />
             </Div>
           )}
@@ -58,7 +58,7 @@ export default function InfoSection(props) {
             </ContentWrapper>
           </Div>
           {!imgStart && (
-            <Div className="sideImg" ml="4" width="100%">
+            <Div className="sideImg" width="100%">
               <Img src={img} alt={img} />
             </Div>
           )}

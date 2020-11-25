@@ -12,6 +12,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 240px;
   /* background: #fff; */
   /* min-height: 400px; */
   /* background: inherit; */
@@ -140,9 +141,11 @@ export const Section = styled.section`
     }
   }
 
-  @media screen and (min-width: 769px) and (max-width: 1020px) {
+  @media screen and (min-width: 768px) and (max-width: 999px) {
     /* padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px; */
+    padding-top: ${SecitonSpacing / 2}px;
+    padding-bottom: ${SecitonSpacing / 2}px;
     
     .sideImg {
       display: flex;
@@ -155,9 +158,9 @@ export const Section = styled.section`
         /* top: auto; 
         bottom: auto; */
         width: 100%;
-        max-width: 380px;
+        max-width: 330px;
         z-index: -1;
-        top: 130px;
+        top: 110px;
       }
     }
 
@@ -166,7 +169,7 @@ export const Section = styled.section`
     }
   }
 
-  @media screen and (min-width: 1021px) and (max-width: 1199px) {
+  @media screen and (min-width: 1000px) and (max-width: 1199px) {
     /* padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px; */
     padding-top: ${SecitonSpacing}px;
@@ -186,7 +189,7 @@ export const Section = styled.section`
         /* bottom: 34px; */
         /* top: 10%; */
         width: 100%;
-        max-width: 530px;
+        max-width: 430px;
         z-index: -1;
         top: 100px;
         /* display: block;
@@ -211,7 +214,7 @@ export const Section = styled.section`
 
   @media screen and (min-width: 1200px) {
     padding-top: ${SecitonSpacing}px;
-    padding-bottom: ${SecitonSpacing * 2}px;
+    padding-bottom: ${SecitonSpacing}px;
     /* background: pink; */
     
     .sideImg {
@@ -228,7 +231,7 @@ export const Section = styled.section`
         /* bottom: 34px; */
         /* top: 10%; */
         width: 100%;
-        max-width: 600px;
+        max-width: 560px;
         z-index: -1;
         top: 60px;
         /* bottom: 144px; */
