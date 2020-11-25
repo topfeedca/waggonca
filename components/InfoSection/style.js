@@ -36,7 +36,7 @@ export const Subtitle = styled.p`
   /* line-height: 24px; */
   /* color: #494949; */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 766px) {
     max-width: none;
   }
 

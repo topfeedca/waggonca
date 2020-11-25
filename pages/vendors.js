@@ -6,19 +6,21 @@ import {
 } from 'react-tinacms-github'
 import { usePlugin } from 'tinacms'
 
+import { PageWrapper } from '../styles'
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Sidebar from '../components/Sidebar'
 import InfoSection from '../components/InfoSection'
-import SplitInfoSection from '../components/SplitInfoSection'
+// import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'
 
 import { vendorsPage as seo } from '../seo'
 
-import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
+import { AppLinkAddress } from '../constants'
 
-export default function Vendors({ file, preview }) {
+export default function Vendors({ file }) {
   const formOptions = {
     label: `${seo.contentLabel} Page`,
     fields: [
@@ -56,13 +58,14 @@ export default function Vendors({ file, preview }) {
     sectionc2,
     sectiond,
     sectione,
-    sectionf
+    sectionf,
+    sectiong,
   } = data;
 
-  const farmerImg = '/img/Farmer.svg'
-  const phoneImg = '/img/Phone.png'
-  const laptopImg = '/img/Laptop.svg'
-  const selectionsImg = '/img/Selections.svg'
+  const Dashboard01 = '/img/screenshots/dashboard-01.png'
+  const AddProduct02 = '/img/screenshots/add-product-02.png'
+  const PublicStore01 = '/img/screenshots/public-store-01.png'
+  const Store02 = '/img/screenshots/store-02.png'
 
   return (
     <>
@@ -71,14 +74,26 @@ export default function Vendors({ file, preview }) {
         <meta name="description" content={seo.description}></meta>
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
-      <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} />
-      <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn />
-      <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} />
-      <InfoSection {...homeObjOne} data={sectiond} img={laptopImg} />
-      <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} imgStart />
-      <CTASection {...homeObjThree} data={sectionf} />
-      <Footer />
+      <PageWrapper>
+        <Navbar toggle={toggle} />
+        <InfoSection data={sectiona} img={Dashboard01} gray noBtn />
+        <CTASection
+          data={sectiong}
+          btnLink
+          hredf={`${AppLinkAddress}/signup`}
+        />
+        <InfoSection data={sectionb} img={AddProduct02} imgStart accent noBtn />
+        {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
+        <InfoSection data={sectiond} img={PublicStore01} noBtn />
+        <InfoSection data={sectione} img={Store02} imgStart gray noBtn />
+        {/* <CTASection data={sectionf} /> */}
+        <CTASection
+          data={sectionf}
+          btnRound
+          href={`${AppLinkAddress}/signup`}
+        />
+        <Footer />
+      </PageWrapper>
     </>
   )
 }

@@ -82,7 +82,7 @@ export default function Home({ file }) {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <PageWrapper>
         <Navbar toggle={toggle} />
-        <InfoSection data={sectiona} img={Dashboard01} noBtn />
+        <InfoSection data={sectiona} img={Dashboard01} gray noBtn />
         <CTASection
           data={sectiong}
           btnLink
