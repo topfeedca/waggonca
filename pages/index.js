@@ -84,17 +84,20 @@ export default function Home({ file }) {
         <Navbar toggle={toggle} />
         <InfoSection data={sectiona} img={Dashboard01} noBtn />
         <CTASection
-          title={sectiong.title}
-          desc={sectiong.desc}
-          btnLabel="Try It Now"
           data={sectiong}
-          btnLink={`${AppLinkAddress}/signup`}
+          btnLink
+          hredf={`${AppLinkAddress}/signup`}
         />
         <InfoSection data={sectionb} img={AddProduct02} imgStart accent noBtn />
         {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
         <InfoSection data={sectiond} img={PublicStore01} noBtn />
         <InfoSection data={sectione} img={Store02} imgStart odd noBtn />
-        <CTASection data={sectionf} />
+        {/* <CTASection data={sectionf} /> */}
+        <CTASection
+          data={sectionf}
+          btnRound
+          href={`${AppLinkAddress}/signup`}
+        />
         <Footer />
       </PageWrapper>
     </>

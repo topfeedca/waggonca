@@ -106,7 +106,7 @@ export const Section = styled.section`
   padding-top: ${SecitonSpacing / 2}px;
   padding-bottom: ${SecitonSpacing / 2}px;
   position: relative;
-  z-index: -2;
+  z-index: 1;
 
   img {
     max-width: 100%;

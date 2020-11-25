@@ -16,6 +16,9 @@ export default function CTASection(props) {
     data,
     accent,
     btnLink,
+    btnRound,
+    btnOutline,
+    href
   } = props;
   return (
     <>
@@ -30,16 +33,20 @@ export default function CTASection(props) {
                 <Subtitle color={accent ? '#fff' : '#494949'}>
                   {data && data.description && data.description}
                 </Subtitle>
-                <Div maxWidth="200px">
-                  <Button
-                    rounded
-                    btnLink={btnLink}
-                    variant={accent ? 'none' : 'primary'}
-                    href={`${AppLinkAddress}/signup`}
-                  >
-                    Try it now
-                  </Button>
-                </Div>
+                {data && data.btnLabel && (
+                  <Div maxWidth="200px">
+                    <Button
+                      outlined={btnOutline}
+                      rounded={btnRound}
+                      btnLink={btnLink}
+                      variant={accent ? 'none' : 'primary'}
+                      // href={`${AppLinkAddress}/signup`}
+                      href={href}
+                    >
+                      {data && data.btnLabel && data.btnLabel}
+                    </Button>
+                  </Div>
+                )}
               </ContentWrapper>
             </Col>
           </Row>

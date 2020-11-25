@@ -25,10 +25,12 @@
   },
   "sectionf": {
     "title": "Grow & market your farm",
-    "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about."
+    "description": "Track every part of your operations while offering your clients the best experience they can tell their friends about.",
+    "btnLabel": "Learn More"
   },
   "sectiong": {
     "title": "Enterprise level services, made for local vendors.",
-    "description": "Get access to powerful services and techniques used by Enterprise level businesses, and help keep you ahead of the compatition."
+    "description": "Get access to powerful services and techniques used by Enterprise level businesses, and help keep you ahead of the compatition.",
+    "btnLabel": "Get Started"
   }
 }
