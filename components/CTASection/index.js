@@ -15,15 +15,16 @@ export default function CTASection(props) {
     id,
     data,
     accent,
+    btnLink,
   } = props;
   return (
     <>
-      <Section id={id} bg={getBgColor()}>
+      <Section id={id}>
         <Container>
-          <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} px={'0', '6', '3'}>
+          <Row display="flex" flexDirection={['column', 'column', 'column', 'row']}>
             <Col>
               <ContentWrapper centered>
-                <Heading color={accent ? '#fff' : '#494949'} fontSize={['32px', '40px', '48px']}>
+                <Heading color={accent ? '#fff' : '#494949'} fontSize="32px">
                   {data && data.title && data.title}
                 </Heading>
                 <Subtitle color={accent ? '#fff' : '#494949'}>
@@ -32,6 +33,7 @@ export default function CTASection(props) {
                 <Div maxWidth="200px">
                   <Button
                     rounded
+                    btnLink={btnLink}
                     variant={accent ? 'none' : 'primary'}
                     href={`${AppLinkAddress}/signup`}
                   >

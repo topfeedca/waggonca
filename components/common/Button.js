@@ -54,7 +54,7 @@ const StyledButton = styled.a`
   align-items: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   background: #555;
   
   ${({small}) => small && `
@@ -122,7 +122,7 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
   align-items: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   background: #555;
   
   ${({small}) => small && `
@@ -185,7 +185,7 @@ const StyledButtonLink = styled.a`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
-  font-weight: 600;
+  font-weight: 400;
   color: #555;
   background: transparent;
   
@@ -312,7 +312,7 @@ const StyledButtonOutline = styled.a`
   align-items: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   /* background: #555; */
   background: transparent;
   

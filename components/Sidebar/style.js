@@ -24,7 +24,6 @@ export const SidebarWrapper = styled.div`
 `
 
 export const SidebarMenu = styled.div`
-  /* background: pink; */
   min-height: 400px;
 `
 
@@ -78,7 +77,7 @@ export const SidebarHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 1.5rem;
   /* height: 84px; */
   margin-bottom: 24px;
   border-bottom: none;
@@ -87,7 +86,7 @@ export const SidebarHeader = styled.div`
 
   @media screen and (max-width: 870px) {
     height: ${MobileNavbarHeight}px;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
   }
 
   @media screen and (min-width: 870px) {
@@ -102,7 +101,7 @@ export const SidebarLogo = styled.a`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
 
   img {

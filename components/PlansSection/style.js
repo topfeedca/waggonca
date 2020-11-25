@@ -13,8 +13,8 @@ export const PlansContainer = styled.div`
 
 export const PlansWrapper = styled.div`
   width: 100%;
-  /* max-width: 1200px; */
-  max-width: 900px;
+  max-width: 1200px;
+  /* max-width: 900px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -126,8 +126,7 @@ export const ViewFeaturesButton = styled(ReactScrollLink)`
 export const PlanCardTitle = styled.h1`
   font-size: 22px;
   font-family: RobotoBold;
-  color: #484848;
-  font-weight: 400;
+  color: #494949;
 `
 
 export const PlanCardDetails = styled.div`
@@ -162,30 +161,6 @@ export const PlanCardDetails = styled.div`
     margin-bottom: 14px;
     padding-bottom: 12px;
     font-family: 'OpenSans';
-    /* background: pink; */
-  }
-
-  /* span:nth-child(3) {
-    display: block;
-    margin-top: 18px;
-    font-size: 14px;
-    font-style: italic;
-    color: red;
-    margin-bottom: 44px;
-  }
-
-  span:nth-child(4) {
-    display: block;
-    margin-top: 28px;
-    margin-bottom: 28px;
-    font-size: 13px;
-    color: #404040;
-  } */
-
-  @media screen and (max-width: 870px) {
-    span:nth-child(1) {
-      /* font-size: 28px; */
-    }
   }
 `
 

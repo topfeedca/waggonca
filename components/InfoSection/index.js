@@ -1,4 +1,5 @@
 import React from 'react'
+import { fontSize } from 'styled-system';
 import { AppLinkAddress } from '../../constants';
 
 import { Col, Container, Row, Section, ContentWrapper, Div, getBgColor } from '../../styles';
@@ -17,13 +18,51 @@ export default function InfoSection(props) {
     img,
     data,
     accent,
+    gray,
+    noBtn
   } = props;
+
+  const backgroundColor = getBgColor(accent ? 'accent' : gray ? 'gray' : 'white')
 
   return (
     <>
-      <Section id={id} bg={getBgColor(accent, imgStart)}>
+      <Section imgStart={imgStart} id={id} bg={backgroundColor}>
         <Container>
-            <Row display="flex">
+          <Div display="flex" justifyContent="space-between" alignItems="center">
+            {imgStart && (
+              <Div className="sideImg" mr="4" width="100%">
+                <Img src={img} alt={img} />
+              </Div>
+            )}
+            <ContentWrapper centerLine bg={backgroundColor}>
+              <Heading color={accent ? '#fff' : '#494949'} fontSize="34px">
+                {data && data.title && data.title}
+              </Heading>
+              <Subtitle color={accent ? '#fff' : '#494949'} fontSize="18px">
+                {data && data.description && data.description}
+              </Subtitle>
+              {!noBtn && (
+                <Div maxWidth="200px">
+                  <Button
+                    rounded
+                    variant={accent ? 'none' : 'primary'}
+                    href={`${AppLinkAddress}/signup`}
+                  >
+                    Try it now
+                  </Button>
+                </Div>
+              )}
+              <Div className="bottomImg" mt="4">
+                <Img src={img} alt={img} />
+              </Div>
+            </ContentWrapper>
+            {!imgStart && (
+              <Div className="sideImg" ml="4" width="100%">
+                <Img src={img} alt={img} />
+              </Div>
+            )}
+          </Div>
+            {/* <Row display="flex">
               {imgStart && (
                 <Col display={["none", 'none', 'flex']} justifyContent="flex-start">
                   <Img src={img} alt={img} style={{ padding: '2rem' }} />
@@ -31,18 +70,13 @@ export default function InfoSection(props) {
               )}
               <Col>
                 <ContentWrapper centerLine>
-                  {/* <Col display={["flex", 'none', 'none']} justifyContent="flex-start"> */}
-                    <Div display={['block', 'block', 'none']} mt={imgStart ? '5' : '5'}>
-                      <Img src={img} alt={img} />
-                    </Div>
-                  {/* </Col> */}
                   <Heading color={accent ? '#fff' : '#494949'} fontSize={['28px', '32px', '38px']}>
                     {data && data.title && data.title}
                   </Heading>
                   <Subtitle color={accent ? '#fff' : '#494949'}>
                     {data && data.description && data.description}
                   </Subtitle>
-                  <Div maxWidth="200px" mb="5">
+                  <Div maxWidth="200px">
                     <Button
                       rounded
                       variant={accent ? 'none' : 'primary'}
@@ -51,6 +85,9 @@ export default function InfoSection(props) {
                       Try it now
                     </Button>
                   </Div>
+                  <Div display={['block', 'block', 'none']}>
+                    <Img src={img} alt={img} alt="info section" />
+                  </Div>
                 </ContentWrapper>
               </Col>
               {!imgStart && (
@@ -58,7 +95,7 @@ export default function InfoSection(props) {
                   <Img src={img} alt={img} style={{ padding: '2rem' }} />
                 </Col>
               )}
-          </Row>
+          </Row> */}
         </Container>
       </Section>
     </>

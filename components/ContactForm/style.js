@@ -5,8 +5,8 @@ export const ContactFormContainer = styled.div`
 `
 
 export const ContactFormWrapper = styled.div`
-  /* max-width: 1200px; */
-  max-width: 900px;
+  max-width: 1200px;
+  /* max-width: 900px; */
   margin: 0 auto;
   padding: 120px 0;
 
@@ -18,7 +18,7 @@ export const ContactFormWrapper = styled.div`
 export const FormTitle = styled.h2`
   text-align: center;
   font-size: 28px;
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
   margin-bottom: 2rem;
 `
 

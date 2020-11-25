@@ -46,7 +46,7 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 870px) {
     height: ${MobileNavbarHeight}px;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
   @media screen and (min-width: 870px) {
@@ -69,7 +69,7 @@ export const LogoImg = styled.img`
 
 export const LogoBrand = styled.span`
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: #494949;
   margin-left: 6px;
 `
@@ -139,6 +139,7 @@ export const MobileHamburger = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 26px;
+  font-weight: 400;
 
   @media screen and (min-width: 870px) {
     display: none;

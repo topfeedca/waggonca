@@ -12,36 +12,19 @@ import theme from '../styles/theme'
 const isProduction = process.env.NODE_ENV === 'production'
 
 const GlobalStyle = createGlobalStyle`
-  html, body {
-    margin: 0;
-    padding: 0;
-  }  
-
  * {
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto';
  }
   
   body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-
-    font-family: 'Roboto';
-  }
-
-  * {
-    font-family: 'Roboto';
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 
   .edit-link-wrapper {
