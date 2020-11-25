@@ -35,6 +35,8 @@ export const ContentWrapper = styled.div`
   }
 
   @media screen and (min-width: 870px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
     /* height: calc(100vh - ${DesktopNavbarHeight}px); */
     /* min-height: 700px; */
     /* min-height: calc(100vh - ${DesktopNavbarHeight}px); */
