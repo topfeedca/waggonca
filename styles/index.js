@@ -50,8 +50,8 @@ export const ContentWrapper = styled.div`
   ${props => props.centerLine && `
     // justify-content: center;
     // text-align: center;
-    padding-top: 50px;
-    padding-bottom: 150px;
+    padding-top: 25px;
+    padding-bottom: 75px;
     text-align: left;
   `}
 
@@ -101,8 +101,8 @@ export const Section = styled.section`
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding-top: ${SecitonSpacing}px;
-  padding-bottom: ${SecitonSpacing}px;
+  padding-top: ${SecitonSpacing / 2}px;
+  padding-bottom: ${SecitonSpacing / 2}px;
   position: relative;
   z-index: -2;
 
@@ -135,6 +135,9 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 768px) and (max-width: 1020px) {
+    padding-top: ${SecitonSpacing}px;
+    padding-bottom: ${SecitonSpacing}px;
+    
     .sideImg {
       display: flex;
 
@@ -158,6 +161,9 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 1021px) and (max-width: 1199px) {
+    padding-top: ${SecitonSpacing}px;
+    padding-bottom: ${SecitonSpacing}px;
+    
     .sideImg {
       display: flex;
 
@@ -196,6 +202,9 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 1200px) {
+    padding-top: ${SecitonSpacing}px;
+    padding-bottom: ${SecitonSpacing}px;
+    
     .sideImg {
       display: flex;
 
