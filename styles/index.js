@@ -66,6 +66,10 @@ export const ContentWrapper = styled.div`
 
   ${props => props.imgStart && `
     align-items: flex-end;
+
+    @media screen and (max-width: 768px) {
+      align-items: flex-start;
+    }
   `}
 `;
 
@@ -136,7 +140,7 @@ export const Section = styled.section`
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1020px) {
+  @media screen and (min-width: 769px) and (max-width: 1020px) {
     /* padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px; */
     
@@ -151,7 +155,7 @@ export const Section = styled.section`
         /* top: auto;
         bottom: auto; */
         width: 100%;
-        max-width: 340px;
+        max-width: 330px;
         z-index: -1;
         top: 130px;
       }
@@ -165,6 +169,8 @@ export const Section = styled.section`
   @media screen and (min-width: 1021px) and (max-width: 1199px) {
     /* padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px; */
+    padding-top: ${SecitonSpacing}px;
+    padding-bottom: ${SecitonSpacing}px;
     
     .sideImg {
       display: flex;
@@ -180,7 +186,7 @@ export const Section = styled.section`
         /* bottom: 34px; */
         /* top: 10%; */
         width: 100%;
-        max-width: 470px;
+        max-width: 330px;
         z-index: -1;
         top: 100px;
         /* display: block;

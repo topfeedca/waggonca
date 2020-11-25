@@ -38,7 +38,7 @@ export default function InfoSection(props) {
               <Heading color={accent ? '#fff' : '#494949'}>
                 {data && data.title && data.title}
               </Heading>
-              <Subtitle color={accent ? '#fff' : '#494949'} fontSize="18px">
+              <Subtitle color={accent ? '#fff' : '#494949'}>
                 {data && data.description && data.description}
               </Subtitle>
               {!noBtn && (
