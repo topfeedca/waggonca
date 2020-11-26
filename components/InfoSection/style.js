@@ -4,9 +4,10 @@ import { layout, space, flexbox, typography, color } from 'styled-system'
 import theme from '../../styles/theme'
 
 const { typo } = theme;
+const { headings, subtitles, buttons } = typo;
 
 export const Heading = styled.h1`
-  font-size: ${typo.fontSize.desktop};
+  font-size: ${headings.fontSize.desktop};
   margin-bottom: 26px;
   max-width: 50%;
   /* max-width: 500px; */
@@ -17,12 +18,12 @@ export const Heading = styled.h1`
   /* color: #494949; */
 
   @media screen and (max-width: 768px) {
-    font-size: ${typo.fontSize.mobile};
+    font-size: ${headings.fontSize.mobile};
     max-width: none;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: ${typo.fontSize.tablet};
+    font-size: ${headings.fontSize.tablet};
     margin-top: 30px;
   }
 
@@ -31,20 +32,16 @@ export const Heading = styled.h1`
 `
 
 export const Subtitle = styled.p`
-  /* max-width: 500px; */
+  font-size: ${subtitles.fontSize.desktop};
   max-width: 50%;
-  /* margin-bottom: 26px; */
-  /* max-width: 440px; */
-  /* margin-bottom: 35px; */
-  /* font-size: 18px; */
-  /* line-height: 24px; */
-  /* color: #494949; */
 
   @media screen and (max-width: 766px) {
+    font-size: ${headings.fontSize.mobile};
     max-width: none;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: ${headings.fontSize.tablet};
     /* margin-bottom: 50px; */
   }
 

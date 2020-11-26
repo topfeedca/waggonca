@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+import theme from '../../styles/theme'
+
+const { typo } = theme;
+const { headings, subtitles, buttons } = typo;
+
 export const ContactFormContainer = styled.div`
   background: #fff;
 `
@@ -63,8 +68,8 @@ export const FormSubmit = styled.input.attrs({
   type: 'submit',
   value: 'Submit'
 })`
-  padding: 0.75rem 1rem;
-  font-size: 18px;
+  padding: 14px 44px;
+  font-size: ${buttons.fontSize.md};
   background: #3dace4;
   color: white;
   border: none;

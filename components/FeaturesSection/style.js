@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+import theme from '../../styles/theme'
+
+const { typo } = theme;
+const { headings, subtitles, buttons } = typo;
+
 export const FeaturesContainer = styled.div`
   color: #484848;
   background: ${({ lightBg }) => (lightBg ? '#ffffff' : '#010606')};
@@ -67,6 +72,7 @@ export const FeaturesTable = styled.div`
 `;
 
 export const FeaturesTableHeading = styled.div`
+  font-size: ${headings.fontSize.desktop};
   text-align: left;
   padding: 0;
 
@@ -75,9 +81,13 @@ export const FeaturesTableHeading = styled.div`
     justify-content: flex-start;  
   }
 
-  /* div:first-child {
-    padding-left: 0px;
-  } */
+  @media screen and (max-width: 768px) {
+    font-size: ${headings.fontSize.mobile};
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: ${headings.fontSize.tablet};
+  }
 `;
 
 export const FeaturesTableData = styled.div`
