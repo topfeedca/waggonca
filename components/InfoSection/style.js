@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import { layout, space, flexbox, typography, color } from 'styled-system'
 
+import theme from '../../styles/theme'
+
+const { typo } = theme;
+
 export const Heading = styled.h1`
-  font-size: 3rem;
+  font-size: ${typo.fontSize.desktop};
   margin-bottom: 26px;
   max-width: 50%;
   /* max-width: 500px; */
@@ -13,13 +17,13 @@ export const Heading = styled.h1`
   /* color: #494949; */
 
   @media screen and (max-width: 768px) {
-    font-size: 2rem;
+    font-size: ${typo.fontSize.mobile};
     max-width: none;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: 2rem;
-    margin-top: 50px;
+    font-size: ${typo.fontSize.tablet};
+    margin-top: 30px;
   }
 
   ${color}
@@ -41,7 +45,7 @@ export const Subtitle = styled.p`
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
   }
 
   ${color}
@@ -54,3 +58,18 @@ export const Img = styled.img`
   /* margin: 2rem auto; */
 `
 
+export const CTAButtonWrapper = styled.div`
+  max-width: 200px;
+  margin-top: 38px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 42px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`

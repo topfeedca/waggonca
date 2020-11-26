@@ -3,6 +3,13 @@ import { Link as ReactScrollLink } from 'react-scroll'
 
 import theme from '../../styles/theme'
 
+const ReactScrollOptions = {
+  spy: true,
+  smooth: true,
+  offset: -80,
+  duration: 500,
+}
+
 export const Button = (props) => {
   if (props.btnLink) {
     return (
@@ -22,7 +29,7 @@ export const Button = (props) => {
 
   if (props.to) {
     return (
-      <StyledReactScrollLink {...props}>
+      <StyledReactScrollLink {...ReactScrollOptions} {...props}>
         {props.children}
       </StyledReactScrollLink>
     )
@@ -169,7 +176,6 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
 
   ${({rounded}) => rounded && `
     border-radius: 30px !important;
-    background: red;
   `}
 `
 

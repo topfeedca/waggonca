@@ -54,6 +54,13 @@ const theme = {
       dark: '#FFE194',
       darker: '#FFB800'
     },
+  },
+  typo: {
+    fontSize: {
+      mobile: '1.7rem',
+      tablet: '2rem',
+      desktop: '3rem'
+    }
   }
 }
 

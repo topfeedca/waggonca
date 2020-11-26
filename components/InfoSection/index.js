@@ -9,6 +9,7 @@ import {
   Heading,
   Subtitle,
   Img,
+  CTAButtonWrapper
 } from './style'
 
 export default function InfoSection(props) {
@@ -19,7 +20,8 @@ export default function InfoSection(props) {
     data,
     accent,
     gray,
-    noBtn
+    noBtn,
+    btnTo,
   } = props;
 
   const backgroundColor = getBgColor(accent ? 'accent' : gray ? 'gray' : 'white')
@@ -41,16 +43,17 @@ export default function InfoSection(props) {
               <Subtitle color={accent ? '#fff' : '#494949'}>
                 {data && data.description && data.description}
               </Subtitle>
-              {!noBtn && (
-                <Div maxWidth="200px">
+              {!noBtn && data && data.btnLabel && (
+                <CTAButtonWrapper>
                   <Button
                     rounded
+                    to={btnTo}
                     variant={accent ? 'none' : 'primary'}
                     href={`${AppLinkAddress}/signup`}
                   >
-                    Try it now
+                    {data.btnLabel}
                   </Button>
-                </Div>
+                </CTAButtonWrapper>
               )}
               <Div className="bottomImg" mt="4">
                 <Img src={img} alt={img} />

@@ -36,7 +36,7 @@ export const SectionRow = styled.div`
 
 export const PlanCard = styled.div`
   background: #fff;
-  padding: 16px 26px;
+  padding: 1rem;
   border-radius: 3px;
   /* border: 1px solid #707070; */
   min-width: 280px;

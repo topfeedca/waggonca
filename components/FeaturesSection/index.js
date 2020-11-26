@@ -16,6 +16,7 @@ import {
   GreenDot,
   Unlimited,
   FeaturesTableTitle,
+  TableHr,
 } from './style'
 
 export default function FeaturesSection(props) {

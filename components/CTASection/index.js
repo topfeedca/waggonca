@@ -27,7 +27,7 @@ export default function CTASection(props) {
           <Row display="flex" flexDirection={['column', 'column', 'column', 'row']}>
             <Col>
               <ContentWrapper centered>
-                <Heading color={accent ? '#fff' : '#494949'} fontSize="32px">
+                <Heading color={accent ? '#fff' : '#494949'}>
                   {data && data.title && data.title}
                 </Heading>
                 <Subtitle color={accent ? '#fff' : '#494949'}>

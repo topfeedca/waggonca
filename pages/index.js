@@ -82,18 +82,26 @@ export default function Home({ file }) {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <PageWrapper>
         <Navbar toggle={toggle} />
-        <InfoSection data={sectiona} img={Dashboard01} gray noBtn />
+        <InfoSection
+          id={`${seo.contentLabel}-page-top`}
+          data={sectiona}
+          img={Dashboard01}
+          gray
+          btnTo="Home-about"
+        />
         <CTASection
+          id={`${seo.contentLabel}-cta-top`}
           data={sectiong}
-          btnLink
+          btnRound
           hredf={`${AppLinkAddress}/signup`}
         />
-        <InfoSection data={sectionb} img={AddProduct02} imgStart accent noBtn />
+        <InfoSection id={`${seo.contentLabel}-about`} data={sectionb} img={AddProduct02} imgStart accent noBtn />
         {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
-        <InfoSection data={sectiond} img={PublicStore01} noBtn />
-        <InfoSection data={sectione} img={Store02} imgStart gray noBtn />
+        <InfoSection id={`${seo.contentLabel}-info`} data={sectiond} img={PublicStore01} noBtn />
+        <InfoSection id={`${seo.contentLabel}-details`} data={sectione} img={Store02} imgStart gray noBtn />
         {/* <CTASection data={sectionf} /> */}
         <CTASection
+          id={`${seo.contentLabel}-cta-top`}
           data={sectionf}
           btnRound
           href={`${AppLinkAddress}/signup`}

@@ -20,11 +20,11 @@ export const FeaturesWrapper = styled.div`
   margin-bottom: 140px;
 
   border-radius: 3px;
-  padding: 30px;
+  padding: 2rem;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
   @media screen and (max-width: 870px) {
-    padding: 18px;
+    /* padding: 1rem 2rem; */
     box-shadow: none;
   }
 `
@@ -90,8 +90,10 @@ export const FeaturesTableFooter = styled.div`
 
 export const TableTitle = styled.div`
   font-family: RobotoBold;
-  height: 40px;
-  padding-left: 10px;
+  min-height: 24px;
+  padding: 0 0.25rem;
+  border-bottom: 1px solid gray;
+  /* padding-left: 10px; */
 `;
 
 export const TableData = styled.div`
@@ -101,7 +103,8 @@ export const TableData = styled.div`
   height: 40px;
   /* min-width: 40px; */
   font-size: 12px;
-  line-height: 10px;
+  line-height: 14px;
+  min-height: 50px;
   min-width: 40px;
   padding: 4px;
   /* margin-top: 10px; */
@@ -168,5 +171,5 @@ export const SupportPlus = styled(Support)`
 export const FeaturesTableTitle = styled.h2`
   color: #494949;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `

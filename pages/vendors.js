@@ -90,6 +90,7 @@ export default function Vendors({ file }) {
         <CTASection
           data={sectionf}
           btnRound
+          btnLabel="Try it now"
           href={`${AppLinkAddress}/signup`}
         />
         <Footer />
