@@ -8,48 +8,18 @@ export const DesktopNavbarHeight = 80;
 export const MobileNavbarHeight = 60;
 
 export const ContentWrapper = styled.div`
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 240px;
-  /* background: #fff; */
-  /* min-height: 400px; */
-  /* background: inherit; */
-  /* padding: 2rem; */
-  /* justify-content: center; */
-  /* align-items: center;
-  height: 100%;
-  /* height: calc(100vh - ${MobileNavbarHeight}px); */
-  /* min-height: 400px; */
-  /* min-height: 500px; */
-  /* min-height: 400px; */
   
   @media screen and (max-width: 768px) {
     padding-top: 0.5rem;
-    /* height: calc(100vh - ${MobileNavbarHeight}px); */
-    /* min-height: 400px; */
-    /* min-height: calc(100vh - ${MobileNavbarHeight}px); */
-    /* padding: 0 1rem; */
-
-    /* margin-top: auto; */
-    /* margin-bottom: 0; */
   }
 
   @media screen and (min-width: 768px) {
     padding-left: 2rem;
     padding-right: 2rem;
-/* 
-    h1 {
-      max-width: 340px;
-    }
-
-    p {
-      max-width: 340px;
-    } */
-    /* height: calc(100vh - ${DesktopNavbarHeight}px); */
-    /* min-height: 768px; */
-    /* min-height: calc(100vh - ${DesktopNavbarHeight}px); */
   }
 
   ${props => props.centered && `
@@ -89,8 +59,6 @@ export const ContentWrapper = styled.div`
 `;
 
 export function getBgColor(colorType) {
-  // if (accent) return '#3DAEE4'
-  // if (imgStart) return '#f4f4f4'
   switch (colorType) {
     case 'accent':
       return '#3DAEE4'
@@ -122,8 +90,6 @@ export const Section = styled.section`
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 50px;
-  /* padding-top: ${SecitonSpacing / 4}px; */
-  /* padding-bottom: ${SecitonSpacing / 4}px; */
   position: relative;
   z-index: 1;
 
@@ -146,11 +112,9 @@ export const Section = styled.section`
   }
 
   .bottomImg {
-    /* display: block; */
     display: flex;
 
     img {
-      /* display: block; */
       max-width: 100%;
       height: auto;
       background: #dadada;
@@ -160,8 +124,6 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 768px) and (max-width: 999px) {
-    /* padding-top: ${SecitonSpacing}px;
-    padding-bottom: ${SecitonSpacing}px; */
     padding-top: ${SecitonSpacing / 2}px;
     padding-bottom: ${SecitonSpacing / 2}px;
     
@@ -173,10 +135,6 @@ export const Section = styled.section`
         position: absolute;
         left: ${props => props.imgStart ? '44px' : 'auto'};
         right: ${props => props.imgStart ? 'auto' : '44px'};
-        /* top: auto; 
-        bottom: auto; */
-        /* width: 100%; */
-        /* max-width: 100%; */
         height: auto;
         max-width: 300px;
         z-index: -1;
@@ -190,8 +148,6 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 1000px) and (max-width: 1199px) {
-    /* padding-top: ${SecitonSpacing}px;
-    padding-bottom: ${SecitonSpacing}px; */
     padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px;
     
@@ -201,29 +157,12 @@ export const Section = styled.section`
       img {
         display: block;
         position: absolute;
-        /* bottom: -44px; */
-        /* right: 84px; */
         left: ${props => props.imgStart ? '44px' : 'auto'};
         right: ${props => props.imgStart ? 'auto' : '44px'};
-        /* right: 44px; */
-        /* bottom: 34px; */
-        /* top: 10%; */
         width: 100%;
         max-width: 430px;
         z-index: -1;
         top: 100px;
-        /* display: block;
-        position: absolute;
-        top: 120px;
-        right: 80px;
-        width: 600px;
-        height: auto;
-        z-index: -1;
-        background: #dadada;
-        padding: 12px;
-        border-radius: 4px; */
-        /* width: 100%; */
-        /* padding: 1rem; */
       }
     }
 
@@ -235,7 +174,6 @@ export const Section = styled.section`
   @media screen and (min-width: 1200px) {
     padding-top: ${SecitonSpacing}px;
     padding-bottom: ${SecitonSpacing}px;
-    /* background: pink; */
     
     .sideImg {
       display: flex;
@@ -243,31 +181,12 @@ export const Section = styled.section`
       img {
         display: block;
         position: absolute;
-        /* bottom: -44px; */
-        /* right: 84px; */
         left: ${props => props.imgStart ? '44px' : 'auto'};
         right: ${props => props.imgStart ? 'auto' : '44px'};
-        /* right: 44px; */
-        /* bottom: 34px; */
-        /* top: 10%; */
         width: 100%;
         max-width: 560px;
         z-index: -1;
         top: 60px;
-        /* bottom: 144px; */
-        /* bottom: 44px; */
-        /* display: block;
-        position: absolute;
-        top: 120px;
-        right: 80px;
-        width: 600px;
-        height: auto;
-        z-index: -1;
-        background: #dadada;
-        padding: 12px;
-        border-radius: 4px; */
-        /* width: 100%; */
-        /* padding: 1rem; */
       }
     }
 
@@ -285,9 +204,6 @@ export const Container = styled.div`
   margin-left: auto;
   padding-left: 2rem;
   padding-right: 2rem;
-
-  /* ${props => props.fluid ? 'width: 100%;' : 'max-width: 900px;'} */
-  /* ${props => props.fluid ? 'width: 100%;' : 'max-width: 1600px; padding-left: 4rem; padding-right: 4rem;'} */
 
   ${props => props.fluid && `
     max-width: 1600px;
@@ -315,10 +231,7 @@ export const Row = styled.div`
 `
 
 export const Col = styled.div`
-  /* position: relative; */
   width: 100%;
-  /* padding-right: 15px;
-  padding-left: 15px; */
 
   ${composed}
 `
