@@ -44,12 +44,12 @@ export const Nav = styled.nav`
   box-sizing: border-box;
   box-shadow: 0 10px 10px -10px rgba(33,35,38,0.1);
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 896px) {
     height: ${MobileNavbarHeight}px;
     padding: 0 1.5rem;
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 896px) {
     height: ${DesktopNavbarHeight}px;
   }
 `
@@ -84,7 +84,7 @@ export const DesktopNavMenuLeft = styled.ul`
     padding-left: 4rem;
   }
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 896px) {
     display: none;
   }
 `
@@ -93,7 +93,7 @@ export const DesktopNavMenuRight = styled.ul`
   display: flex;
   list-style: none;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 896px) {
     display: none;
   }
 `
@@ -129,7 +129,7 @@ export const MobileNavMenu = styled.ul`
   margin-left: auto;
   margin-right: 0;
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 896px) {
     display: none;
   }
 `
@@ -141,7 +141,7 @@ export const MobileHamburger = styled.div`
   font-size: 26px;
   font-weight: 400;
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 896px) {
     display: none;
   }  
 `

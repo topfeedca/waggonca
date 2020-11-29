@@ -25,7 +25,7 @@ export const ContentWrapper = styled.div`
   /* min-height: 500px; */
   /* min-height: 400px; */
   
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     padding-top: 0.5rem;
     /* height: calc(100vh - ${MobileNavbarHeight}px); */
     /* min-height: 400px; */
@@ -36,11 +36,19 @@ export const ContentWrapper = styled.div`
     /* margin-bottom: 0; */
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     padding-left: 2rem;
     padding-right: 2rem;
+/* 
+    h1 {
+      max-width: 340px;
+    }
+
+    p {
+      max-width: 340px;
+    } */
     /* height: calc(100vh - ${DesktopNavbarHeight}px); */
-    /* min-height: 700px; */
+    /* min-height: 768px; */
     /* min-height: calc(100vh - ${DesktopNavbarHeight}px); */
   }
 
@@ -50,13 +58,19 @@ export const ContentWrapper = styled.div`
     justify-content: center;
     text-align: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       text-align: left;
     }
   `}
 
   ${props => props.centerLine && `
     text-align: left;
+
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+      text-align: center;
+      max-width: 360px;
+      margin: 0 auto;
+    }
   `}
 
   ${props => props.bg && `
@@ -161,8 +175,10 @@ export const Section = styled.section`
         right: ${props => props.imgStart ? 'auto' : '44px'};
         /* top: auto; 
         bottom: auto; */
-        width: 100%;
-        max-width: 330px;
+        /* width: 100%; */
+        /* max-width: 100%; */
+        height: auto;
+        max-width: 300px;
         z-index: -1;
         top: 110px;
       }
@@ -291,7 +307,7 @@ export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 

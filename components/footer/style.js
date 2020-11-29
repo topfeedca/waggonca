@@ -18,7 +18,7 @@ export const FooterContainer = styled.div`
     /* max-width: 400px; */
   }
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     .top {
       display: none;
     }
@@ -32,7 +32,7 @@ export const FooterContainer = styled.div`
     }
   }
 /* 
-    @media screen and (max-width: 870px) {
+    @media screen and (max-width: 768px) {
     .top {
       display: none;
     }
@@ -42,7 +42,7 @@ export const FooterContainer = styled.div`
     }
   } */
 
-  /* @media screen and (min-width: 870px) {
+  /* @media screen and (min-width: 768px) {
     .top {
       display: block;
     }
@@ -114,7 +114,7 @@ export const SocialLogo = styled.a`
     height: 56px;
   }
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     img {
       margin-bottom: 30px;
       margin: 0 auto;
@@ -128,7 +128,7 @@ export const WebsiteRights = styled.small`
   display: block;
   /* margin-bottom: 24px; */
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     text-align: center;
     margin-bottom: 40px;
     /* margin-bottom: 24px; */
@@ -156,13 +156,13 @@ export const FooterText = styled.p`
   margin-inline-start: 0px;
   margin-inline-end: 0px; */
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 2rem;
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -177,12 +177,12 @@ export const SocialLinks = styled.div`
   margin-left: auto;
   margin-right: 0;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     padding-left: 0;
     padding-right: 0;
   }

@@ -84,12 +84,12 @@ export const SidebarHeader = styled.div`
   box-sizing: border-box;
   box-shadow: 0 10px 10px -10px rgba(33,35,38,0.1);
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     height: ${MobileNavbarHeight}px;
     /* padding: 0 1rem; */
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     height: ${DesktopNavbarHeight}px;
   }
 `
@@ -128,7 +128,7 @@ export const MobileHamburger = styled.div`
   justify-content: center;
   font-size: 26px;
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }  
 `

@@ -17,12 +17,12 @@ export const Heading = styled.h1`
   max-width: 550px; */
   /* color: #494949; */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 754px) {
     font-size: ${headings.fontSize.mobile};
     max-width: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 754px) and (max-width: 1199px) {
     font-size: ${headings.fontSize.tablet};
   }
 
@@ -36,11 +36,11 @@ export const Subtitle = styled.p`
   width: 100%;
   max-width: 400px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 754px) {
     font-size: ${subtitles.fontSize.mobile};
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 754px) and (max-width: 1199px) {
     font-size: ${subtitles.fontSize.tablet};
   }
 
