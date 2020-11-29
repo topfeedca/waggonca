@@ -46,7 +46,7 @@ export default function InfoSection(props) {
               {!noBtn && data && data.btnLabel && (
                 <CTAButtonWrapper>
                   <Button
-                    rounded
+                    btnRounded
                     to={btnTo}
                     variant={accent ? 'none' : 'primary'}
                     href={`${AppLinkAddress}/signup`}
@@ -81,7 +81,7 @@ export default function InfoSection(props) {
                   </Subtitle>
                   <Div maxWidth="200px">
                     <Button
-                      rounded
+                      btnRounded
                       variant={accent ? 'none' : 'primary'}
                       href={`${AppLinkAddress}/signup`}
                     >

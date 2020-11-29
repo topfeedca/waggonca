@@ -14,6 +14,14 @@ const ReactScrollOptions = {
 }
 
 export const Button = (props) => {
+  if (props.btnRounded) {
+    return (
+      <StyledButton {...props}>
+        {props.children}
+      </StyledButton>
+    )
+  }
+
   if (props.btnLink) {
     return (
       <StyledButtonLink {...props}>
@@ -107,7 +115,7 @@ const StyledButton = styled.a`
     }
   `}
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `
@@ -173,7 +181,7 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
     }
   `}
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `
@@ -293,7 +301,7 @@ const StyledButtonLink = styled.a`
     text-decoration: underline;
   }
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `
@@ -426,7 +434,7 @@ const StyledButtonOutline = styled.a`
     }
   `}
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `

@@ -123,6 +123,8 @@ export const Section = styled.section`
     display: none;
 
     img {
+      max-width: 100%;
+      height: auto;
       background: #dadada;
       padding: 6px;
       border-radius: 4px;
@@ -135,6 +137,8 @@ export const Section = styled.section`
 
     img {
       /* display: block; */
+      max-width: 100%;
+      height: auto;
       background: #dadada;
       padding: 6px;
       border-radius: 4px;

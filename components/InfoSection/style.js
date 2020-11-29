@@ -36,12 +36,12 @@ export const Subtitle = styled.p`
   max-width: 50%;
 
   @media screen and (max-width: 766px) {
-    font-size: ${headings.fontSize.mobile};
+    font-size: ${subtitles.fontSize.mobile};
     max-width: none;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: ${headings.fontSize.tablet};
+    font-size: ${subtitles.fontSize.tablet};
     /* margin-bottom: 50px; */
   }
 

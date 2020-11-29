@@ -89,7 +89,7 @@ export default function Vendors({ file }) {
         {/* <CTASection data={sectionf} /> */}
         <CTASection
           data={sectionf}
-          btnRound
+          btnRounded
           btnLabel="Try it now"
           href={`${AppLinkAddress}/signup`}
         />

@@ -16,7 +16,7 @@ export default function CTASection(props) {
     data,
     accent,
     btnLink,
-    btnRound,
+    btnRounded,
     btnOutline,
     href
   } = props;
@@ -37,7 +37,7 @@ export default function CTASection(props) {
                   <Div maxWidth="200px">
                     <Button
                       outlined={btnOutline}
-                      rounded={btnRound}
+                      btnRounded={btnRounded}
                       btnLink={btnLink}
                       variant={accent ? 'none' : 'primary'}
                       // href={`${AppLinkAddress}/signup`}

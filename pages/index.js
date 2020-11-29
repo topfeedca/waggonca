@@ -92,7 +92,7 @@ export default function Home({ file }) {
         <CTASection
           id={`${seo.contentLabel}-cta-top`}
           data={sectiong}
-          btnRound
+          btnRounded
           hredf={`${AppLinkAddress}/signup`}
         />
         <InfoSection id={`${seo.contentLabel}-about`} data={sectionb} img={AddProduct02} imgStart accent noBtn />
@@ -103,7 +103,7 @@ export default function Home({ file }) {
         <CTASection
           id={`${seo.contentLabel}-cta-top`}
           data={sectionf}
-          btnRound
+          btnRounded
           href={`${AppLinkAddress}/signup`}
         />
         <Footer />
