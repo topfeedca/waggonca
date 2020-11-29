@@ -9,7 +9,7 @@ export const FeaturesContainer = styled.div`
   color: #484848;
   background: ${({ lightBg }) => (lightBg ? '#ffffff' : '#010606')};
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     padding: 0;
   }
 `
@@ -28,7 +28,7 @@ export const FeaturesWrapper = styled.div`
   padding: 2rem;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     /* padding: 1rem 2rem; */
     box-shadow: none;
   }
@@ -45,7 +45,7 @@ export const SectionRow = styled.div`
   padding: 30px;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16); */
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -64,7 +64,7 @@ export const FeaturesTable = styled.div`
   padding: 30px;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16); */
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     border-radius: 0;
     border: none;
     padding: 0;
@@ -124,7 +124,7 @@ export const TableData = styled.div`
     /* background: #f1f1f1; */
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     border: none;
 
     &:nth-child(odd) {
@@ -173,7 +173,7 @@ export const SupportPlus = styled(Support)`
   color: darkblue;
   width: 100%;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     max-width: 50px;
   }
 `;

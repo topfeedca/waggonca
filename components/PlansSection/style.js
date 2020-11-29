@@ -6,7 +6,7 @@ export const PlansContainer = styled.div`
   color: #fff;
   background: transparent;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     padding: 0;
   }
 `
@@ -29,7 +29,7 @@ export const SectionRow = styled.div`
   justify-content: space-around;
   text-align: center;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -51,7 +51,7 @@ export const PlanCard = styled.div`
     margin-bottom: 14px;
   }
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     margin: 10px;
     margin-bottom: 60px;
     margin-right: 0;

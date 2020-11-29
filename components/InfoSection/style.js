@@ -17,12 +17,12 @@ export const Heading = styled.h1`
   /* max-width: 550px; */
   /* color: #494949; */
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 754px) {
     font-size: ${headings.fontSize.mobile};
     max-width: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 754px) and (max-width: 1199px) {
     font-size: ${headings.fontSize.tablet};
     margin-top: 30px;
   }
@@ -35,12 +35,12 @@ export const Subtitle = styled.p`
   font-size: ${subtitles.fontSize.desktop};
   max-width: 50%;
 
-  @media screen and (max-width: 766px) {
+  @media screen and (max-width: 754px) {
     font-size: ${subtitles.fontSize.mobile};
     max-width: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 754px) and (max-width: 1199px) {
     font-size: ${subtitles.fontSize.tablet};
     /* margin-bottom: 50px; */
   }
@@ -59,12 +59,12 @@ export const CTAButtonWrapper = styled.div`
   max-width: 200px;
   margin-top: 38px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 754px) {
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 754px) and (max-width: 1199px) {
     margin-top: 42px;
     margin-left: auto;
     margin-right: auto;

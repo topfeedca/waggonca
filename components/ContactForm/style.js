@@ -15,7 +15,7 @@ export const ContactFormWrapper = styled.div`
   margin: 0 auto;
   padding: 120px 0;
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     padding: 60px 0;
   }
 `
@@ -36,12 +36,12 @@ export const Form = styled.form`
 
   box-shadow: 0 15px 50px 0 rgba(41,44,60,0.16);
 
-  @media screen and (max-width: 870px) {
+  @media screen and (max-width: 768px) {
     max-width: none;
     /* padding: 0 1.5rem; */
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 768px) {
     max-width: 650px;
     /* padding: 4rem; */
   }
