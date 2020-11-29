@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+import theme from '../../styles/theme'
+
+const { typo } = theme
+const { headings, subtitles } = typo
+
 export const SplitInfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? '#fff' : '#010606')};
