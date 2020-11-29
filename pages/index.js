@@ -12,13 +12,14 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Sidebar from '../components/Sidebar'
 import InfoSection from '../components/InfoSection'
-import SplitInfoSection from '../components/SplitInfoSection'
+// import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'
 
 import { homePage as seo } from '../seo'
 
 import { homeObjOne, homeObjTwo, homeObjThree } from '../components/InfoSection/data'
 import Head from 'next/head'
+import { AppLinkAddress } from '../constants'
 
 export default function Home({ file }) {
   const formOptions = {
@@ -67,6 +68,11 @@ export default function Home({ file }) {
   const laptopImg = '/img/Laptop.svg'
   const selectionsImg = '/img/Selections.svg'
 
+  const Dashboard01 = '/img/screenshots/dashboard-01.png'
+  const AddProduct02 = '/img/screenshots/add-product-02.png'
+  const PublicStore01 = '/img/screenshots/public-store-01.png'
+  const Store02 = '/img/screenshots/store-02.png'
+
   return (
     <>
       <Head>
@@ -76,13 +82,30 @@ export default function Home({ file }) {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <PageWrapper>
         <Navbar toggle={toggle} />
-        <InfoSection {...homeObjOne} data={sectiona} img={farmerImg} imgOffset />
-        <CTASection {...homeObjThree} data={sectiong} btnLink />
-        <InfoSection {...homeObjTwo} data={sectionb} img={phoneImg} noBtn accent imgHeight="40%" />
+        <InfoSection
+          id={`${seo.contentLabel}-page-top`}
+          data={sectiona}
+          img={Dashboard01}
+          gray
+          btnTo="Home-about"
+        />
+        <CTASection
+          id={`${seo.contentLabel}-cta-top`}
+          data={sectiong}
+          btnRounded
+          hredf={`${AppLinkAddress}/signup`}
+        />
+        <InfoSection id={`${seo.contentLabel}-about`} data={sectionb} img={AddProduct02} imgStart accent noBtn />
         {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}
-        <InfoSection {...homeObjTwo} id="test-section" data={sectiond} img={laptopImg} />
-        <InfoSection {...homeObjOne} data={sectione} img={selectionsImg} />
-        <CTASection {...homeObjThree} data={sectionf} />
+        <InfoSection id={`${seo.contentLabel}-info`} data={sectiond} img={PublicStore01} noBtn />
+        <InfoSection id={`${seo.contentLabel}-details`} data={sectione} img={Store02} imgStart gray noBtn />
+        {/* <CTASection data={sectionf} /> */}
+        <CTASection
+          id={`${seo.contentLabel}-cta-top`}
+          data={sectionf}
+          btnRounded
+          href={`${AppLinkAddress}/signup`}
+        />
         <Footer />
       </PageWrapper>
     </>

@@ -3,7 +3,25 @@ import { Link as ReactScrollLink } from 'react-scroll'
 
 import theme from '../../styles/theme'
 
+const { typo, colors } = theme;
+const { headings, subtitles, buttons } = typo;
+
+const ReactScrollOptions = {
+  spy: true,
+  smooth: true,
+  offset: -80,
+  duration: 500,
+}
+
 export const Button = (props) => {
+  if (props.btnRounded) {
+    return (
+      <StyledButton {...props}>
+        {props.children}
+      </StyledButton>
+    )
+  }
+
   if (props.btnLink) {
     return (
       <StyledButtonLink {...props}>
@@ -22,7 +40,7 @@ export const Button = (props) => {
 
   if (props.to) {
     return (
-      <StyledReactScrollLink {...props}>
+      <StyledReactScrollLink {...ReactScrollOptions} {...props}>
         {props.children}
       </StyledReactScrollLink>
     )
@@ -42,7 +60,7 @@ const StyledButton = styled.a`
   /* width: 160px; */
   padding: 14px 44px;
   color: #fff;
-  font-size: 17px;
+  font-size: ${buttons.fontSize.sm};
   outline: none;
   border-width: 3px;
   border-style: solid;
@@ -54,52 +72,50 @@ const StyledButton = styled.a`
   align-items: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   background: #555;
   
   ${({small}) => small && `
     padding: 10px 16px;
-    font-size: 14px;
-    // width: 120px;
+    font-size: ${buttons.fontSize.sm};
   `}
 
   ${({large}) => large && `
     padding: 18px 48px;
-    font-size: 20px;
-    // width: 200px;
+    font-size: ${buttons.fontSize.lg};
   `}
   
-  ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.base};`}
-  ${({variant}) => variant && variant == 'danger' && `background: ${theme.colors.danger.base};`}
-  ${({variant}) => variant && variant == 'warning' && `background: ${theme.colors.warning.base};`}
-  ${({variant}) => variant && variant == 'info' && `background: ${theme.colors.info.base};`}
-  ${({variant}) => variant && variant == 'success' && `background: ${theme.colors.success.base};`}
+  ${({variant}) => variant && variant == 'primary' && `background: ${colors.primary.base};`}
+  ${({variant}) => variant && variant == 'danger' && `background: ${colors.danger.base};`}
+  ${({variant}) => variant && variant == 'warning' && `background: ${colors.warning.base};`}
+  ${({variant}) => variant && variant == 'info' && `background: ${colors.info.base};`}
+  ${({variant}) => variant && variant == 'success' && `background: ${colors.success.base};`}
 
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #444;
 
-    ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.dark};`}
+    ${({variant}) => variant && variant == 'primary' && `background: ${colors.primary.dark};`}
   }
 
   &:active {
     transition: all 0.2s ease-in-out;
     background: #333;
 
-    ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.darker};`}
+    ${({variant}) => variant && variant == 'primary' && `background: ${colors.primary.darker};`}
   }
 
   ${({disabled}) => disabled && `
-    background: ${theme.colors.primary.lighter};
+    background: ${colors.primary.lighter};
     cursor: auto;
 
     &:hover,
     &:active {
-      background: ${theme.colors.primary.lighter};
+      background: ${colors.primary.lighter};
     }
   `}
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `
@@ -110,7 +126,7 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
   /* width: 160px; */
   padding: 14px 44px;
   color: #fff;
-  font-size: 17px;
+  font-size: ${buttons.fontSize.md};
   outline: none;
   border-width: 3px;
   border-style: solid;
@@ -122,54 +138,51 @@ const StyledReactScrollLink = styled(ReactScrollLink)`
   align-items: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   background: #555;
   
   ${({small}) => small && `
     padding: 10px 16px;
-    font-size: 14px;
-    // width: 120px;
+    font-size: ${buttons.fontSize.sm};
   `}
 
   ${({large}) => large && `
     padding: 18px 48px;
-    font-size: 20px;
-    // width: 200px;
+    font-size: ${buttons.fontSize.lg};
   `}
   
-  ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.base};`}
-  ${({variant}) => variant && variant == 'danger' && `background: ${theme.colors.danger.base};`}
-  ${({variant}) => variant && variant == 'warning' && `background: ${theme.colors.warning.base};`}
-  ${({variant}) => variant && variant == 'info' && `background: ${theme.colors.info.base};`}
-  ${({variant}) => variant && variant == 'success' && `background: ${theme.colors.success.base};`}
+  ${({variant}) => variant && variant == 'primary' && `background: ${colors.primary.base};`}
+  ${({variant}) => variant && variant == 'danger' && `background: ${colors.danger.base};`}
+  ${({variant}) => variant && variant == 'warning' && `background: ${colors.warning.base};`}
+  ${({variant}) => variant && variant == 'info' && `background: ${colors.info.base};`}
+  ${({variant}) => variant && variant == 'success' && `background: ${colors.success.base};`}
 
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #444;
 
-    ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.dark};`}
+    ${({variant}) => variant && variant == 'primary' && `background: ${colors.primary.dark};`}
   }
 
   &:active {
     transition: all 0.2s ease-in-out;
     background: #333;
 
-    ${({variant}) => variant && variant == 'primary' && `background: ${theme.colors.primary.darker};`}
+    ${({variant}) => variant && variant == 'primary' && `background: ${colors.primary.darker};`}
   }
 
   ${({disabled}) => disabled && `
-    background: ${theme.colors.primary.lighter};
+    background: ${colors.primary.lighter};
     cursor: auto;
 
     &:hover,
     &:active {
-      background: ${theme.colors.primary.lighter};
+      background: ${colors.primary.lighter};
     }
   `}
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
-    background: red;
   `}
 `
 
@@ -177,7 +190,7 @@ const StyledButtonLink = styled.a`
   display: block;
   white-space: nowrap;
   color: #555;
-  font-size: 17px;
+  font-size: ${buttons.fontSize.md};
   outline: none;
   text-decoration: none;
   cursor: pointer;
@@ -185,82 +198,82 @@ const StyledButtonLink = styled.a`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
-  font-weight: 600;
+  font-weight: 400;
   color: #555;
   background: transparent;
   
   ${({small}) => small && `
-    font-size: 14px;
+    font-size: ${buttons.fontSize.sm};
   `}
 
   ${({large}) => large && `
-    font-size: 20px;
+    font-size: ${buttons.fontSize.lg};
   `}
 
   
   ${({variant}) => variant && variant == 'primary' && `
-    color: ${theme.colors.primary.light};
+    color: ${colors.primary.light};
     
     &:hover {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.primary.dark};
+      color: ${colors.primary.dark};
     }
     
     &:active {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.primary.darker}
+      color: ${colors.primary.darker}
     }
     `}
   ${({variant}) => variant && variant == 'danger' && `
-    color: ${theme.colors.danger.base};
+    color: ${colors.danger.base};
     
     &:hover {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.danger.dark};
+      color: ${colors.danger.dark};
     }
     
     &:active {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.danger.darker}
+      color: ${colors.danger.darker}
     }
     `}
   ${({variant}) => variant && variant == 'warning' && `
-    color: ${theme.colors.warning.base};
+    color: ${colors.warning.base};
     
     &:hover {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.warning.dark};
+      color: ${colors.warning.dark};
     }
     
     &:active {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.warning.darker}
+      color: ${colors.warning.darker}
     }
     `}
   ${({variant}) => variant && variant == 'info' && `
-    color: ${theme.colors.info.base};
+    color: ${colors.info.base};
     
     &:hover {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.info.dark};
+      color: ${colors.info.dark};
     }
     
     &:active {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.info.darker}
+      color: ${colors.info.darker}
     }
     `}
   ${({variant}) => variant && variant == 'success' && `
-    color: ${theme.colors.success.base};
+    color: ${colors.success.base};
     
     &:hover {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.success.base};
+      color: ${colors.success.base};
     }
     
     &:active {
       transition: all 0.2s ease-in-out;
-      color: ${theme.colors.success.darker}
+      color: ${colors.success.darker}
     }
     `}
 
@@ -288,7 +301,7 @@ const StyledButtonLink = styled.a`
     text-decoration: underline;
   }
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `
@@ -301,7 +314,7 @@ const StyledButtonOutline = styled.a`
   padding: 14px 44px;
   /* color: #fff; */
   color: #555;
-  font-size: 17px;
+  font-size: ${buttons.fontSize.md};
   outline: none;
   border-width: 3px;
   border-style: solid;
@@ -312,99 +325,97 @@ const StyledButtonOutline = styled.a`
   align-items: center;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-weight: 600;
-  /* background: #555; */
+  font-weight: 400;
+  background: #555;
   background: transparent;
   
   ${({small}) => small && `
     padding: 10px 16px;
-    font-size: 14px;
-    // width: 120px;
+    font-size: ${buttons.fontSize.sm};
   `}
 
   ${({large}) => large && `
     padding: 18px 48px;
-    font-size: 20px;
-    // width: 200px;
+    font-size: ${buttons.fontSize.lg};
   `}
   
   ${({variant}) => variant && variant == 'primary' && `
-    border: 3px solid ${theme.colors.primary.base};
-    color: ${theme.colors.primary.base};
+    border: 3px solid ${colors.primary.base};
+    color: ${colors.primary.base};
 
     &:hover {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.primary.base};
+      background: ${colors.primary.base};
       color: #fff;
     }
 
     &:active {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.primary.darker}
+      background: ${colors.primary.darker}
       color: #fff;
     }
   `}
   ${({variant}) => variant && variant == 'danger' && `
-    border: 3px solid ${theme.colors.danger.base};
-    color: ${theme.colors.danger.base};
+    border: 3px solid ${colors.danger.base};
+    color: ${colors.danger.base};
 
     &:hover {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.danger.base};
+      background: ${colors.danger.base};
       color: #fff;
     }
 
     &:active {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.danger.darker}
+      background: ${colors.danger.darker}
       color: #fff;
     }
   `}
   ${({variant}) => variant && variant == 'warning' && `
-    border: 3px solid ${theme.colors.warning.base};
-    color: ${theme.colors.warning.base};
+    border: 3px solid ${colors.warning.base};
+    color: ${colors.warning.base};
 
     &:hover {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.warning.base};
+      background: ${colors.warning.base};
       color: #fff;
     }
 
     &:active {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.warning.darker}
+      background: ${colors.warning.darker}
       color: #fff;
     }
   `}
   ${({variant}) => variant && variant == 'info' && `
-    border: 3px solid ${theme.colors.info.base};
-    color: ${theme.colors.info.base};
+    border: 3px solid ${colors.info.base};
+    color: ${colors.info.base};
     
     &:hover {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.info.base};
+      background: ${colors.info.base};
       color: #fff;
     }
 
     &:active {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.info.darker}
+      background: ${colors.info.darker}
       color: #fff;
     }
   `}
   ${({variant}) => variant && variant == 'success' && `
-    border: 3px solid ${theme.colors.success.base};
-    color: ${theme.colors.success.base};
+    border: 3px solid ${colors.success.base};
+    color: ${colors.success.base};
 
     &:hover {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.success.base};
+      background: ${colors.success.base};
       color: #fff;
     }
 
     &:active {
       transition: all 0.2s ease-in-out;
-      background: ${theme.colors.success.darker}
+      background: ${colors.success.darker}
       color: #fff;
     }
   `}
@@ -423,7 +434,7 @@ const StyledButtonOutline = styled.a`
     }
   `}
 
-  ${({rounded}) => rounded && `
+  ${({btnRounded}) => btnRounded && `
     border-radius: 30px !important;
   `}
 `

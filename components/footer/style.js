@@ -54,10 +54,9 @@ export const FooterContainer = styled.div`
 `
 
 export const FooterWrapper = styled.div`
-
   width: 100%;
   max-width: 1600px;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -107,7 +106,7 @@ export const SocialLogo = styled.a`
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0;
 
   img {
@@ -149,7 +148,7 @@ export const SocialIconsLink = styled.a`
 `
 
 export const FooterText = styled.p`
-  font-size: 17px;
+  font-size: 15px;
   /* width: 100%; */
   /* max-width: 400px; */
   /* margin-block-start: 0px;
@@ -160,18 +159,13 @@ export const FooterText = styled.p`
   @media screen and (max-width: 870px) {
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-bottom: 2rem;
   }
 
   @media screen and (min-width: 870px) {
     padding-left: 0;
     padding-right: 0;
   }
-`
-
-export const LegalSocialWrapper = styled.div`
-  width: 100%;
-  /* max-width: 1200px; */
-  max-width: 900px;
 `
 
 export const SocialLinks = styled.div`

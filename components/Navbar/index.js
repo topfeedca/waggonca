@@ -61,7 +61,7 @@ export default function Navbar(props) {
                 <Button
                   small
                   variant="primary"
-                  rounded
+                  btnRounded
                   href={`${AppLinkAddress}/login`}  
                 >
                   Get Started

@@ -14,8 +14,8 @@ export const SplitInfoWrapper = styled.div`
   z-index: 1;
   height: 860px;
   width: 100%;
-  /* max-width: 1200px; */
-  max-width: 900px;
+  max-width: 1200px;
+  /* max-width: 900px; */
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
@@ -80,25 +80,37 @@ export const TextWrapper = styled.div`
 `
 
 export const Heading = styled.h1`
+  font-size: ${headings.fontSize.desktop};
   margin-bottom: 24px;
-  font-size: 32px;
   line-height: 1.1;
   font-weight: 600;
   color: #494949;
 
-  @media screen and (max-width: 420px) {
-    font-size: 32px;
+  @media screen and (max-width: 768px) {
+    font-size: ${headings.fontSize.mobile};
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: ${headings.fontSize.tablet};
   }
 `
 
 export const Subtitle = styled.p`
+  font-size: ${subtitles.fontSize.desktop};
   max-width: 440px;
   margin-bottom: 35px;
   height: 100%;
   min-height: 100px;
-  font-size: 17px;
   line-height: 24px;
   color: #494949;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${subtitles.fontSize.mobile};
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: ${subtitles.fontSize.tablet};
+  }
 `
 
 export const BtnWrapper = styled.div`

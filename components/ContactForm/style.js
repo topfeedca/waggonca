@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 
+import theme from '../../styles/theme'
+
+const { typo } = theme;
+const { headings, subtitles, buttons } = typo;
+
 export const ContactFormContainer = styled.div`
   background: #fff;
 `
 
 export const ContactFormWrapper = styled.div`
-  /* max-width: 1200px; */
-  max-width: 900px;
+  max-width: 1200px;
+  /* max-width: 900px; */
   margin: 0 auto;
   padding: 120px 0;
 
@@ -18,7 +23,7 @@ export const ContactFormWrapper = styled.div`
 export const FormTitle = styled.h2`
   text-align: center;
   font-size: 28px;
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
   margin-bottom: 2rem;
 `
 
@@ -63,8 +68,8 @@ export const FormSubmit = styled.input.attrs({
   type: 'submit',
   value: 'Submit'
 })`
-  padding: 0.75rem 1rem;
-  font-size: 18px;
+  padding: 14px 44px;
+  font-size: ${buttons.fontSize.md};
   background: #3dace4;
   color: white;
   border: none;

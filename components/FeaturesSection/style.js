@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+import theme from '../../styles/theme'
+
+const { typo } = theme;
+const { headings, subtitles, buttons } = typo;
+
 export const FeaturesContainer = styled.div`
   color: #484848;
   background: ${({ lightBg }) => (lightBg ? '#ffffff' : '#010606')};
@@ -11,8 +16,8 @@ export const FeaturesContainer = styled.div`
 
 export const FeaturesWrapper = styled.div`
   width: 100vw;
-  /* max-width: 1200px; */
-  max-width: 900px;
+  max-width: 1200px;
+  /* max-width: 900px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -20,11 +25,11 @@ export const FeaturesWrapper = styled.div`
   margin-bottom: 140px;
 
   border-radius: 3px;
-  padding: 30px;
+  padding: 2rem;
   box-shadow: 0 15px 50px 0 rgba(41, 44, 60, 0.16);
 
   @media screen and (max-width: 870px) {
-    padding: 18px;
+    /* padding: 1rem 2rem; */
     box-shadow: none;
   }
 `
@@ -67,6 +72,7 @@ export const FeaturesTable = styled.div`
 `;
 
 export const FeaturesTableHeading = styled.div`
+  font-size: ${headings.fontSize.desktop};
   text-align: left;
   padding: 0;
 
@@ -75,9 +81,13 @@ export const FeaturesTableHeading = styled.div`
     justify-content: flex-start;  
   }
 
-  /* div:first-child {
-    padding-left: 0px;
-  } */
+  @media screen and (max-width: 768px) {
+    font-size: ${headings.fontSize.mobile};
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: ${headings.fontSize.tablet};
+  }
 `;
 
 export const FeaturesTableData = styled.div`
@@ -90,8 +100,10 @@ export const FeaturesTableFooter = styled.div`
 
 export const TableTitle = styled.div`
   font-family: RobotoBold;
-  height: 40px;
-  padding-left: 10px;
+  min-height: 24px;
+  padding: 0 0.25rem;
+  border-bottom: 1px solid gray;
+  /* padding-left: 10px; */
 `;
 
 export const TableData = styled.div`
@@ -101,7 +113,8 @@ export const TableData = styled.div`
   height: 40px;
   /* min-width: 40px; */
   font-size: 12px;
-  line-height: 10px;
+  line-height: 14px;
+  min-height: 50px;
   min-width: 40px;
   padding: 4px;
   /* margin-top: 10px; */
@@ -168,5 +181,5 @@ export const SupportPlus = styled(Support)`
 export const FeaturesTableTitle = styled.h2`
   color: #494949;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `

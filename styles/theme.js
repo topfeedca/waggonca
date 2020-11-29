@@ -54,6 +54,29 @@ const theme = {
       dark: '#FFE194',
       darker: '#FFB800'
     },
+  },
+  typo: {
+    headings: {
+      fontSize: {
+        mobile: '1.7rem',
+        tablet: '2rem',
+        desktop: '3rem'
+      }
+    },
+    subtitles: {
+      fontSize: {
+        mobile: '17px',
+        tablet: '17px',
+        desktop: '17px'
+      }
+    },
+    buttons: {
+      fontSize: {
+        sm: '15px',
+        md: '17px',
+        lg: '20px'
+      }
+    }
   }
 }
 

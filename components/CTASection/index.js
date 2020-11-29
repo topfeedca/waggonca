@@ -15,29 +15,38 @@ export default function CTASection(props) {
     id,
     data,
     accent,
+    btnLink,
+    btnRounded,
+    btnOutline,
+    href
   } = props;
   return (
     <>
-      <Section id={id} bg={getBgColor()}>
+      <Section id={id}>
         <Container>
-          <Row display="flex" flexDirection={['column', 'column', 'column', 'row']} px={'0', '6', '3'}>
+          <Row display="flex" flexDirection={['column', 'column', 'column', 'row']}>
             <Col>
               <ContentWrapper centered>
-                <Heading color={accent ? '#fff' : '#494949'} fontSize={['32px', '40px', '48px']}>
+                <Heading color={accent ? '#fff' : '#494949'}>
                   {data && data.title && data.title}
                 </Heading>
                 <Subtitle color={accent ? '#fff' : '#494949'}>
                   {data && data.description && data.description}
                 </Subtitle>
-                <Div maxWidth="200px">
-                  <Button
-                    rounded
-                    variant={accent ? 'none' : 'primary'}
-                    href={`${AppLinkAddress}/signup`}
-                  >
-                    Try it now
-                  </Button>
-                </Div>
+                {data && data.btnLabel && (
+                  <Div maxWidth="200px">
+                    <Button
+                      outlined={btnOutline}
+                      btnRounded={btnRounded}
+                      btnLink={btnLink}
+                      variant={accent ? 'none' : 'primary'}
+                      // href={`${AppLinkAddress}/signup`}
+                      href={href}
+                    >
+                      {data && data.btnLabel && data.btnLabel}
+                    </Button>
+                  </Div>
+                )}
               </ContentWrapper>
             </Col>
           </Row>
