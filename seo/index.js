@@ -10,9 +10,9 @@ export const contactPage = {
   description: 'Get a hold of a waggon professional today.'
 }
 
-export const vendorsPage = {
-  contentLabel: 'Vendors',
-  title: 'waggon | Vendors',
+export const featuresPage = {
+  contentLabel: 'Features',
+  title: 'waggon | Features',
   description: 'Sell your products to customers in your area.'
 }
 

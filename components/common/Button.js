@@ -14,6 +14,15 @@ const ReactScrollOptions = {
 }
 
 export const Button = (props) => {
+
+  if (props.to) {
+    return (
+      <StyledReactScrollLink {...ReactScrollOptions} {...props}>
+        {props.children}
+      </StyledReactScrollLink>
+    )
+  }
+
   if (props.btnRounded) {
     return (
       <StyledButton {...props}>
@@ -35,14 +44,6 @@ export const Button = (props) => {
       <StyledButtonOutline {...props}>
         {props.children}
       </StyledButtonOutline>
-    )
-  }
-
-  if (props.to) {
-    return (
-      <StyledReactScrollLink {...ReactScrollOptions} {...props}>
-        {props.children}
-      </StyledReactScrollLink>
     )
   }
 

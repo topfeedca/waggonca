@@ -45,14 +45,14 @@ export default function InfoSection(props) {
               </Subtitle>
               {!noBtn && data && data.btnLabel && (
                 <CTAButtonWrapper>
-                  <Button
-                    btnRounded
-                    to={btnTo}
-                    variant={accent ? 'none' : 'primary'}
-                    href={`${AppLinkAddress}/signup`}
-                  >
-                    {data.btnLabel}
-                  </Button>
+                    <Button
+                      to="Home-about"
+                      btnRounded
+                      // to={btnTo ? btnTo : data.btnLink}
+                      variant={accent ? 'none' : 'primary'}
+                    >
+                      {data.btnLabel}
+                    </Button>
                 </CTAButtonWrapper>
               )}
               <Div className="bottomImg" mt="4">

@@ -65,7 +65,6 @@ export const CTAButtonWrapper = styled.div`
   }
 
   @media screen and (min-width: 754px) and (max-width: 1199px) {
-    margin-top: 42px;
     margin-left: auto;
     margin-right: auto;
   }

@@ -87,13 +87,13 @@ export default function Home({ file }) {
           data={sectiona}
           img={Dashboard01}
           gray
-          btnTo="Home-about"
+          btnTo={`${seo.contentLabel}-about`}
         />
         <CTASection
           id={`${seo.contentLabel}-cta-top`}
           data={sectiong}
           btnRounded
-          hredf={`${AppLinkAddress}/signup`}
+          hredf={`${seo.contentLabel}/signup`}
         />
         <InfoSection id={`${seo.contentLabel}-about`} data={sectionb} img={AddProduct02} imgStart accent noBtn />
         {/* <SplitInfoSection dataOne={sectionc1} dataTwo={sectionc2} /> */}

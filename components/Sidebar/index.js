@@ -34,8 +34,8 @@ export default function Sidebar ({ isOpen, toggle }) {
       </SidebarHeader>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink href="/vendors">
-            Vendors
+          <SidebarLink href="/features">
+            Features
           </SidebarLink>
           <SidebarLink href="/pricing">
             Pricing

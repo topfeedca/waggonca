@@ -15,12 +15,12 @@ import InfoSection from '../components/InfoSection'
 // import SplitInfoSection from '../components/SplitInfoSection'
 import CTASection from '../components/CTASection'
 
-import { vendorsPage as seo } from '../seo'
+import { featuresPage as seo } from '../seo'
 
 import Head from 'next/head'
 import { AppLinkAddress } from '../constants'
 
-export default function Vendors({ file }) {
+export default function Features({ file }) {
   const formOptions = {
     label: `${seo.contentLabel} Page`,
     fields: [
@@ -106,7 +106,7 @@ export const getStaticProps = async function ({
   if (preview) {
     return getGithubPreviewProps({
       ...previewData,
-      fileRelativePath: 'content/vendors.json',
+      fileRelativePath: 'content/features.json',
       parse: parseJson,
     })
   }
@@ -116,8 +116,8 @@ export const getStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: 'content/vendors.json',
-        data: (await import('../content/vendors.json')).default,
+        fileRelativePath: 'content/features.json',
+        data: (await import('../content/features.json')).default,
       },
     },
   }

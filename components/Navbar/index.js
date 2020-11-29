@@ -34,7 +34,7 @@ export default function Navbar(props) {
             </NavLogo>
             <DesktopNavMenuLeft>
               <NavMenuItem>
-                <NavLink href="/vendors">Vendors</NavLink>
+                <NavLink href="/features">Features</NavLink>
               </NavMenuItem>
               <NavMenuItem>
                 <NavLink href="/pricing">Pricing</NavLink>
